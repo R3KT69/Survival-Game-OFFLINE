@@ -97,7 +97,7 @@ public class PlayerInventoryManager : MonoBehaviour
         
     }
 
-    public bool get_ammo_index(string ID, out int x, out int y)
+    public bool get_item_index(string ID, out int x, out int y) // Returns the first item
     {
         for (x = 0; x < 5; x++)
         {
@@ -109,6 +109,7 @@ public class PlayerInventoryManager : MonoBehaviour
                 }
             }
         }
+        Debug.Log($"{ID} not found/destroyed/depleted");
         x = -1;
         y = -1;
         return false;

@@ -62,7 +62,7 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
     {
         if (currentWeapon == null) return;
 
-        playerInventoryManager.get_ammo_index("AMMO", out ammoX, out ammoY);
+        if (!playerInventoryManager.get_item_index("AMMO", out ammoX, out ammoY)) return;
 
         int ammoNeeded = currentWeapon.wep_data.magSize - currentWeapon.runtimeAmmo;
         if (ammoNeeded <= 0) return;
