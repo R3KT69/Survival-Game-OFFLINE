@@ -50,9 +50,10 @@ public class PlayerInventoryManager : MonoBehaviour
         AssignItemHotbar(0, "PISTOL");
         AssignItemHotbar(1, "SHOTGUN");
         AssignItemHotbar(2, "RIFLE");
-        AssignItemHotbar(3, "PICKAXE");
-        AssignItemHotbar(4, "HATCHET");
-        AssignItemHotbar(5, "AUTOSHOT");
+        AssignItemHotbar(3, "AUTOSHOT");
+        AssignItemHotbar(4, "PICKAXE");
+        AssignItemHotbar(5, "HATCHET");
+        
         
         /*
         inv[0,0] = WeaponLookup["PISTOL"];
