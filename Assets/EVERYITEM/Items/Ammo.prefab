@@ -48,7 +48,7 @@ MonoBehaviour:
   itemType: 2
   weaponType: 4
   runtimeCount: 0
-  defaultCount: 10
+  defaultCount: 100
   Durability: 0
   id: AMMO
   maxDurability: 100
