@@ -152,14 +152,16 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
             Destroy(bullet, 5f);
         }
         
+        // Recoil usage
+        // SimulateRecoil(x: vertical recoil [-75, -90] (lower is more recoil) , z:horizontal sway [-1, 1] (higher is more recoil), y : -180 default, duration: 0.2 default
         if (rigShifting.isAiming)
         {
-            Aiming_R_Sight.GetComponent<Weapon_PrimaryIK_Anim_Manager>().SimulateRecoil(Random.Range(-70, -80), 0, duration: 0.5f);
+            Aiming_R_Sight.GetComponent<Weapon_PrimaryIK_Anim_Manager>().SimulateRecoil(Random.Range(-80, -80), 0, duration: 0.5f);
             AddCameraRecoil(-1.5f, -2.5f, 0.3f);
         }
         else
         {
-            Aiming_R_Hip.GetComponent<Weapon_PrimaryIK_Anim_Manager>().SimulateRecoil(Random.Range(-60, -70), 0, duration: 0.5f);
+            Aiming_R_Hip.GetComponent<Weapon_PrimaryIK_Anim_Manager>().SimulateRecoil(Random.Range(-75, -78), Random.Range(-2.5f, 2.5f), duration: 0.5f);
             AddCameraRecoil(-2.5f, -5f, 0.3f);
         }
     }
