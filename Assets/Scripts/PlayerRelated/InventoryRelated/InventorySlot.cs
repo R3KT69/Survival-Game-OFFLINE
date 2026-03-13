@@ -18,7 +18,7 @@ public class InventorySlot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             Debug.Log("Updating Inventory State");
             UpdateItemState();

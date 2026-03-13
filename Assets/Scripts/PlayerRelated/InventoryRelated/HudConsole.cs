@@ -11,10 +11,12 @@ public class HudConsole : MonoBehaviour
     public TextMeshProUGUI ammo;
     public GameObject console;
     public GameObject inventory;
+    public bool isInventoryOpen;
 
     void Start()
     {
         ammo.text += "inf";
+        isInventoryOpen = false;
     }
 
     // Update is called once per frame
@@ -23,6 +25,7 @@ public class HudConsole : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             inventory.SetActive(!inventory.activeSelf);
+            isInventoryOpen = !isInventoryOpen;
             MouseLockToggle();
             
         }

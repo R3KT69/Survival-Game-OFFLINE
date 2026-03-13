@@ -17,6 +17,7 @@ public class FpsHeadController : MonoBehaviour
     private Animator animator;
 
     public Quaternion rotationOffset;
+    public HudConsole hud;
 
     void Start()
     {
@@ -36,9 +37,14 @@ public class FpsHeadController : MonoBehaviour
 
     void Update()
     {
-        // Mouse input
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+        float mouseX = 0f;
+        float mouseY = 0f;
+
+        if (!hud.isInventoryOpen)
+        {
+            mouseX = Input.GetAxisRaw("Mouse X") * mouseSensitivity;
+            mouseY = Input.GetAxisRaw("Mouse Y") * mouseSensitivity;
+        }
 
         xAngle += mouseX;
         yAngle -= mouseY;
