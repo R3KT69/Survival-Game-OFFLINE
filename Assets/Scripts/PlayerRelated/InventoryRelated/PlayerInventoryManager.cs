@@ -45,7 +45,7 @@ public class PlayerInventoryManager : MonoBehaviour
 
         AssignItemInventory(2,3, "AMMO");
         AssignItemInventory(1,1, "AMMO");
-        AssignItemInventory(0,0, "PISTOL");
+        
 
         //Debug.Log(ItemLookup["PISTOL"].name);
         AssignItemHotbar(0, "PISTOL");
