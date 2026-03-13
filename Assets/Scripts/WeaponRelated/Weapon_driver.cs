@@ -12,6 +12,7 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
     public GameObject Aiming_R_Sight;
     public RigShifting rigShifting;
     public GameObject CommmonSound;
+    public GameObject bulletObject;
 
     public Vector3[] swingKeyframes = new Vector3[]
     {
@@ -23,7 +24,7 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
     //public float fireRate = 0.2f; // seconds between shots (now wepaon dependent)
     private float lastShotTime = 0f;
     private Coroutine recoilResetCoroutine;
-    public int ammoX, ammoY;
+    
     
     void Start()
     {
@@ -49,7 +50,16 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
             {
                 wep_gun_tryShoot();
             }
-            
+
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+            if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunAuto) 
+            {
+                wep_gun_tryShoot();
+            }
+                
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -58,6 +68,7 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
         }
     }
 
+    private int ammoX, ammoY;
     void reload_weapon()
     {
         if (currentWeapon == null) return;
@@ -120,6 +131,26 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
 
         Debug.Log($"Ammo used by {currentWeapon.name}");
         currentWeapon.runtimeAmmo -= 1;
+
+        if (bulletObject != null)
+        {
+            GameObject bullet = Instantiate(
+                bulletObject, 
+                currentWeapon.shootingPoint.position, 
+                currentWeapon.shootingPoint.rotation
+            );
+
+            Rigidbody rb = bullet.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.linearVelocity = currentWeapon.shootingPoint.forward * currentWeapon.wep_data.bulletVel;
+                rb.useGravity = true;
+                rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+            }
+
+            
+            Destroy(bullet, 5f);
+        }
         
         if (rigShifting.isAiming)
         {

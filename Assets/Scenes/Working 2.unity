@@ -5507,6 +5507,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -5162614647667346855, guid: 9df9d4cd98097bc4d9030f66d0886c15, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9df9d4cd98097bc4d9030f66d0886c15, type: 3}
       propertyPath: m_Name
       value: IndustrialBuildings
@@ -5515,9 +5519,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9df9d4cd98097bc4d9030f66d0886c15, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8533475307676034584, guid: 9df9d4cd98097bc4d9030f66d0886c15, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533475307676034584, guid: 9df9d4cd98097bc4d9030f66d0886c15, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46803,6 +46815,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4db03a1f8e033d4fa2a093c6a46cfe4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7032823420476312315, guid: e4db03a1f8e033d4fa2a093c6a46cfe4, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -53067,6 +53083,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 693802431998594076, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_Name
+      value: '[RIG]Hipfire(Twohanded)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 727154638938003210, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_Name
+      value: '[RIG]Hipfire(onehand)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 988363398876147204, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_Name
+      value: =======TwoHanded========
+      objectReference: {fileID: 0}
+    - target: {fileID: 1645835174310832152, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_Name
+      value: '[RIG]Aiming(onehand)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685601498927946074, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_Name
+      value: '[RIG]Aiming(Twohanded)'
+      objectReference: {fileID: 0}
     - target: {fileID: 2760789310335615696, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.000025351159
@@ -53107,6 +53143,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -178.111
       objectReference: {fileID: 0}
+    - target: {fileID: 4059874489005847989, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: bulletObject
+      value: 
+      objectReference: {fileID: 7559797203264936339, guid: 2f945c92a6f1cb54bba545d1e88d25be, type: 3}
     - target: {fileID: 6992881462544478299, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.00009459234
@@ -53146,6 +53186,14 @@ PrefabInstance:
     - target: {fileID: 6992881462544478299, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 18.063
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423844025719791541, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_Name
+      value: =======OneHanded========
+      objectReference: {fileID: 0}
+    - target: {fileID: 8633132301921338241, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_Name
+      value: ========OneHandedMisc=======
       objectReference: {fileID: 0}
     - target: {fileID: 9073733813393692534, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalPosition.x

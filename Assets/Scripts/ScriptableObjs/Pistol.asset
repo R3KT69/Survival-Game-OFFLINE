@@ -16,5 +16,6 @@ MonoBehaviour:
   weaponType: 0
   damage: 15
   fireRate: 0.2
+  bulletVel: 50
   magSize: 12
   weaponPrefab: {fileID: 1168103757531140553, guid: b3925c67bfe2da445a1dd0926b73f3bb, type: 3}

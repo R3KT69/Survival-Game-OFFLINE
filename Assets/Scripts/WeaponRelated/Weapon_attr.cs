@@ -4,6 +4,7 @@ using UnityEngine;
 public enum WEP_ANIM
 {
     Gun,
+    GunAuto,
     Melee
 }
 
@@ -14,6 +15,7 @@ public class Weapon_attr : ScriptableObject
     public WEP_ANIM weaponType;
     public float damage;
     public float fireRate;
+    public float bulletVel;
     public int magSize;
     public GameObject weaponPrefab;
 }
