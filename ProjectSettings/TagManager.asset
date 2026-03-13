@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Flesh
   - TPSCamera
+  - MAINPLAYER
   layers:
   - Default
   - TransparentFX

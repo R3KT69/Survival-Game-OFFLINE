@@ -45,6 +45,7 @@ public class PlayerInventoryManager : MonoBehaviour
 
         AssignItemInventory(2,3, "AMMO");
         AssignItemInventory(1,1, "AMMO");
+        AssignItemInventory(0,0, "PISTOL");
 
         //Debug.Log(ItemLookup["PISTOL"].name);
         AssignItemHotbar(0, "PISTOL");
@@ -93,7 +94,7 @@ public class PlayerInventoryManager : MonoBehaviour
     public void AssignItemInventory(int x, int y, string id)
     {
         if (x < 0 || y < 0) return; // Also not bigger than 5
-
+        
         inv[x,y] = SpawnItem(ItemInventory, ItemLookup[id].gameObject).GetComponent<Item>();
         
     }
