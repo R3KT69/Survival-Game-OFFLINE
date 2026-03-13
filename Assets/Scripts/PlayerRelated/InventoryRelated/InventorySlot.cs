@@ -18,14 +18,16 @@ public class InventorySlot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        /*
+        if (Input.GetKeyDown(KeyCode.I))
         {
             Debug.Log("Updating Inventory State");
             UpdateItemState();
-        }
+        }*/
+        UpdateItemStateInv();
     }
 
-    public void UpdateItemState()
+    public void UpdateItemStateInv()
     {
         int ind1 = int.Parse(gameObject.name[0].ToString())-1;
         int ind2 = int.Parse(gameObject.name[1].ToString())-1;
@@ -43,7 +45,7 @@ public class InventorySlot : MonoBehaviour
 
     void Start()
     {
-        UpdateItemState();
+        UpdateItemStateInv();
     }
 
 
