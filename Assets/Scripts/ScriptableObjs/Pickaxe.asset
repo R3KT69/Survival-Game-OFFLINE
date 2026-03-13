@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Pickaxe
   m_EditorClassIdentifier: 
   weaponName: pickaxe
-  weaponType: 1
+  weaponType: 2
   damage: 15
   fireRate: 0.5
+  bulletVel: 0
+  magSize: 0
   weaponPrefab: {fileID: 4866783582119382371, guid: 631dc62f13388d543b28f14a91d0edd2, type: 3}

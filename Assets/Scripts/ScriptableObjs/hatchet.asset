@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: hatchet
   m_EditorClassIdentifier: 
   weaponName: hatchet
-  weaponType: 1
+  weaponType: 2
   damage: 15
   fireRate: 0.5
+  bulletVel: 0
+  magSize: 0
   weaponPrefab: {fileID: 8891052501189980024, guid: 02a1d724120eb684fb527c51814b5b64, type: 3}
