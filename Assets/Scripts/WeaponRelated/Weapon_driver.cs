@@ -63,6 +63,32 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
                 
         }
 
+        // Normal Shotgun
+        if (Input.GetMouseButtonDown(0) && canShoot)
+        {
+            if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunScatter)
+            {
+                if (Time.time >= lastShotTime + currentWeapon.wep_data.fireRate)
+                {
+                    ShootWeapon_Scatter(pelletCount: 8, spreadAngle: 5f); 
+                    lastShotTime = Time.time;
+                }
+            }
+        }
+
+        // Auto Shotgun
+        if (Input.GetMouseButton(0) && canShoot)
+        {
+            if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunAutoScatter)
+            {
+                if (Time.time >= lastShotTime + currentWeapon.wep_data.fireRate)
+                {
+                    ShootWeapon_Scatter(pelletCount: 6, spreadAngle: 5f);
+                    lastShotTime = Time.time;
+                }
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             reload_weapon();
@@ -163,6 +189,61 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
         else
         {
             Aiming_R_Hip.GetComponent<Weapon_PrimaryIK_Anim_Manager>().SimulateRecoil(Random.Range(-75, -78), Random.Range(-2.5f, 2.5f), duration: 0.5f);
+            AddCameraRecoil(-2.5f, -5f, 0.3f);
+        }
+    }
+
+    void ShootWeapon_Scatter(int pelletCount, float spreadAngle)
+    {
+        if (currentWeapon.runtimeAmmo <= 0)
+        {
+            CommmonSound.GetComponent<AudioSource>().Play();
+            Debug.Log("Ammo finished");
+            return;
+        }
+
+        currentWeapon.TriggerShootingEffects();
+        currentWeapon.runtimeAmmo--;
+
+        for (int i = 0; i < pelletCount; i++)
+        {
+            if (bulletObject == null) continue;
+
+            Quaternion baseRot = currentWeapon.shootingPoint.rotation;
+
+            // Random spread for each pellet
+            float spreadX = Random.Range(-spreadAngle, spreadAngle);
+            float spreadY = Random.Range(-spreadAngle, spreadAngle);
+            Quaternion pelletRot = baseRot * Quaternion.Euler(spreadX, spreadY, 0f);
+
+            GameObject pellet = Instantiate(
+                bulletObject,
+                currentWeapon.shootingPoint.position,
+                pelletRot
+            );
+
+            Rigidbody rb = pellet.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.linearVelocity = pelletRot * Vector3.forward * currentWeapon.wep_data.bulletVel;
+                rb.useGravity = true;
+                rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+            }
+
+            Destroy(pellet, 5f);
+        }
+
+        // Recoil
+        if (rigShifting.isAiming)
+        {
+            Aiming_R_Sight.GetComponent<Weapon_PrimaryIK_Anim_Manager>()
+                .SimulateRecoil(Random.Range(-80, -80), 0, duration: 0.5f);
+            AddCameraRecoil(-1.5f, -2.5f, 0.3f);
+        }
+        else
+        {
+            Aiming_R_Hip.GetComponent<Weapon_PrimaryIK_Anim_Manager>()
+                .SimulateRecoil(Random.Range(-75, -78), Random.Range(-2.5f, 2.5f), duration: 0.5f);
             AddCameraRecoil(-2.5f, -5f, 0.3f);
         }
     }
