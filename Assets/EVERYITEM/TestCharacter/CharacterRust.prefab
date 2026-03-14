@@ -24,13 +24,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11996291503824133}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.45451954, y: 0.54167515, z: 0.54167515, w: 0.45451954}
+  m_LocalPosition: {x: -0.049, y: 0.96, z: -0.189}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9073733813393692534}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 280, z: -180}
 --- !u!1 &84899705450088222
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 6613579151504347343}
   - component: {fileID: 4430375414231254440}
   m_Layer: 6
-  m_Name: '[RIG]Hipfire(Shotgun)'
+  m_Name: '[RIG]Hipfire(Twohanded)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 3999817359588928264}
   - component: {fileID: 7232996345051733339}
   m_Layer: 6
-  m_Name: '[RIG]Hipfire(Pistol)'
+  m_Name: '[RIG]Hipfire(onehand)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -880,7 +880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6528471400453948480}
   m_Layer: 6
-  m_Name: =======SHOTGUN========
+  m_Name: =======TwoHanded========
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6282,7 +6282,7 @@ GameObject:
   - component: {fileID: 3236543203225517284}
   - component: {fileID: 1692298385932655029}
   m_Layer: 6
-  m_Name: '[RIG]Aiming(Pistol)'
+  m_Name: '[RIG]Aiming(onehand)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12216,7 +12216,7 @@ GameObject:
   - component: {fileID: 4640520095982946851}
   - component: {fileID: 6524505530085875892}
   m_Layer: 6
-  m_Name: '[RIG]Aiming(Shotgun)'
+  m_Name: '[RIG]Aiming(Twohanded)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12663,13 +12663,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2904219851528517545}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14451553, y: 0.008251909, z: 0.0043232786, w: 0.9894587}
-  m_LocalPosition: {x: -0.000000014305114, y: 0.030162595, z: 0.000000088214875}
+  m_LocalRotation: {x: 0.57802874, y: 0.009315268, z: 0.00010521338, w: 0.8159632}
+  m_LocalPosition: {x: -0.000025351159, y: 0.030223189, z: -0.000006992371}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7192901438140681647}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 109.38699, y: -177.354, z: -178.111}
 --- !u!1 &2908356674766061000
 GameObject:
   m_ObjectHideFlags: 0
@@ -17229,13 +17229,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6081328373182251745}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17781499, y: 0.012137283, z: 0.01258717, w: 0.9839086}
-  m_LocalPosition: {x: -0, y: 0.0268872, z: -0.00000004798174}
+  m_LocalRotation: {x: 0.67482597, y: 0.016978182, z: 0.004182432, w: 0.73776984}
+  m_LocalPosition: {x: -0.00009459234, y: 0.027049774, z: -0.00004778267}
   m_LocalScale: {x: 1, y: 0.9999999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1960076277980101024}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 84.617, y: 19.101, z: 18.063}
 --- !u!1 &6176810973631353437
 GameObject:
   m_ObjectHideFlags: 0
@@ -24715,6 +24715,7 @@ MonoBehaviour:
   cameraSocket: {fileID: 2389004682583948711}
   playerTransform: {fileID: 9073733813393692534}
   rotationOffset: {x: 0, y: 0, z: 0, w: 0}
+  hud: {fileID: 0}
 --- !u!1 &8309782924254534120
 GameObject:
   m_ObjectHideFlags: 0
@@ -24757,7 +24758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4103393457009343759}
   m_Layer: 6
-  m_Name: =======PISTOL========
+  m_Name: =======OneHanded========
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24937,7 +24938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4454395428618071976}
   m_Layer: 6
-  m_Name: ========OneHanded=======
+  m_Name: ========OneHandedMisc=======
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25583,7 +25584,7 @@ GameObject:
   - component: {fileID: 1394235701021672240}
   m_Layer: 6
   m_Name: CharacterRust
-  m_TagString: Untagged
+  m_TagString: MAINPLAYER
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25635,8 +25636,6 @@ MonoBehaviour:
   holding_point_tool: {fileID: 5231938171225581007}
   ItemInventory: {fileID: 8180071944636510322}
   weapon_Driver: {fileID: 4059874489005847989}
-  ammoX: 0
-  ammoY: 0
 --- !u!114 &5889008850087389375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25740,12 +25739,12 @@ MonoBehaviour:
   Aiming_R_Sight: {fileID: 2734304746549837278}
   rigShifting: {fileID: 1132071761430539381}
   CommmonSound: {fileID: 6176810973631353437}
+  bulletObject: {fileID: 7559797203264936339, guid: 2f945c92a6f1cb54bba545d1e88d25be, type: 3}
+  canShoot: 0
   swingKeyframes:
   - {x: -90, y: -180, z: 0}
   - {x: -30, y: -180, z: 0}
   - {x: -150, y: -180, z: 0}
-  ammoX: 0
-  ammoY: 0
 --- !u!114 &1132071761430539381
 MonoBehaviour:
   m_ObjectHideFlags: 0
