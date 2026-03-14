@@ -29478,6 +29478,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1132071761430539381, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: aimFOV
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 3709213884250109054, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -29486,6 +29490,18 @@ PrefabInstance:
       propertyPath: hud
       value: 
       objectReference: {fileID: 996810243}
+    - target: {fileID: 5449536148221381271, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.039
+      objectReference: {fileID: 0}
+    - target: {fileID: 5449536148221381271, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.009
+      objectReference: {fileID: 0}
+    - target: {fileID: 5449536148221381271, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.19
+      objectReference: {fileID: 0}
     - target: {fileID: 9073733813393692534, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.02562955
