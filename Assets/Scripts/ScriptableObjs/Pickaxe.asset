@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pickaxe
   m_EditorClassIdentifier: 
   weaponName: pickaxe
-  weaponType: 2
+  weaponType: 4
   damage: 15
   fireRate: 0.5
   bulletVel: 0

@@ -3,8 +3,10 @@ using UnityEngine;
 
 public enum WEP_ANIM
 {
-    Gun,
-    GunAuto,
+    Gun, // Single shot
+    GunAuto, // Automatic single shot
+    GunScatter, // Multi shot
+    GunAutoScatter, // Automatic multi shot
     Melee
 }
 
