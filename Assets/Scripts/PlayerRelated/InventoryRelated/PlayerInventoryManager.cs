@@ -69,7 +69,7 @@ public class PlayerInventoryManager : MonoBehaviour
         AssignItemHotbar(2, "RIFLE");
         AssignItemHotbar(3, "AUTOSHOT");
         AssignItemHotbar(4, "MP5");
-        AssignItemHotbar(5, "HATCHET");
+        AssignItemHotbar(5, "M4");
         
         
         /*
