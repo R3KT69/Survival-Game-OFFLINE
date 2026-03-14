@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class HudConsole : MonoBehaviour
 {
+    public Weapon_driver weapon_Driver;
     public List<Button> buttons;
     public TextMeshProUGUI hp;
     public TextMeshProUGUI ammo;
@@ -29,6 +30,7 @@ public class HudConsole : MonoBehaviour
             MouseLockToggle();
             
         }
+        weapon_Driver.canShoot = !isInventoryOpen;
     }
 
     void MouseLockToggle()

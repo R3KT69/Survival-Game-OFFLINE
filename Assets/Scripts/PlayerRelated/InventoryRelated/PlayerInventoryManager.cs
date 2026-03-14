@@ -16,11 +16,27 @@ public class PlayerInventoryManager : MonoBehaviour
     //public List<Item> AllTools; 
     //public List<Item> AllConsumeable; 
     //public List<Item> AllMeele; 
-    
-    
-
     private Dictionary<string, Item> ItemLookup;
-    
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            
+            PrintInventoryState();
+            //Debug.Log($"Ammo Count: {inv[0,0].runtimeCount}");
+            //get_ammo_index("AMMO", out ammoX, out ammoY);
+            //Debug.Log($"Ammo Index: X:{ammoX} Y: {ammoY}");
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            //PopulateInv(4,0, AllWeapons[0]);
+            //RemoveItemHotbar(0, AllWeapons[0]);
+
+            SwapHotbar(0, 3);
+        }
+    }
     
     void Awake()
     {
@@ -73,6 +89,18 @@ public class PlayerInventoryManager : MonoBehaviour
         
         PrintInventoryState();
     }
+
+    public void SwapHotbar(int currentIndex, int nextIndex)
+    {
+        if (currentIndex < 0 || currentIndex >= hotbar.Length) return;
+        if (nextIndex < 0 || nextIndex >= hotbar.Length) return;
+
+        Item temp = hotbar[currentIndex];
+        hotbar[currentIndex] = hotbar[nextIndex];
+        hotbar[nextIndex] = temp;
+    }
+
+    
 
     public void AssignItemHotbar(int index, string id)
     {
@@ -176,24 +204,8 @@ public class PlayerInventoryManager : MonoBehaviour
     }
 */
     // Update is called once per frame
-    public int ammoX, ammoY;
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            
-            PrintInventoryState();
-            //Debug.Log($"Ammo Count: {inv[0,0].runtimeCount}");
-            //get_ammo_index("AMMO", out ammoX, out ammoY);
-            Debug.Log($"Ammo Index: X:{ammoX} Y: {ammoY}");
-        }
+    //public int ammoX, ammoY;
 
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            //PopulateInv(4,0, AllWeapons[0]);
-            //RemoveItemHotbar(0, AllWeapons[0]);
-        }
-    }
 
     public void PrintInventoryState()
     {

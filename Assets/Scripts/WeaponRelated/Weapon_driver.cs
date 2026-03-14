@@ -13,6 +13,7 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
     public RigShifting rigShifting;
     public GameObject CommmonSound;
     public GameObject bulletObject;
+    public bool canShoot;
 
     public Vector3[] swingKeyframes = new Vector3[]
     {
@@ -40,7 +41,7 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
             return;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canShoot)
         {
             if (currentWeapon.wep_data.weaponType == WEP_ANIM.Melee)
             {
@@ -53,7 +54,7 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
 
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && canShoot)
         {
             if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunAuto) 
             {
