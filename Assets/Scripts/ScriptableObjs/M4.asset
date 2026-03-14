@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: M4
   weaponType: 1
   damage: 15
-  fireRate: 0.1
+  fireRate: 0.09
   bulletVel: 75
   magSize: 30
   weaponPrefab: {fileID: 6581710516491225315, guid: 7a3c1122962a4a24ca3889a978ab307e, type: 3}
