@@ -17380,6 +17380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundeffects:
   - {fileID: 8300000, guid: d454aa623524e9b4b8f2851486264d65, type: 3}
+  - {fileID: 8300000, guid: 46e2af8a01e89ce40bc9030308b2e321, type: 3}
 --- !u!1 &6205373567405456046
 GameObject:
   m_ObjectHideFlags: 0
@@ -25637,6 +25638,7 @@ MonoBehaviour:
   ItemInventory: {fileID: 8180071944636510322}
   weapon_Driver: {fileID: 4059874489005847989}
   arm: {fileID: 5397093063869325062}
+  commonAudio: {fileID: 6176810973631353437}
 --- !u!114 &5889008850087389375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25765,8 +25767,8 @@ MonoBehaviour:
   neckConstraint: {fileID: 7910109842552469667}
   switchKey: 324
   blendSpeed: 4
-  aimFOV: 50
-  defaultFOV: 75
+  aimFOV: 60
+  defaultFOV: 90
   isAiming: 0
 --- !u!95 &7246457875556755121
 Animator:

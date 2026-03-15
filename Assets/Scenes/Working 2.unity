@@ -15910,11 +15910,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1217053027 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6176810973631353437, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
-  m_PrefabInstance: {fileID: 335623196694885555}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1229125919
 GameObject:
   m_ObjectHideFlags: 0
@@ -29945,26 +29940,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 475153863235454388, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
-      propertyPath: commonAudio
-      value: 
-      objectReference: {fileID: 1217053027}
-    - target: {fileID: 1132071761430539381, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
-      propertyPath: aimFOV
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 1132071761430539381, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
-      propertyPath: defaultFOV
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5086448624379743956, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
-      propertyPath: soundeffects.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5086448624379743956, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
-      propertyPath: 'soundeffects.Array.data[1]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 46e2af8a01e89ce40bc9030308b2e321, type: 3}
     - target: {fileID: 5298657099145672105, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: hud
       value: 
