@@ -21,6 +21,7 @@ public class ChangingArm : MonoBehaviour
     public int MeeleIndex = 2;
     public int UnarmedIndex = 3;
     public int hotbarIndex;
+    public bool isUnarmed;
 
     void Awake()
     {
@@ -32,7 +33,9 @@ public class ChangingArm : MonoBehaviour
         //ChangeArm(0,playerInventoryManager.hotbar, WEP_Type.OneHandedGun, playerInventoryManager.hotbar[0].gameObject.GetComponent<Weapon_global>());
         for (int i = 0; i < playerInventoryManager.hotbar.Length; i++)
         {
-            if (playerInventoryManager.hotbar[i] != null)
+            if (playerInventoryManager.hotbar[i] == null) Unarmed();
+
+            else if (playerInventoryManager.hotbar[i] != null)
             {
                 playerInventoryManager.hotbar[i].gameObject.SetActive(false);
             }
@@ -44,17 +47,27 @@ public class ChangingArm : MonoBehaviour
         int keyInt = GetNumberKeyPressed(); // 1-6
         if (keyInt != -1)
         {
-            hotbarIndex = keyInt - 1; // map 1->0, 2->1
-            if (hotbarIndex >= 0 && hotbarIndex < playerInventoryManager.hotbar.Length)
+            int pressedIndex = keyInt - 1;
+
+            if (pressedIndex >= 0 && pressedIndex < playerInventoryManager.hotbar.Length)
             {
-                Item item = playerInventoryManager.hotbar[hotbarIndex];
+                // If same slot pressed again → go unarmed
+                if (pressedIndex == currentslot)
+                {
+                    Unarmed();
+                    
+                    currentslot = -1; // no weapon equipped
+                    return;
+                }
+
+                Item item = playerInventoryManager.hotbar[pressedIndex];
                 if (item != null && item.gameObject != null)
                 {
                     Weapon_global wg = item.gameObject.GetComponent<Weapon_global>();
                     if (wg != null)
                     {
-                        currentslot = hotbarIndex;
-                        ChangeArm(hotbarIndex, playerInventoryManager.hotbar, item.weaponType, wg);
+                        currentslot = pressedIndex;
+                        ChangeArm(pressedIndex, playerInventoryManager.hotbar, item.weaponType, wg);
                     }
                 }
             }
@@ -74,6 +87,17 @@ public class ChangingArm : MonoBehaviour
         }
 
         return -1; // no number key pressed
+    }
+
+    public void Unarmed()
+    {   
+        isUnarmed = true;
+        Debug.Log("Player is unarmed");
+        weapon_Driver.Aiming_R_Hip = Hip[2];
+        SetActiveRigGroup(UnarmedRigs);
+
+        rigShifting.rigA = null;
+        rigShifting.rigB = null;
     }
 
     // Update is called once per frame
@@ -154,10 +178,12 @@ public class ChangingArm : MonoBehaviour
             rigShifting.rigA = null;
             rigShifting.rigB = null;
         }  
-        else if (type == WEP_Type.Unarmed)
+        else
         {
+            /*
             GameObject EquippedObj = hotbar[indice]?.gameObject; // the object we want to equip
 
+            
             for (int i = 0; i < hotbar.Length; i++)
             {
                 if (hotbar[i] != null && hotbar[i].gameObject != null)
@@ -165,7 +191,7 @@ public class ChangingArm : MonoBehaviour
                     // Only enable the selected object, leave duplicates alone
                     hotbar[i].gameObject.SetActive(hotbar[i].gameObject == EquippedObj);
                 }
-            }
+            }*/
 
             weapon_Driver.Aiming_R_Hip = Hip[2];
 
@@ -175,7 +201,7 @@ public class ChangingArm : MonoBehaviour
             rigShifting.rigB = null;
         }
         
-        
+        isUnarmed = false;
     }
 
 
