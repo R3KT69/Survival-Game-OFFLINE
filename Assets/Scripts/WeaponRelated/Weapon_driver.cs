@@ -134,7 +134,7 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
         {
             if (currentWeapon.runtimeAmmo <= 0)
             {
-                CommmonSound.GetComponent<AudioSource>().Play();
+                EmptyMagSfx();
                 Debug.Log("Ammo finished");
                 return;
             }
@@ -193,11 +193,18 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
         }
     }
 
+    void EmptyMagSfx()
+    {
+        AudioClip audio = CommmonSound.GetComponent<AudioCollection>().soundeffects[0];
+        CommmonSound.GetComponent<AudioSource>().clip = audio;
+        CommmonSound.GetComponent<AudioSource>().Play();
+    }
+
     void ShootWeapon_Scatter(int pelletCount, float spreadAngle)
     {
         if (currentWeapon.runtimeAmmo <= 0)
         {
-            CommmonSound.GetComponent<AudioSource>().Play();
+            EmptyMagSfx();
             Debug.Log("Ammo finished");
             return;
         }

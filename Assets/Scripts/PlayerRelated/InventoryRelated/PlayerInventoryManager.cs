@@ -12,6 +12,7 @@ public class PlayerInventoryManager : MonoBehaviour
     public Transform ItemInventory;
     public Weapon_driver weapon_Driver;
     public ChangingArm arm;
+    public GameObject commonAudio;
     
     //public List<Item> AllWeapons; 
     //public List<Item> AllTools; 
@@ -77,12 +78,12 @@ public class PlayerInventoryManager : MonoBehaviour
         
 
         //Debug.Log(ItemLookup["PISTOL"].name);
-        //AssignItemHotbar(0, "PISTOL");
-        AssignItemHotbar(1, "SHOTGUN");
-        AssignItemHotbar(2, "RIFLE");
-        AssignItemHotbar(3, "AUTOSHOT");
-        AssignItemHotbar(4, "MP5");
-        AssignItemHotbar(5, "M4");
+        AssignItemHotbar(0, "PISTOL");
+        //AssignItemHotbar(1, "SHOTGUN");
+        //AssignItemHotbar(2, "RIFLE");
+        //AssignItemHotbar(3, "AUTOSHOT");
+        //AssignItemHotbar(4, "MP5");
+        //AssignItemHotbar(5, "M4");
         
         
         /*
@@ -103,7 +104,12 @@ public class PlayerInventoryManager : MonoBehaviour
         PrintInventoryState();
     }
 
-    
+    void PlayEquipSfx()
+    {
+        AudioClip audio = commonAudio.GetComponent<AudioCollection>().soundeffects[1];
+        commonAudio.GetComponent<AudioSource>().clip = audio;
+        commonAudio.GetComponent<AudioSource>().Play();
+    }
 
 
     // THE FOUR HORSEMEN OF INVENTORY SYSTEM STARTS HERE LOL
@@ -114,6 +120,8 @@ public class PlayerInventoryManager : MonoBehaviour
         Item temp = inv[x1, y1];
         inv[x1, y1] = inv[x2, y2];
         inv[x2, y2] = temp;
+
+        PlayEquipSfx();
     }
 
     // SECOND
@@ -125,6 +133,8 @@ public class PlayerInventoryManager : MonoBehaviour
         Item temp = hotbar[currentIndex];
         hotbar[currentIndex] = hotbar[nextIndex];
         hotbar[nextIndex] = temp;
+
+        PlayEquipSfx();
     }
 
     // THIRD    
@@ -163,6 +173,7 @@ public class PlayerInventoryManager : MonoBehaviour
         invItem.transform.SetParent(targetPoint);
 
         // Setting weapon pos
+        
         invItem.transform.localPosition = weapon_Driver.currentWeapon.position;
         invItem.transform.localRotation = Quaternion.Euler(weapon_Driver.currentWeapon.rotation);
         invItem.transform.localScale = weapon_Driver.currentWeapon.scale * Vector3.one;
@@ -181,6 +192,8 @@ public class PlayerInventoryManager : MonoBehaviour
         // Clear inventory slot if hotbar empty
         if (hotbarItem == null)
             inv[invX, invY] = null;
+
+        PlayEquipSfx();
     }
 
     private Transform GetHoldingPoint(Item item)
@@ -245,6 +258,8 @@ public class PlayerInventoryManager : MonoBehaviour
                 arm.ChangeArm(hotbarIndex, hotbar, hotbar[hotbarIndex].weaponType, weapon_Driver.currentWeapon);
             }
         }
+
+        PlayEquipSfx();
     }
     
 

@@ -34,8 +34,19 @@ public class InventorySlot : MonoBehaviour
 
         if (playerInventoryManager.inv[ind1,ind2] != null)
         {
-            UI_text.text = playerInventoryManager.inv[ind1,ind2].id; 
-            info.text = playerInventoryManager.inv[ind1,ind2].runtimeCount.ToString();
+            UI_text.text = playerInventoryManager.inv[ind1,ind2].id;
+
+            if (playerInventoryManager.inv[ind1,ind2].itemType == ItemType.Weapon)
+            {
+                string currentAmmo = playerInventoryManager.inv[ind1,ind2].GetComponent<Weapon_global>().runtimeAmmo.ToString();
+                string maxAmmo = playerInventoryManager.inv[ind1,ind2].GetComponent<Weapon_global>().wep_data.magSize.ToString();
+                info.text = $"{currentAmmo}/{maxAmmo}";
+            } else
+            {
+                string count = playerInventoryManager.inv[ind1,ind2].runtimeCount.ToString();
+                info.text = $"x{count}";
+            }
+            
         } else
         {
             UI_text.text = "Empty"; 

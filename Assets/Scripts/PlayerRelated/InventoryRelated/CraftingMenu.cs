@@ -1,9 +1,17 @@
+using TMPro;
 using UnityEngine;
 
 public class CraftingMenu : MonoBehaviour
 {
     public PlayerInventoryManager playerInventoryManager;
     public string ITEMID;
+    public TextMeshProUGUI UI_text;
+
+    void Start()
+    {
+        UI_text = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        UI_text.text = ITEMID;
+    }
 
     public void CraftItem()
     {
