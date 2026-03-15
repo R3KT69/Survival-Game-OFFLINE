@@ -41620,6 +41620,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1132071761430539381, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: aimFOV
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 1255693302681694764, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_Enabled
       value: 1

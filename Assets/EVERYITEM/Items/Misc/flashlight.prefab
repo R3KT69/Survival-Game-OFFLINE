@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1005023260213486598
 Light:
   m_ObjectHideFlags: 0
@@ -46,9 +46,9 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 25
-  m_SpotAngle: 67.3736
-  m_InnerSpotAngle: 35.571312
+  m_Range: 40
+  m_SpotAngle: 54.304207
+  m_InnerSpotAngle: 16.901224
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -83,7 +83,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
