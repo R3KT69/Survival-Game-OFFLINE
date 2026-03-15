@@ -25,7 +25,7 @@ public class UIHoverHelperHotbar : MonoBehaviour
                 // Only swap if a drag actually started
                 if (dragStartIndex != -1 && dragStartIndex != i)
                 {
-                    playerInventoryManager.SwapHotbar(dragStartIndex, i);
+                    playerInventoryManager.HotbarToHotbarSwap(dragStartIndex, i);
                 }
                 
                 dragStartIndex = -1; // reset

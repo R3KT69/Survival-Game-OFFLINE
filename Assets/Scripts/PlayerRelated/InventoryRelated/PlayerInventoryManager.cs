@@ -70,10 +70,10 @@ public class PlayerInventoryManager : MonoBehaviour
         //inv[0,0] = ItemLookup["AMMO"];
         //Debug.Log(inv[0,0].runtimeCount);
 
-        AssignItemInventory(2,3, "AMMO");
-        AssignItemInventory(1,1, "AMMO");
-        AssignItemInventory(0,0, "M4");
-        AssignItemInventory(0,1, "PISTOL");
+        //AssignItemInventory(2,3, "AMMO");
+        //AssignItemInventory(1,1, "AMMO");
+        //AssignItemInventory(0,0, "M4");
+        //AssignItemInventory(0,1, "PISTOL");
         
 
         //Debug.Log(ItemLookup["PISTOL"].name);
@@ -103,7 +103,21 @@ public class PlayerInventoryManager : MonoBehaviour
         PrintInventoryState();
     }
 
-    public void SwapHotbar(int currentIndex, int nextIndex)
+    
+
+
+    // THE FOUR HORSEMEN OF INVENTORY SYSTEM STARTS HERE LOL
+
+    // FIRST
+    public void InvToInvSwap(int x1, int y1, int x2, int y2)
+    {
+        Item temp = inv[x1, y1];
+        inv[x1, y1] = inv[x2, y2];
+        inv[x2, y2] = temp;
+    }
+
+    // SECOND
+    public void HotbarToHotbarSwap(int currentIndex, int nextIndex)
     {
         if (currentIndex < 0 || currentIndex >= hotbar.Length) return;
         if (nextIndex < 0 || nextIndex >= hotbar.Length) return;
@@ -113,13 +127,7 @@ public class PlayerInventoryManager : MonoBehaviour
         hotbar[nextIndex] = temp;
     }
 
-    public void InvToInvSwap(int x1, int y1, int x2, int y2)
-    {
-        Item temp = inv[x1, y1];
-        inv[x1, y1] = inv[x2, y2];
-        inv[x2, y2] = temp;
-    }
-
+    // THIRD    
     public void InvToHotbarSwap(int hotbarIndex, int invX, int invY)
     {
         Item invItem = inv[invX, invY];           // Item in inventory
@@ -187,6 +195,57 @@ public class PlayerInventoryManager : MonoBehaviour
     }
 
     
+    // Fourth
+    public void HotbarToInvSwap(int hotbarIndex, int invX, int invY)
+    {
+        Item hotbarItem = hotbar[hotbarIndex];     // Item in hotbar
+        Item invItem = inv[invX, invY];            // Item in inventory
+
+        if (hotbarItem == null)
+        {
+            Debug.LogWarning("Hotbar slot is empty!");
+            return;
+        }
+
+        // Swap parent/position for the inventory item
+        if (invItem != null)
+        {
+            // Move the current inventory item to hotbar
+            weapon_Driver.currentWeapon = invItem.GetComponent<Weapon_global>();
+
+            Transform targetPoint = GetHoldingPoint(invItem);
+            invItem.transform.SetParent(targetPoint);
+
+            invItem.transform.localPosition = weapon_Driver.currentWeapon.position;
+            invItem.transform.localRotation = Quaternion.Euler(weapon_Driver.currentWeapon.rotation);
+            invItem.transform.localScale = weapon_Driver.currentWeapon.scale * Vector3.one;
+            invItem.gameObject.SetActive(true);
+
+            hotbar[hotbarIndex] = invItem;
+            invItem.gameObject.SetActive(false);
+        }
+        else
+        {
+            hotbar[hotbarIndex] = null;
+        }
+
+        // Move hotbar item to inventory
+        hotbarItem.transform.SetParent(ItemInventory);
+        hotbarItem.transform.localPosition = Vector3.zero;
+        hotbarItem.transform.localRotation = Quaternion.identity;
+        hotbarItem.transform.localScale = Vector3.one;
+
+        inv[invX, invY] = hotbarItem;
+        hotbarItem.gameObject.SetActive(false);
+
+        if (arm.currentslot == hotbarIndex)
+        {
+            if (hotbar[hotbarIndex] != null)
+            {
+                arm.ChangeArm(hotbarIndex, hotbar, hotbar[hotbarIndex].weaponType, weapon_Driver.currentWeapon);
+            }
+        }
+    }
     
 
     public void AssignItemHotbar(int index, string id)
