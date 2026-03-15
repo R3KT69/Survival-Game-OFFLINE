@@ -35,7 +35,17 @@ public class PlayerInventoryManager : MonoBehaviour
             //PopulateInv(4,0, AllWeapons[0]);
             //RemoveItemHotbar(0, AllWeapons[0]);
 
+            //InvToHotbarSwap(0, 0, 0);
+            InvToInvSwap(0,0, 0,1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            //PopulateInv(4,0, AllWeapons[0]);
+            //RemoveItemHotbar(0, AllWeapons[0]);
+
             InvToHotbarSwap(0, 0, 0);
+            //InvToInvSwap(0,0, 0,1);
         }
     }
     
@@ -63,6 +73,7 @@ public class PlayerInventoryManager : MonoBehaviour
         AssignItemInventory(2,3, "AMMO");
         AssignItemInventory(1,1, "AMMO");
         AssignItemInventory(0,0, "M4");
+        AssignItemInventory(0,1, "PISTOL");
         
 
         //Debug.Log(ItemLookup["PISTOL"].name);
@@ -100,6 +111,13 @@ public class PlayerInventoryManager : MonoBehaviour
         Item temp = hotbar[currentIndex];
         hotbar[currentIndex] = hotbar[nextIndex];
         hotbar[nextIndex] = temp;
+    }
+
+    public void InvToInvSwap(int x1, int y1, int x2, int y2)
+    {
+        Item temp = inv[x1, y1];
+        inv[x1, y1] = inv[x2, y2];
+        inv[x2, y2] = temp;
     }
 
     public void InvToHotbarSwap(int hotbarIndex, int invX, int invY)
@@ -168,6 +186,7 @@ public class PlayerInventoryManager : MonoBehaviour
         };
     }
 
+    
     
 
     public void AssignItemHotbar(int index, string id)
