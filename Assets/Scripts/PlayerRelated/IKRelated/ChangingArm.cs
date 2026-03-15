@@ -15,6 +15,7 @@ public class ChangingArm : MonoBehaviour
     public List<Rig> ShotgunRigs;
     public List<Rig> ToolsRigs;
     public List<Rig> UnarmedRigs;
+    public int currentslot;
     
     //public List<GameObject> weapons;
     public int MeeleIndex = 2;
@@ -28,7 +29,7 @@ public class ChangingArm : MonoBehaviour
 
     void Start()
     {
-        ChangeArm(0,playerInventoryManager.hotbar, WEP_Type.OneHandedGun, playerInventoryManager.hotbar[0].gameObject.GetComponent<Weapon_global>());
+        //ChangeArm(0,playerInventoryManager.hotbar, WEP_Type.OneHandedGun, playerInventoryManager.hotbar[0].gameObject.GetComponent<Weapon_global>());
     }
 
     void Update()
@@ -45,6 +46,7 @@ public class ChangingArm : MonoBehaviour
                     Weapon_global wg = item.gameObject.GetComponent<Weapon_global>();
                     if (wg != null)
                     {
+                        currentslot = hotbarIndex;
                         ChangeArm(hotbarIndex, playerInventoryManager.hotbar, item.weaponType, wg);
                     }
                 }
@@ -68,7 +70,7 @@ public class ChangingArm : MonoBehaviour
     }
 
     // Update is called once per frame
-    void ChangeArm(int indice, Item[] hotbar, WEP_Type type, Weapon_global weapon)
+    public void ChangeArm(int indice, Item[] hotbar, WEP_Type type, Weapon_global weapon)
     {
         if (type == WEP_Type.OneHandedGun) 
         {

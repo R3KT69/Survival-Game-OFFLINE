@@ -29478,6 +29478,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 475153863235454388, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: arm
+      value: 
+      objectReference: {fileID: 7721495254993307811}
     - target: {fileID: 1132071761430539381, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: aimFOV
       value: 50
@@ -29742,6 +29746,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eeb3bfd46ff617b49ba47fc83041a5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7721495254993307811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5397093063869325062, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+  m_PrefabInstance: {fileID: 335623196694885555}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44779cba27dafe64190d5a6e0b3c1b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

@@ -11,6 +11,7 @@ public class PlayerInventoryManager : MonoBehaviour
     public Transform holding_point_tool;
     public Transform ItemInventory;
     public Weapon_driver weapon_Driver;
+    public ChangingArm arm;
     
     //public List<Item> AllWeapons; 
     //public List<Item> AllTools; 
@@ -34,7 +35,7 @@ public class PlayerInventoryManager : MonoBehaviour
             //PopulateInv(4,0, AllWeapons[0]);
             //RemoveItemHotbar(0, AllWeapons[0]);
 
-            SwapHotbar(0, 3);
+            InvToHotbarSwap(0, 0, 0);
         }
     }
     
@@ -61,10 +62,11 @@ public class PlayerInventoryManager : MonoBehaviour
 
         AssignItemInventory(2,3, "AMMO");
         AssignItemInventory(1,1, "AMMO");
+        AssignItemInventory(0,0, "M4");
         
 
         //Debug.Log(ItemLookup["PISTOL"].name);
-        AssignItemHotbar(0, "PISTOL");
+        //AssignItemHotbar(0, "PISTOL");
         AssignItemHotbar(1, "SHOTGUN");
         AssignItemHotbar(2, "RIFLE");
         AssignItemHotbar(3, "AUTOSHOT");
@@ -98,6 +100,72 @@ public class PlayerInventoryManager : MonoBehaviour
         Item temp = hotbar[currentIndex];
         hotbar[currentIndex] = hotbar[nextIndex];
         hotbar[nextIndex] = temp;
+    }
+
+    public void InvToHotbarSwap(int hotbarIndex, int invX, int invY)
+    {
+        Item invItem = inv[invX, invY];           // Item in inventory
+        Item hotbarItem = hotbar[hotbarIndex];   // Currently equipped item in hotbar
+
+        if (invItem == null)
+        {
+            Debug.LogWarning("Inventory slot is empty!");
+            return;
+        }
+
+        // Swap parent/position for the hotbar item
+        if (hotbarItem != null)
+        {
+            // Move the current hotbar weapon back to inventory
+            hotbarItem.transform.SetParent(ItemInventory);
+            hotbarItem.transform.localPosition = Vector3.zero;
+            hotbarItem.transform.localRotation = Quaternion.identity;
+            hotbarItem.transform.localScale = Vector3.one;
+
+            inv[invX, invY] = hotbarItem; // Place it in inventory
+            hotbarItem.gameObject.SetActive(false); // deactivate while in inventory
+        }
+        else
+        {
+            inv[invX, invY] = null;
+        }
+
+        // Move inventory item to hotbar
+        weapon_Driver.currentWeapon = invItem.GetComponent<Weapon_global>();
+
+        Transform targetPoint = GetHoldingPoint(invItem);
+        invItem.transform.SetParent(targetPoint);
+
+        // Setting weapon pos
+        invItem.transform.localPosition = weapon_Driver.currentWeapon.position;
+        invItem.transform.localRotation = Quaternion.Euler(weapon_Driver.currentWeapon.rotation);
+        invItem.transform.localScale = weapon_Driver.currentWeapon.scale * Vector3.one;
+        invItem.gameObject.SetActive(true);
+
+        hotbar[hotbarIndex] = invItem;
+        
+        invItem.gameObject.SetActive(false);
+
+        if (arm.currentslot == hotbarIndex)
+        {
+            arm.ChangeArm(hotbarIndex, hotbar, hotbar[hotbarIndex].weaponType, weapon_Driver.currentWeapon); // if changed the current equipped weapon
+        }
+        //arm.ChangeArm(hotbarIndex, hotbar, hotbar[hotbarIndex].weaponType, weapon_Driver.currentWeapon);
+
+        // Clear inventory slot if hotbar empty
+        if (hotbarItem == null)
+            inv[invX, invY] = null;
+    }
+
+    private Transform GetHoldingPoint(Item item)
+    {
+        return item.weaponType switch
+        {
+            WEP_Type.OneHandedGun => holding_point_onehanded,
+            WEP_Type.TwoHandedGun => holding_point_twohanded,
+            WEP_Type.OneHandedTool => holding_point_tool,
+            _ => holding_point_onehanded
+        };
     }
 
     
