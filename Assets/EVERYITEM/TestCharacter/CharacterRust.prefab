@@ -14750,7 +14750,7 @@ Transform:
   m_GameObject: {fileID: 4090981215872291459}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2832048, y: -0.37520576, z: -0.7923141, w: 0.388914}
-  m_LocalPosition: {x: -0.0491, y: -0.0068, z: 0.1865}
+  m_LocalPosition: {x: -0.039, y: 0.009, z: 0.19}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25636,6 +25636,7 @@ MonoBehaviour:
   holding_point_tool: {fileID: 5231938171225581007}
   ItemInventory: {fileID: 8180071944636510322}
   weapon_Driver: {fileID: 4059874489005847989}
+  arm: {fileID: 5397093063869325062}
 --- !u!114 &5889008850087389375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25691,6 +25692,7 @@ MonoBehaviour:
   - {fileID: 6024643849461401428}
   UnarmedRigs:
   - {fileID: 4571897294118406330}
+  currentslot: 0
   MeeleIndex: 2
   UnarmedIndex: 3
   hotbarIndex: 0
@@ -25763,7 +25765,7 @@ MonoBehaviour:
   neckConstraint: {fileID: 7910109842552469667}
   switchKey: 324
   blendSpeed: 4
-  aimFOV: 60
+  aimFOV: 50
   defaultFOV: 75
   isAiming: 0
 --- !u!95 &7246457875556755121

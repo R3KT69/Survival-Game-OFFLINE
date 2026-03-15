@@ -14546,7 +14546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7970545079263213596
 Transform:
   m_ObjectHideFlags: 0
@@ -14569,7 +14569,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5057481071823067800}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0.8113208, g: 0.59548086, b: 0.3099858, a: 1}
@@ -14705,7 +14705,7 @@ MonoBehaviour:
   wep_animator: {fileID: 0}
   wep_audioSource: {fileID: 6177860149276841145}
   wep_data: {fileID: 11400000, guid: 3713be7d52bb316498cc2ce922377190, type: 2}
-  runtimeAmmo: 0
+  runtimeAmmo: 28
   type: 
   lightDuration: 0.1
   position: {x: 0, y: 0, z: 0}

@@ -141,7 +141,7 @@ public class PlayerInventoryManager : MonoBehaviour
             hotbarItem.transform.localScale = Vector3.one;
 
             inv[invX, invY] = hotbarItem; // Place it in inventory
-            hotbarItem.gameObject.SetActive(false); // deactivate while in inventory
+            //hotbarItem.gameObject.SetActive(false); // deactivate while in inventory
         }
         else
         {

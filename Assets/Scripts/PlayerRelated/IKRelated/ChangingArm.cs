@@ -30,6 +30,13 @@ public class ChangingArm : MonoBehaviour
     void Start()
     {
         //ChangeArm(0,playerInventoryManager.hotbar, WEP_Type.OneHandedGun, playerInventoryManager.hotbar[0].gameObject.GetComponent<Weapon_global>());
+        for (int i = 0; i < playerInventoryManager.hotbar.Length; i++)
+        {
+            if (playerInventoryManager.hotbar[i] != null)
+            {
+                playerInventoryManager.hotbar[i].gameObject.SetActive(false);
+            }
+        }
     }
 
     void Update()
