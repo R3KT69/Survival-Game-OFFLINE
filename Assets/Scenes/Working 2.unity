@@ -29952,6 +29952,14 @@ PrefabInstance:
       propertyPath: m_Data.m_TargetRotationWeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2166609999016440992, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.967
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166609999016440992, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.676
+      objectReference: {fileID: 0}
     - target: {fileID: 2847023011141072751, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -29960,6 +29968,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4059874489005847989, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: changingArm
+      value: 
+      objectReference: {fileID: 7721495254993307811}
     - target: {fileID: 4435570861620451699, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -29982,43 +29994,43 @@ PrefabInstance:
       objectReference: {fileID: 996810243}
     - target: {fileID: 6319362338973861592, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1241066
+      value: -2.09
       objectReference: {fileID: 0}
     - target: {fileID: 6319362338973861592, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9472356
+      value: 1.042
       objectReference: {fileID: 0}
     - target: {fileID: 6319362338973861592, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.4
+      value: -5.389
       objectReference: {fileID: 0}
     - target: {fileID: 6319362338973861592, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.06989755
+      value: -0.1900196
       objectReference: {fileID: 0}
     - target: {fileID: 6319362338973861592, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.013608874
+      value: 0.23740558
       objectReference: {fileID: 0}
     - target: {fileID: 6319362338973861592, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.26265582
+      value: -0.36830267
       objectReference: {fileID: 0}
     - target: {fileID: 6319362338973861592, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.96225834
+      value: -0.8785695
       objectReference: {fileID: 0}
     - target: {fileID: 6319362338973861592, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 210.49
+      value: 227.509
       objectReference: {fileID: 0}
     - target: {fileID: 6319362338973861592, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180.7
+      value: 155.773
       objectReference: {fileID: 0}
     - target: {fileID: 6319362338973861592, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -8.5
+      value: -13.615997
       objectReference: {fileID: 0}
     - target: {fileID: 9073733813393692534, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30260,6 +30272,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eeb3bfd46ff617b49ba47fc83041a5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7721495254993307811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5397093063869325062, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+  m_PrefabInstance: {fileID: 335623196694885555}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44779cba27dafe64190d5a6e0b3c1b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

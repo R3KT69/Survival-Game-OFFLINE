@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 public class Weapon_driver : MonoBehaviour // Shooting Script
 {
     public PlayerInventoryManager playerInventoryManager;
+    public ChangingArm changingArm;
     public Weapon_global currentWeapon;
     public FpsHeadController fpsHeadController;
     public GameObject Aiming_R_Hip;
@@ -41,50 +42,53 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
             return;
         }
 
-        if (Input.GetMouseButtonDown(0) && canShoot)
+        if (canShoot && !changingArm.isUnarmed)
         {
-            if (currentWeapon.wep_data.weaponType == WEP_ANIM.Melee)
+            if (Input.GetMouseButtonDown(0))
             {
-                wep_meele_tryShoot();
-            }
-            else if (currentWeapon.wep_data.weaponType == WEP_ANIM.Gun)
-            {
-                wep_gun_tryShoot();
-            }
-
-        }
-
-        if (Input.GetMouseButton(0) && canShoot)
-        {
-            if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunAuto) 
-            {
-                wep_gun_tryShoot();
-            }
-                
-        }
-
-        // Normal Shotgun
-        if (Input.GetMouseButtonDown(0) && canShoot)
-        {
-            if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunScatter)
-            {
-                if (Time.time >= lastShotTime + currentWeapon.wep_data.fireRate)
+                if (currentWeapon.wep_data.weaponType == WEP_ANIM.Melee)
                 {
-                    ShootWeapon_Scatter(pelletCount: 8, spreadAngle: 5f); 
-                    lastShotTime = Time.time;
+                    wep_meele_tryShoot();
+                }
+                else if (currentWeapon.wep_data.weaponType == WEP_ANIM.Gun)
+                {
+                    wep_gun_tryShoot();
+                }
+
+            }
+
+            if (Input.GetMouseButton(0))
+            {
+                if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunAuto) 
+                {
+                    wep_gun_tryShoot();
+                }
+                    
+            }
+
+            // Normal Shotgun
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunScatter)
+                {
+                    if (Time.time >= lastShotTime + currentWeapon.wep_data.fireRate)
+                    {
+                        ShootWeapon_Scatter(pelletCount: 8, spreadAngle: 5f); 
+                        lastShotTime = Time.time;
+                    }
                 }
             }
-        }
 
-        // Auto Shotgun
-        if (Input.GetMouseButton(0) && canShoot)
-        {
-            if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunAutoScatter)
+            // Auto Shotgun
+            if (Input.GetMouseButton(0))
             {
-                if (Time.time >= lastShotTime + currentWeapon.wep_data.fireRate)
+                if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunAutoScatter)
                 {
-                    ShootWeapon_Scatter(pelletCount: 6, spreadAngle: 5f);
-                    lastShotTime = Time.time;
+                    if (Time.time >= lastShotTime + currentWeapon.wep_data.fireRate)
+                    {
+                        ShootWeapon_Scatter(pelletCount: 6, spreadAngle: 5f);
+                        lastShotTime = Time.time;
+                    }
                 }
             }
         }

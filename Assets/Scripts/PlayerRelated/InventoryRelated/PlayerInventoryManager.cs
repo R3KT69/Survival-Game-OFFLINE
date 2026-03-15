@@ -237,9 +237,10 @@ public class PlayerInventoryManager : MonoBehaviour
             hotbar[hotbarIndex] = invItem;
             invItem.gameObject.SetActive(false);
         }
-        else
+        else // if hotbar becomes empty after dragging
         {
             hotbar[hotbarIndex] = null;
+            arm.Unarmed();
         }
 
         // Move hotbar item to inventory
