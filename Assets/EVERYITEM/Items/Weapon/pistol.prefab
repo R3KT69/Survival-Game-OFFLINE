@@ -4874,6 +4874,7 @@ GameObject:
   - component: {fileID: 4465643582563892598}
   - component: {fileID: 7540200984649625143}
   - component: {fileID: 5890041859441773218}
+  - component: {fileID: 3632162123621607075}
   m_Layer: 0
   m_Name: pistol
   m_TagString: Untagged
@@ -5080,6 +5081,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemHolder: 
   Instance: 0
+--- !u!65 &3632162123621607075
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3011614421415145807}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.11599401, y: 0.1954445, z: 0.33932203}
+  m_Center: {x: 0.000000014901161, y: -0.044022724, z: 0.027915984}
 --- !u!1 &3111264741240496798
 GameObject:
   m_ObjectHideFlags: 0
