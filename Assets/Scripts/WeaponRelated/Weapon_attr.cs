@@ -19,5 +19,5 @@ public class Weapon_attr : ScriptableObject
     public float fireRate;
     public float bulletVel;
     public int magSize;
-    public GameObject weaponPrefab;
+    //public GameObject weaponPrefab;
 }

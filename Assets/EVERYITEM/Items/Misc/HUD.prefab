@@ -12350,7 +12350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInventoryManager: {fileID: 0}
-  ITEMID: RIFLE
+  ITEMID: MACHETE
   UI_text: {fileID: 0}
 --- !u!1 &3652402040977943489
 GameObject:
