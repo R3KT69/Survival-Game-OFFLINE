@@ -7838,13 +7838,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946001445}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.4460149, y: -0.22957525, z: 0.11950932, w: 0.85678667}
   m_LocalPosition: {x: 5.209773, y: 4.525268, z: -5.86515}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 55, y: -30, z: 0}
 --- !u!1 &1956411254
 GameObject:
   m_ObjectHideFlags: 0
@@ -8800,14 +8800,6 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
-    - target: {fileID: 1480508331971371912, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1480508331971371912, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -13.4
-      objectReference: {fileID: 0}
     - target: {fileID: 1511532819127379125, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: autoshot
   weaponType: 3
   damage: 15
-  fireRate: 0.2
+  fireRate: 0.25
   bulletVel: 50
   magSize: 8
   weaponPrefab: {fileID: 6810826342680241524, guid: 0b981673e3286e04787b9cb64d638b20, type: 3}
