@@ -52,8 +52,10 @@ public class Weapon_global : MonoBehaviour
 
         if (wep_audioSource != null)
         {
-            wep_audioSource.Play();
+            AudioSource.PlayClipAtPoint(wep_audioSource.clip, transform.position);
         }
+
+       
 
     }
     
