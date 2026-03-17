@@ -54,10 +54,10 @@ public class PickupItem : MonoBehaviour
                 int savedAmmo = pickableItem.gameObject.GetComponent<Weapon_global>().runtimeAmmo;
                 assignedWeapon.runtimeAmmo = savedAmmo;
                 Debug.Log($"Pickup: after pickup {pickableItem.name}");
-
+                
                 arm.ChangeArm(emptyIndex, inv.hotbar, inv.hotbar[emptyIndex].weaponType, assignedWeapon);
                 arm.currentslot = emptyIndex;
-                
+
                 Destroy(hit.collider.gameObject);
             }
         }

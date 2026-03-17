@@ -53,7 +53,7 @@ public class ChangingArm : MonoBehaviour
 
             if (pressedIndex >= 0 && pressedIndex < playerInventoryManager.hotbar.Length)
             {
-                // If same slot pressed again → go unarmed
+                // If same slot pressed again
                 if (pressedIndex == currentslot)
                 {
                     Unarmed();

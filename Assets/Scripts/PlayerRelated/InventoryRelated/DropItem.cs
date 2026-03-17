@@ -42,12 +42,9 @@ public class DropItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inv.hotbar[arm.currentslot] != null)
+        if (Input.GetKeyDown(KeyCode.G) && inv.hotbar[arm.currentslot] != null)
         {
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                DropItemCurrent();
-            }
+            DropItemCurrent();
         }
         
     }
