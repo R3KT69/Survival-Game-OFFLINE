@@ -61528,7 +61528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c0c705330e265a45a2e648029c54c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInventoryManager: {fileID: 7721495254993307798}
+  inv: {fileID: 7721495254993307798}
   weapon_Driver: {fileID: 7721495254993307804}
   arm: {fileID: 7721495254993307811}
   playerLayer:

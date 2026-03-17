@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DropItem : MonoBehaviour
 {
-    public PlayerInventoryManager playerInventoryManager;
+    public PlayerInventoryManager inv;
     public Weapon_driver weapon_Driver;
     public ChangingArm arm;
     public LayerMask playerLayer;
@@ -42,9 +42,13 @@ public class DropItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (inv.hotbar[arm.currentslot] != null)
         {
-            DropItemCurrent();
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                DropItemCurrent();
+            }
         }
+        
     }
 }

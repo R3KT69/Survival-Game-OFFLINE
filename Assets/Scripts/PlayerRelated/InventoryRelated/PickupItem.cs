@@ -56,7 +56,8 @@ public class PickupItem : MonoBehaviour
                 Debug.Log($"Pickup: after pickup {pickableItem.name}");
 
                 arm.ChangeArm(emptyIndex, inv.hotbar, inv.hotbar[emptyIndex].weaponType, assignedWeapon);
-
+                arm.currentslot = emptyIndex;
+                
                 Destroy(hit.collider.gameObject);
             }
         }
