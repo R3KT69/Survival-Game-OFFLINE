@@ -21,6 +21,10 @@ public class Crouching : MonoBehaviour
     public float default_arm;
     public float crouched_arm;
 
+    private float hipArmTargetDistance;
+    private float aimArmTargetDistance;
+    public float armLerpSpeed_crouch = 5f; 
+
     // Targets
     private float targetHeight;
     private float currentWeight;
@@ -48,16 +52,17 @@ public class Crouching : MonoBehaviour
             {
                 targetHeight = originalHeight * crouchHeightFactor;
                 targetOffset = crouchOffset;
-                hipArmAdjustment.forwardDistance = crouched_arm;
-                aimArmAdjustment.forwardDistance = crouched_arm;
+
+                hipArmTargetDistance = crouched_arm;
+                aimArmTargetDistance = crouched_arm;
             }
             else
             {
                 targetHeight = originalHeight;
                 targetOffset = Vector3.zero;
 
-                hipArmAdjustment.forwardDistance = default_arm;
-                aimArmAdjustment.forwardDistance = default_arm;
+                hipArmTargetDistance = default_arm;
+                aimArmTargetDistance = default_arm;
             }
         }
 
@@ -78,5 +83,19 @@ public class Crouching : MonoBehaviour
 
             constraint.data = data;
         }
+
+        if (hipArmAdjustment != null)
+            hipArmAdjustment.forwardDistance = Mathf.Lerp(
+                hipArmAdjustment.forwardDistance,
+                hipArmTargetDistance,
+                Time.deltaTime * armLerpSpeed_crouch
+            );
+
+        if (aimArmAdjustment != null)
+            aimArmAdjustment.forwardDistance = Mathf.Lerp(
+                aimArmAdjustment.forwardDistance,
+                aimArmTargetDistance,
+                Time.deltaTime * armLerpSpeed_crouch
+            );
     }
 }

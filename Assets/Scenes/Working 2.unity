@@ -65194,6 +65194,10 @@ PrefabInstance:
       propertyPath: m_Data.m_TargetRotationWeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2010555787345648716, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_Name
+      value: '[aim]aimdriver'
+      objectReference: {fileID: 0}
     - target: {fileID: 2166609999016440992, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.967
@@ -65237,6 +65241,10 @@ PrefabInstance:
     - target: {fileID: 4435570861620451699, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: forwardDistance
       value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279116832194674972, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_Name
+      value: '[hip]aimdriver'
       objectReference: {fileID: 0}
     - target: {fileID: 5298657099145672105, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: hud
