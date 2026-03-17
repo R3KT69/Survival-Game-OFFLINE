@@ -15,6 +15,15 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
     public GameObject CommmonSound;
     public GameObject bulletObject;
     public bool canShoot;
+    public bool isShooting;
+
+    public Vector3 reload_offset_twohand;
+    public Vector3 reload_offset_onehand;
+
+    public MultiRotationConstraint onehandedIK;
+    public MultiRotationConstraint twohandedIK;
+
+    
 
     public Vector3[] swingKeyframes = new Vector3[]
     {
@@ -33,9 +42,22 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
         rigShifting = GetComponent<RigShifting>();
     }
 
+    private IEnumerator ShootingLockCoroutine(float duration)
+    {
+        isShooting = true;
+
+        // Wait for the specified duration
+        yield return new WaitForSeconds(duration);
+
+        // Reset
+        isShooting = false;
+    }
+
 
     void Update()
     {
+        
+
         if (currentWeapon == null)
         {
             //Debug.Log("Current weapon not found/destroyed/dropped");
@@ -50,6 +72,7 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
 
         if (canShoot && !changingArm.isUnarmed)
         {
+            
             if (Input.GetMouseButtonDown(0))
             {
                 if (currentWeapon.wep_data.weaponType == WEP_ANIM.Melee)
@@ -58,16 +81,21 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
                 }
                 else if (currentWeapon.wep_data.weaponType == WEP_ANIM.Gun)
                 {
+                    isShooting = true;
                     wep_gun_tryShoot();
+                    StartCoroutine(ShootingLockCoroutine(1f));
                 }
 
             }
 
+            // Automatic wep
             if (Input.GetMouseButton(0))
             {
                 if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunAuto) 
                 {
+                    isShooting = true;
                     wep_gun_tryShoot();
+                    StartCoroutine(ShootingLockCoroutine(1f));
                 }
                     
             }
@@ -77,11 +105,15 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
             {
                 if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunScatter)
                 {
+                    isShooting = true;
+                    
                     if (Time.time >= lastShotTime + currentWeapon.wep_data.fireRate)
                     {
                         ShootWeapon_Scatter(pelletCount: 8, spreadAngle: 5f); 
                         lastShotTime = Time.time;
                     }
+
+                    StartCoroutine(ShootingLockCoroutine(1f));
                 }
             }
 
@@ -90,19 +122,90 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
             {
                 if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunAutoScatter)
                 {
+                    isShooting = true;
+
                     if (Time.time >= lastShotTime + currentWeapon.wep_data.fireRate)
                     {
                         ShootWeapon_Scatter(pelletCount: 6, spreadAngle: 5f);
                         lastShotTime = Time.time;
                     }
+
+                    StartCoroutine(ShootingLockCoroutine(1f));
                 }
             }
         }
 
+
         if (Input.GetKeyDown(KeyCode.R))
         {
-            reload_weapon();
+            if (isReloading)
+            {
+                Debug.Log("Cannot reload: already reloading");
+                return;
+            }
+
+            if (rigShifting.isAiming)
+            {
+                Debug.Log("Cannot reload: currently aiming");
+                return;
+            }
+
+            if (isShooting)
+            {
+                Debug.Log("Cannot reload: currently shooting");
+                return;
+            }
+
+            if (!playerInventoryManager.check_item("AMMO"))
+            {
+                Debug.Log("Cannot reload: no ammo in inventory");
+                return;
+            }
+            
+            canShoot = false;
+            StartCoroutine(ReloadWithDelay(currentWeapon.wep_data.reloadTime));
         }
+    }
+
+    private bool isReloading = false;
+    IEnumerator ReloadWithDelay(float delay)
+    {
+        isReloading = true;
+        canShoot = false;
+
+        Vector3 startOneHand = onehandedIK.data.offset;
+        Vector3 startTwoHand = twohandedIK.data.offset;
+
+        float t = 0f;
+        float transitionTime = 0.3f; // duration to reach reload offset
+
+        // Lerp to reload offsets
+        while (t < 1f)
+        {
+            t += Time.deltaTime / transitionTime;
+            onehandedIK.data.offset = Vector3.Lerp(startOneHand, reload_offset_onehand, t);
+            twohandedIK.data.offset = Vector3.Lerp(startTwoHand, reload_offset_twohand, t);
+            yield return null; // wait for next frame
+        }
+
+        // Wait for reload duration minus transition time
+        yield return new WaitForSeconds(delay - transitionTime * 2f);
+
+        // Perform actual reload
+        reload_weapon();
+
+        // Lerp back to default offsets
+        t = 0f;
+        while (t < 1f)
+        {
+            t += Time.deltaTime / transitionTime;
+            onehandedIK.data.offset = Vector3.Lerp(reload_offset_onehand, startOneHand, t);
+            twohandedIK.data.offset = Vector3.Lerp(reload_offset_twohand, startTwoHand, t);
+            yield return null;
+        }
+
+        isReloading = false;
+        canShoot = true;
     }
 
     private int ammoX, ammoY;

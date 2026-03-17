@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 853d12e585a69b442aa5debb161035d9, type: 3}
-  m_Name: Shotgun
+  m_Name: M4
   m_EditorClassIdentifier: 
-  weaponName: pumpshotgun
-  weaponType: 2
+  weaponName: M4
+  weaponType: 1
   damage: 15
-  fireRate: 0.5
-  bulletVel: 50
-  magSize: 5
-  weaponPrefab: {fileID: 3780582590001716358, guid: b91cb20c4f131604cae5fa3af0268ab7, type: 3}
+  fireRate: 0.1
+  bulletVel: 100
+  magSize: 30
+  reloadTime: 1

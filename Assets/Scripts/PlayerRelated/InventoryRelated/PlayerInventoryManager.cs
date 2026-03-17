@@ -71,7 +71,7 @@ public class PlayerInventoryManager : MonoBehaviour
         //inv[0,0] = ItemLookup["AMMO"];
         //Debug.Log(inv[0,0].runtimeCount);
 
-        //AssignItemInventory(2,3, "AMMO");
+        AssignItemInventory(2,3, "AMMO");
         //AssignItemInventory(1,1, "AMMO");
         //AssignItemInventory(0,0, "M4");
         //AssignItemInventory(0,1, "PISTOL");
@@ -306,6 +306,23 @@ public class PlayerInventoryManager : MonoBehaviour
         Debug.Log($"{ID} not found/destroyed/depleted");
         x = -1;
         y = -1;
+        return false;
+    }
+
+    public bool check_item(string ID) // checks the first item if its there
+    {
+        for (int x = 0; x < 5; x++)
+        {
+            for (int y = 0; y < 5; y++)
+            {
+                if (inv[x, y] != null && inv[x, y].id == ID)
+                {
+                    return true;
+                }
+            }
+        }
+        Debug.Log($"{ID} not found/destroyed/depleted");
+        
         return false;
     }
 
