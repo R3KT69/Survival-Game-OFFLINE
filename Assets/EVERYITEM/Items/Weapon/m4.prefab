@@ -14860,7 +14860,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.056330163, y: 0.20062868, z: 0.96810794}
   m_Center: {x: -0.0011322731, y: -0.037846427, z: 0.22146994}
@@ -14872,9 +14872,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8128455380904006199}
     m_Modifications:
+    - target: {fileID: 1005023260213486598, guid: 366b39aaf5fb9f14da18a25a8c838a12, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1538375479811168289, guid: 366b39aaf5fb9f14da18a25a8c838a12, type: 3}
       propertyPath: m_Name
       value: flashlight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082206252901620069, guid: 366b39aaf5fb9f14da18a25a8c838a12, type: 3}
+      propertyPath: m_AdditionalLightsShadowResolutionTier
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8117862625905562195, guid: 366b39aaf5fb9f14da18a25a8c838a12, type: 3}
       propertyPath: m_LocalPosition.x
