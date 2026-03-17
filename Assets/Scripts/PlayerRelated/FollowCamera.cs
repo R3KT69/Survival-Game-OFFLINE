@@ -57,8 +57,9 @@ public class FollowCamera : MonoBehaviour
         Vector3 rotatedLocal = rot * localOffset;
 
         // Prevent going behind the camera
+        /*
         if (rotatedLocal.z < 0f)
-            rotatedLocal.z = Mathf.Abs(rotatedLocal.z);
+            rotatedLocal.z = Mathf.Abs(rotatedLocal.z);*/
 
         // Convert to world space
         Vector3 worldPos = cameraTransform.TransformPoint(rotatedLocal);

@@ -16,6 +16,11 @@ public class Crouching : MonoBehaviour
     private float originalHeight;
     public bool isCrouching = false;
 
+    public FollowCamera hipArmAdjustment;
+    public FollowCamera aimArmAdjustment;
+    public float default_arm;
+    public float crouched_arm;
+
     // Targets
     private float targetHeight;
     private float currentWeight;
@@ -37,15 +42,22 @@ public class Crouching : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             isCrouching = !isCrouching;
+            
+
             if (isCrouching)
             {
                 targetHeight = originalHeight * crouchHeightFactor;
                 targetOffset = crouchOffset;
+                hipArmAdjustment.forwardDistance = crouched_arm;
+                aimArmAdjustment.forwardDistance = crouched_arm;
             }
             else
             {
                 targetHeight = originalHeight;
                 targetOffset = Vector3.zero;
+
+                hipArmAdjustment.forwardDistance = default_arm;
+                aimArmAdjustment.forwardDistance = default_arm;
             }
         }
 

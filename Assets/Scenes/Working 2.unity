@@ -52069,6 +52069,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5464759565388227999, guid: 9052f7a966c58fe48b90ce4f08734b34, type: 3}
   m_PrefabInstance: {fileID: 1294864584}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1295342388 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3606387193771656874, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+  m_PrefabInstance: {fileID: 335623196694885555}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02fb172cfc988214a95ed9a5229e5bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1303177980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53311,6 +53322,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8119442419153356043, guid: fa4ebd331e6dafc47aae469a7865a0e7, type: 3}
   m_PrefabInstance: {fileID: 1390572851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1394575578 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5449536148221381271, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+  m_PrefabInstance: {fileID: 335623196694885555}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1402472849
 PrefabInstance:
@@ -56200,6 +56216,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 870637588}
   m_SourcePrefab: {fileID: 100100000, guid: e4db03a1f8e033d4fa2a093c6a46cfe4, type: 3}
+--- !u!114 &1493687449 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1722505706853357590, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+  m_PrefabInstance: {fileID: 335623196694885555}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02fb172cfc988214a95ed9a5229e5bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1495900341
 GameObject:
   m_ObjectHideFlags: 0
@@ -65151,6 +65178,14 @@ PrefabInstance:
       propertyPath: aimFOV
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 1132071761430539381, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: leftHandGrip
+      value: 
+      objectReference: {fileID: 1394575578}
+    - target: {fileID: 1132071761430539381, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: leftHandGrip_default
+      value: -0.039
+      objectReference: {fileID: 0}
     - target: {fileID: 1255693302681694764, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -65172,6 +65207,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2978892837282199404, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606387193771656874, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: forwardDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709213884250109054, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -65203,6 +65246,22 @@ PrefabInstance:
       propertyPath: currentslot
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 5854159903629758998, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.662
+      objectReference: {fileID: 0}
+    - target: {fileID: 5889008850087389375, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: crouched_arm
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 5889008850087389375, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: aimArmAdjustment
+      value: 
+      objectReference: {fileID: 1295342388}
+    - target: {fileID: 5889008850087389375, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: hipArmAdjustment
+      value: 
+      objectReference: {fileID: 1493687449}
     - target: {fileID: 6319362338973861592, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.09

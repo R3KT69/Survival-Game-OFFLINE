@@ -90,7 +90,7 @@ MonoBehaviour:
   lightDuration: 0.1
   position: {x: 0.053, y: 0.123, z: 0.074}
   rotation: {x: 15, y: 90, z: 180}
-  scale: 1
+  scale: 6.32
 --- !u!114 &8714592379660014373
 MonoBehaviour:
   m_ObjectHideFlags: 0

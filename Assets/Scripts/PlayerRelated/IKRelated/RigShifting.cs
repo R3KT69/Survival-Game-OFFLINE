@@ -8,6 +8,10 @@ public class RigShifting : MonoBehaviour
     public Rig rigB; // aim rig
     public Camera playerCamera;
     public MultiRotationConstraint neckConstraint;
+    public Transform leftHandGrip;
+    public float leftHandGrip_bias = -0.07f;
+    public float leftHandGrip_default = -0.039f;
+
 
     [Header("Settings")]
     [Tooltip("Key to switch aiming (toggle).")]
@@ -44,6 +48,13 @@ public class RigShifting : MonoBehaviour
             Vector3 targetOffset = isAiming ? new Vector3(0f, 0f, -30f) : Vector3.zero;
             neckConstraint.data.offset = Vector3.Lerp(neckConstraint.data.offset, targetOffset, Time.deltaTime * 8f);
 
+            /*
+            if (leftHandGrip != null)
+            {
+                Vector3 localPos = leftHandGrip.localPosition;
+                localPos.x = Mathf.Lerp(localPos.x, isAiming ? leftHandGrip_bias : leftHandGrip_default, Time.deltaTime * 10f);
+                leftHandGrip.localPosition = localPos;
+            }*/
         }
 
         // Smoothly blend camera FOV

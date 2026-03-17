@@ -86,7 +86,7 @@ public class PlayerInventoryManager : MonoBehaviour
         AssignItemHotbar(3, "AUTOSHOT");
         AssignItemHotbar(4, "MP5");
         AssignItemHotbar(5, "M4");*/
-        
+        AssignItemHotbar(0, "M4");
         
         /*
         inv[0,0] = WeaponLookup["PISTOL"];
