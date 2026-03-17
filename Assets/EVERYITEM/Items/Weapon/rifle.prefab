@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2932199430862285939}
   - component: {fileID: 8619191123073942587}
   - component: {fileID: 6091389663781789174}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 3140275145544317372}
   - component: {fileID: 330369937194033488}
   - component: {fileID: 1624653435939640069}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4807,7 +4807,7 @@ GameObject:
   - component: {fileID: 1392804109321639521}
   - component: {fileID: 3745889533768181741}
   - component: {fileID: 441978421427459763}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4929,7 +4929,7 @@ GameObject:
   - component: {fileID: 2215819458602650002}
   - component: {fileID: 8977930098658791827}
   - component: {fileID: 1398293304352822269}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: crosshair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5036,7 +5036,7 @@ GameObject:
   - component: {fileID: 3230117357838633347}
   - component: {fileID: 1080121739807573412}
   - component: {fileID: 6268632999234217037}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LK M70_Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5120,7 +5120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9046331123016919481}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Zastava LK M70
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5156,7 +5156,7 @@ GameObject:
   - component: {fileID: 6574553242406942846}
   - component: {fileID: 8591700819452099210}
   - component: {fileID: 7557021619224295282}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FlashHeadon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10060,7 +10060,7 @@ GameObject:
   - component: {fileID: 5573777349358214376}
   - component: {fileID: 6462920185254825061}
   - component: {fileID: 58672795530626166}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: crosshair1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10167,7 +10167,7 @@ GameObject:
   - component: {fileID: 4519087367221166290}
   - component: {fileID: 3107505090751634318}
   - component: {fileID: 7636336214517305454}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15072,7 +15072,7 @@ GameObject:
   - component: {fileID: 4576278685794477407}
   - component: {fileID: 4924934618620177144}
   - component: {fileID: 1937826426501727872}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LK M70_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15158,7 +15158,7 @@ GameObject:
   - component: {fileID: 7539655898638216066}
   - component: {fileID: 8770047977251014835}
   - component: {fileID: 1341450658743582190}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ZRAK_ON_2_Scope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15245,7 +15245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3677526189602321556}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15283,7 +15283,7 @@ GameObject:
   - component: {fileID: 6590204998418804337}
   - component: {fileID: 2755328782166752318}
   - component: {fileID: 6691369892044630006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rifle
   m_TagString: Pickable
   m_Icon: {fileID: 0}
@@ -15475,7 +15475,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1088
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0

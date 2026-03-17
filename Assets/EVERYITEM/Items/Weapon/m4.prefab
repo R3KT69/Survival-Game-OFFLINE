@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3267087656497593625}
   - component: {fileID: 3852009799809527367}
   - component: {fileID: 1805171042168198578}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4914,7 +4914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6952254224260688235}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4949,7 +4949,7 @@ GameObject:
   - component: {fileID: 445122963879550408}
   - component: {fileID: 9030145885489992470}
   - component: {fileID: 2554020969746181041}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FlashHeadon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9852,7 +9852,7 @@ GameObject:
   - component: {fileID: 7717897715822597861}
   - component: {fileID: 7497152560293885373}
   - component: {fileID: 2254377710894798119}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14540,7 +14540,7 @@ GameObject:
   - component: {fileID: 7970545079263213596}
   - component: {fileID: 3129707581529926105}
   - component: {fileID: 2445204572436768995}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14664,7 +14664,7 @@ GameObject:
   - component: {fileID: -5302543154543170984}
   - component: {fileID: 6177860149276841145}
   - component: {fileID: 296041493127814411}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: m4
   m_TagString: Pickable
   m_Icon: {fileID: 0}
@@ -14856,7 +14856,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1088
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -14879,6 +14879,10 @@ PrefabInstance:
     - target: {fileID: 1538375479811168289, guid: 366b39aaf5fb9f14da18a25a8c838a12, type: 3}
       propertyPath: m_Name
       value: flashlight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538375479811168289, guid: 366b39aaf5fb9f14da18a25a8c838a12, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4082206252901620069, guid: 366b39aaf5fb9f14da18a25a8c838a12, type: 3}
       propertyPath: m_AdditionalLightsShadowResolutionTier
@@ -14998,9 +15002,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -3506339810341108216, guid: 948b8ba774576024aa36617cc67b04f9, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -3485796134441671115, guid: 948b8ba774576024aa36617cc67b04f9, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 948b8ba774576024aa36617cc67b04f9, type: 3}
       propertyPath: m_Name
       value: M4
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 948b8ba774576024aa36617cc67b04f9, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15066,6 +15082,10 @@ PrefabInstance:
     - target: {fileID: 3438564254389362515, guid: bfe92a8d4bd5e6e42aa4ff02807c2744, type: 3}
       propertyPath: m_Name
       value: Light_Pistol_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 3438564254389362515, guid: bfe92a8d4bd5e6e42aa4ff02807c2744, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1109329922711034555}
   - component: {fileID: 2290001771715810985}
   - component: {fileID: 6659953153943475183}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pistol_C_Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3716481436879492476}
   - component: {fileID: 3768568643430324440}
   - component: {fileID: 5200152267651770467}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pistol_C_Receiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 7870974084715200050}
   - component: {fileID: 3199026453111208634}
   - component: {fileID: 1387194005982990701}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4875,7 +4875,7 @@ GameObject:
   - component: {fileID: 7540200984649625143}
   - component: {fileID: 5890041859441773218}
   - component: {fileID: 3632162123621607075}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pistol
   m_TagString: Pickable
   m_Icon: {fileID: 0}
@@ -5094,7 +5094,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1088
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -5113,7 +5113,7 @@ GameObject:
   - component: {fileID: 8989596415785436755}
   - component: {fileID: 7863080651101637534}
   - component: {fileID: 7939131438544638194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pistol_C_BarrelGuard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5199,7 +5199,7 @@ GameObject:
   - component: {fileID: 3127389623973044956}
   - component: {fileID: 1684896304265660987}
   - component: {fileID: 2136341142297443993}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FlashHeadon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10102,7 +10102,7 @@ GameObject:
   - component: {fileID: 1888710040561676086}
   - component: {fileID: 7312714248455824734}
   - component: {fileID: 8748238733644542210}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pistol_C_Mag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10188,7 +10188,7 @@ GameObject:
   - component: {fileID: 47723076136336356}
   - component: {fileID: 8249757250602176832}
   - component: {fileID: 7593887637309182081}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pistol_C_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10274,7 +10274,7 @@ GameObject:
   - component: {fileID: 5955090088409606242}
   - component: {fileID: 3793621934322456422}
   - component: {fileID: 5219489188552810772}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10395,7 +10395,7 @@ GameObject:
   - component: {fileID: 6337824343693609304}
   - component: {fileID: 3770044273346673925}
   - component: {fileID: 3503779718363580117}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15298,7 +15298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7760568407212738934}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15333,7 +15333,7 @@ GameObject:
   - component: {fileID: 2309378359824009938}
   - component: {fileID: 8649669755224877210}
   - component: {fileID: 4912732783006237794}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pistol_C_Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}

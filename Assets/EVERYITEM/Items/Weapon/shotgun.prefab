@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5933623505805549087}
   - component: {fileID: 7073660004253971453}
   - component: {fileID: 6233717871161795529}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Barrel.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4147571137388230865}
   - component: {fileID: 7772577435778197959}
   - component: {fileID: 8648819828388597422}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FlashHeadon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5003,7 +5003,7 @@ GameObject:
   - component: {fileID: 4940877703530525793}
   - component: {fileID: 2967328804583049843}
   - component: {fileID: 6194116777840412978}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: shotgun
   m_TagString: Pickable
   m_Icon: {fileID: 0}
@@ -5195,7 +5195,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1088
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -5214,7 +5214,7 @@ GameObject:
   - component: {fileID: 5117393590929569072}
   - component: {fileID: 951194685557372032}
   - component: {fileID: 150453585462571002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Trigger Guard.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5300,7 +5300,7 @@ GameObject:
   - component: {fileID: 4146757619357045712}
   - component: {fileID: 5649094919444814479}
   - component: {fileID: 9213297159043063179}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5421,7 +5421,7 @@ GameObject:
   - component: {fileID: 8262449282719559048}
   - component: {fileID: 7169842004766304390}
   - component: {fileID: 9161353240228891194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Trigger.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5507,7 +5507,7 @@ GameObject:
   - component: {fileID: 8992459899825057575}
   - component: {fileID: 7299077666592718650}
   - component: {fileID: 1171381261992570229}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5596,7 +5596,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2961816366347077057}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5631,7 +5631,7 @@ GameObject:
   - component: {fileID: 4233176131134125255}
   - component: {fileID: 3189444910231506276}
   - component: {fileID: 1865396638947227883}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Magazine Tube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5717,7 +5717,7 @@ GameObject:
   - component: {fileID: 2632339983291357784}
   - component: {fileID: 6374994398898147952}
   - component: {fileID: 3777140245504898181}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10622,7 +10622,7 @@ GameObject:
   - component: {fileID: 8040582255670608101}
   - component: {fileID: 2490049618905150058}
   - component: {fileID: 4590000536311890768}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Forend.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10708,7 +10708,7 @@ GameObject:
   - component: {fileID: 4049555391991218426}
   - component: {fileID: 2117641091161676978}
   - component: {fileID: 7431686061846371159}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}

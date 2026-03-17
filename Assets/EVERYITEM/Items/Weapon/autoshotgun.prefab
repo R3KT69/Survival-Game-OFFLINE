@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8924039818935312618}
   - component: {fileID: 5969476062379249273}
   - component: {fileID: 5600977447613413958}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShotGun_D_Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3267087656497593625}
   - component: {fileID: 3852009799809527367}
   - component: {fileID: 1805171042168198578}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5002,7 +5002,7 @@ GameObject:
   - component: {fileID: 2229201872126343054}
   - component: {fileID: 7274450097872330828}
   - component: {fileID: 4317757248336927594}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShotGun_D_Receiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5088,7 +5088,7 @@ GameObject:
   - component: {fileID: 7154214849503735008}
   - component: {fileID: 6514389632613676052}
   - component: {fileID: 7124075641882365611}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShotGun_D_Stock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5172,7 +5172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1638011784492352045}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Autoshotty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5216,7 +5216,7 @@ GameObject:
   - component: {fileID: 3340223126146704239}
   - component: {fileID: 9202513759037194099}
   - component: {fileID: 5342713689386945098}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShotGun_D_Rail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5302,7 +5302,7 @@ GameObject:
   - component: {fileID: 2291934204137223206}
   - component: {fileID: 8511164249621944613}
   - component: {fileID: 699964191150953751}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShotGun_D_Mag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5386,7 +5386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6952254224260688235}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5421,7 +5421,7 @@ GameObject:
   - component: {fileID: 445122963879550408}
   - component: {fileID: 9030145885489992470}
   - component: {fileID: 2554020969746181041}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FlashHeadon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10324,7 +10324,7 @@ GameObject:
   - component: {fileID: 7717897715822597861}
   - component: {fileID: 7497152560293885373}
   - component: {fileID: 2254377710894798119}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15012,7 +15012,7 @@ GameObject:
   - component: {fileID: 4611321227004205644}
   - component: {fileID: 2791121805625489053}
   - component: {fileID: 5367665054774133637}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShotGun_D_BarrelGuard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15099,7 +15099,7 @@ GameObject:
   - component: {fileID: 7970545079263213596}
   - component: {fileID: 3129707581529926105}
   - component: {fileID: 2445204572436768995}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15220,7 +15220,7 @@ GameObject:
   - component: {fileID: 2474964299943760224}
   - component: {fileID: 5782342211440071732}
   - component: {fileID: 600361092903439341}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShotGun_D_BarrelGuard_Rail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15306,7 +15306,7 @@ GameObject:
   - component: {fileID: 5984543780826033383}
   - component: {fileID: 5588671067730140387}
   - component: {fileID: 6213994960394144089}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShotGun_D_Sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15395,7 +15395,7 @@ GameObject:
   - component: {fileID: -5302543154543170984}
   - component: {fileID: 6177860149276841145}
   - component: {fileID: 4825521285143694240}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: autoshotgun
   m_TagString: Pickable
   m_Icon: {fileID: 0}
@@ -15586,7 +15586,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1088
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -15605,7 +15605,7 @@ GameObject:
   - component: {fileID: 2402016182587644757}
   - component: {fileID: 1728138130559315354}
   - component: {fileID: 5353298682069371856}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShotGun_D_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15691,7 +15691,7 @@ GameObject:
   - component: {fileID: 7500065546789672012}
   - component: {fileID: 2003893202975733636}
   - component: {fileID: 7316475138928538945}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShotGun_D_Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15777,7 +15777,7 @@ GameObject:
   - component: {fileID: 5993720250806700889}
   - component: {fileID: 2324268881370780621}
   - component: {fileID: 3802847533316827204}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShotGun_D_Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
