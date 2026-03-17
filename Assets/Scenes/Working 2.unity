@@ -54486,6 +54486,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5464759565388227999, guid: 9052f7a966c58fe48b90ce4f08734b34, type: 3}
   m_PrefabInstance: {fileID: 1713423171}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &1716217780 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2353197865594787438, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+  m_PrefabInstance: {fileID: 335623196694885555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1729990205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60741,6 +60746,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9087343682645810256, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       insertIndex: 1
+      addedObject: {fileID: 7721495254993307821}
+    - targetCorrespondingSourceObject: {fileID: 9087343682645810256, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      insertIndex: 2
       addedObject: {fileID: 7721495254993307820}
   m_SourcePrefab: {fileID: 100100000, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
 --- !u!4 &543450652046333670
@@ -61522,10 +61530,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventoryManager: {fileID: 7721495254993307798}
   weapon_Driver: {fileID: 7721495254993307804}
+  arm: {fileID: 7721495254993307811}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
   dropHeight: 1.3
+--- !u!114 &7721495254993307821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521592584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e3eb10dc88aa34ba48a98959c164db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1716217780}
+  inv: {fileID: 7721495254993307798}
+  arm: {fileID: 7721495254993307811}
+  emptyIndex: 0
 --- !u!33 &7906453478946012948
 MeshFilter:
   m_ObjectHideFlags: 0

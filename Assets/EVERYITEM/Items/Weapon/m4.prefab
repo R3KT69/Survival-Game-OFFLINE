@@ -14663,9 +14663,10 @@ GameObject:
   - component: {fileID: 1853641263064706418}
   - component: {fileID: -5302543154543170984}
   - component: {fileID: 6177860149276841145}
+  - component: {fileID: 296041493127814411}
   m_Layer: 0
   m_Name: m4
-  m_TagString: Untagged
+  m_TagString: Pickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14842,6 +14843,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &296041493127814411
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6810826342680241524}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 0.13183653, y: 0.2877515, z: 0.96810794}
+  m_Center: {x: 0.0017718157, y: -0.040750556, z: 0.22146994}
 --- !u!1001 &1575811202676408411
 PrefabInstance:
   m_ObjectHideFlags: 0

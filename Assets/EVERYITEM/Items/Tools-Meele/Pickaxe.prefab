@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 9020868388371192798}
   - component: {fileID: 8466834460694607290}
   - component: {fileID: 5221320222836641135}
+  - component: {fileID: 3369871441997157132}
   m_Layer: 0
   m_Name: Pickaxe
-  m_TagString: Untagged
+  m_TagString: Pickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +108,7 @@ MonoBehaviour:
   wep_animator: {fileID: 0}
   wep_audioSource: {fileID: 0}
   wep_data: {fileID: 11400000, guid: e222b380e579d0c4a9454d4618da69c3, type: 2}
+  runtimeAmmo: 0
   type: 
   lightDuration: 0.1
   position: {x: 0.046, y: 0.097, z: -0.008}
@@ -127,12 +129,10 @@ MonoBehaviour:
   isStackable: 0
   itemType: 1
   weaponType: 2
-  Count: 1
+  runtimeCount: 0
+  defaultCount: 0
   Durability: 100
   id: PICKAXE
-  instanceId: 
-  maxStack: 1
-  currentStack: 1
   maxDurability: 100
 --- !u!114 &5221320222836641135
 MonoBehaviour:
@@ -148,3 +148,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemHolder: 
   Instance: 0
+--- !u!65 &3369871441997157132
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3107740303186867581}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 0.018593706, y: 0.14598615, z: 0.189262}
+  m_Center: {x: 7.214351e-11, y: -0.0009932443, z: 0.009682939}

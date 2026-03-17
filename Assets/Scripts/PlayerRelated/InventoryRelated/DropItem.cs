@@ -4,6 +4,7 @@ public class DropItem : MonoBehaviour
 {
     public PlayerInventoryManager playerInventoryManager;
     public Weapon_driver weapon_Driver;
+    public ChangingArm arm;
     public LayerMask playerLayer;
     public float dropHeight;
 
@@ -19,16 +20,21 @@ public class DropItem : MonoBehaviour
         
 
         GameObject droppedObj = Instantiate(currentObj, dropPos, rotation);
+        Destroy(weapon_Driver.currentWeapon.gameObject);
+        weapon_Driver.currentWeapon = droppedObj.GetComponent<Weapon_global>();
+        arm.Unarmed();
 
-        MonoBehaviour[] scripts = droppedObj.GetComponents<MonoBehaviour>();
-        foreach (MonoBehaviour script in scripts) Destroy(script);
+        //MonoBehaviour[] scripts = droppedObj.GetComponents<MonoBehaviour>();
+        //foreach (MonoBehaviour script in scripts) Destroy(script);
 
         Rigidbody rigidObj = droppedObj.AddComponent<Rigidbody>();
-        droppedObj.AddComponent<BoxCollider>();
-        droppedObj.GetComponent<BoxCollider>().size = new Vector3(0.1f,0.15f,0.5f);
-        droppedObj.GetComponent<BoxCollider>().excludeLayers = playerLayer;
-
         rigidObj.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        droppedObj.GetComponent<BoxCollider>().enabled = true;
+        //droppedObj.AddComponent<BoxCollider>();
+        //droppedObj.GetComponent<BoxCollider>().size = new Vector3(0.1f,0.15f,0.5f);
+        //droppedObj.GetComponent<BoxCollider>().excludeLayers = playerLayer;
+
+        
         
         rigidObj.linearVelocity = transform.forward * 3f + Vector3.up * 1.5f;
         

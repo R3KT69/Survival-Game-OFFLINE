@@ -5135,8 +5135,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5568305000942388391}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.030843573, y: -0.7064338, z: -0.030843573, w: 0.7064338}
-  m_LocalPosition: {x: 0.34251007, y: 0.0067024943, z: 0.91598254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3354984, y: 0.052980233, z: 0.9153144}
   m_LocalScale: {x: 2.6, y: 2.6, z: 2.6}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5144,7 +5144,7 @@ Transform:
   - {fileID: 3230117357838633347}
   - {fileID: 7539655898638216066}
   m_Father: {fileID: 7168132214393007435}
-  m_LocalEulerAnglesHint: {x: -5, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5823637278661735104
 GameObject:
   m_ObjectHideFlags: 0
@@ -15282,9 +15282,10 @@ GameObject:
   - component: {fileID: 5615870472991457075}
   - component: {fileID: 6590204998418804337}
   - component: {fileID: 2755328782166752318}
+  - component: {fileID: 6691369892044630006}
   m_Layer: 0
   m_Name: rifle
-  m_TagString: Untagged
+  m_TagString: Pickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15297,15 +15298,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8083343752046945167}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0382163, y: 0.70626485, z: 0.028089618, w: 0.70635724}
-  m_LocalPosition: {x: -0.396, y: 0.015, z: 0.226}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.146, y: 0, z: -0.345}
   m_LocalScale: {x: 0.43, y: 0.43, z: 0.43}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9046331123016919481}
   - {fileID: 3677526189602321556}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0.82, y: 90.031, z: 5.375}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6605924034946669001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15327,8 +15328,8 @@ MonoBehaviour:
   runtimeAmmo: 0
   type: 
   lightDuration: 0.1
-  position: {x: -0.396, y: 0.015, z: 0.226}
-  rotation: {x: 0.82, y: 90.031, z: 5.375}
+  position: {x: -0.146, y: 0, z: -0.345}
+  rotation: {x: 0, y: 0, z: 0}
   scale: 0.43
 --- !u!114 &5615870472991457075
 MonoBehaviour:
@@ -15461,3 +15462,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ItemHolder: 
   Instance: 0
+--- !u!65 &6691369892044630006
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8083343752046945167}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 0.17666525, y: 0.6605963, z: 2.9126558}
+  m_Center: {x: 0.36578122, y: 0.049701765, z: 1.476975}

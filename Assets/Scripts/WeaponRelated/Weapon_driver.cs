@@ -36,6 +36,12 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
 
     void Update()
     {
+        if (currentWeapon == null)
+        {
+            //Debug.Log("Current weapon not found/destroyed/dropped");
+            return;
+        }
+
         if (currentWeapon.gameObject.activeSelf == false)
         {
             //Debug.Log("Weapon Null");
