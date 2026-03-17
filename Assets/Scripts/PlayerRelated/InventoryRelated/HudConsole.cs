@@ -28,9 +28,9 @@ public class HudConsole : MonoBehaviour
             inventory.SetActive(!inventory.activeSelf);
             isInventoryOpen = !isInventoryOpen;
             MouseLockToggle();
-            
+            weapon_Driver.canShoot = !isInventoryOpen;
         }
-        //weapon_Driver.canShoot = !isInventoryOpen;
+        
     }
 
     void MouseLockToggle()

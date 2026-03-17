@@ -106,7 +106,7 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
                 if (currentWeapon.wep_data.weaponType == WEP_ANIM.GunScatter)
                 {
                     isShooting = true;
-                    
+
                     if (Time.time >= lastShotTime + currentWeapon.wep_data.fireRate)
                     {
                         ShootWeapon_Scatter(pelletCount: 8, spreadAngle: 5f); 
@@ -296,7 +296,7 @@ public class Weapon_driver : MonoBehaviour // Shooting Script
         // SimulateRecoil(x: vertical recoil [-75, -90] (lower is more recoil) , z:horizontal sway [-1, 1] (higher is more recoil), y : -180 default, duration: 0.2 default
         if (rigShifting.isAiming)
         {
-            Aiming_R_Sight.GetComponent<Weapon_PrimaryIK_Anim_Manager>().SimulateRecoil(Random.Range(-80, -80), 0, duration: 0.5f);
+            Aiming_R_Sight.GetComponent<Weapon_PrimaryIK_Anim_Manager>().SimulateRecoil(Random.Range(-80, -80), Random.Range(-1.0f, 1.0f), duration: 0.5f);
             AddCameraRecoil(-1.5f, -2.5f, 0.3f);
         }
         else
