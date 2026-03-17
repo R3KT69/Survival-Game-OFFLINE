@@ -41981,6 +41981,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7816655082758854912, guid: 7203c091fa24aa64cba01b81a97f0158, type: 3}
   m_PrefabInstance: {fileID: 1275895431}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &551174295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4255528382392427825, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+  m_PrefabInstance: {fileID: 8516162367906750292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &551174299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551174295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e3b280b9e5c7943af076802f5a3c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateInterval: 0.5
 --- !u!4 &551569139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7816655082758854912, guid: 7203c091fa24aa64cba01b81a97f0158, type: 3}
@@ -66311,6 +66329,34 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
+    - target: {fileID: 3120620750850887048, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120620750850887048, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120620750850887048, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120620750850887048, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120620750850887048, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1077.0126
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120620750850887048, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -551.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3120620750850887048, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -38.02
+      objectReference: {fileID: 0}
     - target: {fileID: 3143579215574617206, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
@@ -66343,6 +66389,10 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
+    - target: {fileID: 4255528382392427825, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4377830548248601390, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
@@ -66623,6 +66673,77 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
+    - target: {fileID: 8513904410962720757, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_text
+      value: 'Movement:
+
+        Move: WASD
+
+        Jump: Space
+
+        Sprint:
+        Shift
+
+        Crouch: LCtrl
+
+
+        Action:
+
+        Pickup Item: E
+
+        Drop
+        Item: G
+
+        Shoot: MB1
+
+        AIm: MB2
+
+        Reload: R
+
+
+        Inventory:
+
+        Open/Close:
+        Q
+
+        Move item: drag w/ mouse
+
+        Equip Hotbar: 1 to 6
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513904410962720757, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513904410962720757, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_fontStyle
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513904410962720757, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513904410962720757, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513904410962720757, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513904410962720757, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513904410962720757, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513904410962720757, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8574211053307344659, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
@@ -66650,7 +66771,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4255528382392427825, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 551174299}
   m_SourcePrefab: {fileID: 100100000, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
 --- !u!4 &8780363481588065742
 Transform:
