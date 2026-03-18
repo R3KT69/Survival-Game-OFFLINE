@@ -29,6 +29,7 @@ public class DropItem : MonoBehaviour
 
         Rigidbody rigidObj = droppedObj.AddComponent<Rigidbody>();
         rigidObj.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        rigidObj.interpolation = RigidbodyInterpolation.Interpolate;
         droppedObj.GetComponent<BoxCollider>().enabled = true;
         //droppedObj.AddComponent<BoxCollider>();
         //droppedObj.GetComponent<BoxCollider>().size = new Vector3(0.1f,0.15f,0.5f);
