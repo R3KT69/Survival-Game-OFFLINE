@@ -14496,7 +14496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInventoryManager: {fileID: 0}
-  ITEMID: STONE
+  ITEMID: LH_PISTOL
   UI_text: {fileID: 0}
 --- !u!1 &4096545319811064735
 GameObject:
