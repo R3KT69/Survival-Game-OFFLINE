@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: M4
   weaponType: 1
   damage: 15
-  fireRate: 0.1
+  fireRate: 0.12
   bulletVel: 100
   magSize: 30
   reloadTime: 1

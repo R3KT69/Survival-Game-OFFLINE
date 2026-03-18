@@ -16123,6 +16123,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 7585619298634076431}
     m_Modifications:
     - target: {fileID: 1005023260213486598, guid: 366b39aaf5fb9f14da18a25a8c838a12, type: 3}
+      propertyPath: m_Range
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005023260213486598, guid: 366b39aaf5fb9f14da18a25a8c838a12, type: 3}
+      propertyPath: m_Intensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005023260213486598, guid: 366b39aaf5fb9f14da18a25a8c838a12, type: 3}
+      propertyPath: m_SpotAngle
+      value: 75.05783
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005023260213486598, guid: 366b39aaf5fb9f14da18a25a8c838a12, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 2
       objectReference: {fileID: 0}

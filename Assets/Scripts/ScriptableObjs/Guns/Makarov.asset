@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 853d12e585a69b442aa5debb161035d9, type: 3}
-  m_Name: Mp5
+  m_Name: Makarov
   m_EditorClassIdentifier: 
-  weaponName: mp5
-  weaponType: 1
+  weaponName: makarov
+  weaponType: 0
   damage: 15
-  fireRate: 0.1
+  fireRate: 0.25
   bulletVel: 50
-  magSize: 25
+  magSize: 8
   reloadTime: 1
