@@ -9,7 +9,16 @@ public class PlayerStatsManager : MonoBehaviour
     public int health_pts;
     public int food_pts;
 
-    
+    void Start()
+    {
+        if (food_bar || health_bar == null)
+        {
+            health_bar = GameObject.Find("health_bar").GetComponent<Image>();
+            food_bar = GameObject.Find("food_bar").GetComponent<Image>();
+        }
+        
+    }
+
     void Update()
     {
         health_bar.fillAmount = health_pts * 0.01f;

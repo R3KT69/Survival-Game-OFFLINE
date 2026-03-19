@@ -63702,29 +63702,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4518503430687531658, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
-      propertyPath: food
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4518503430687531658, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
-      propertyPath: health
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4518503430687531658, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: food_bar
       value: 
       objectReference: {fileID: 461120302}
     - target: {fileID: 4518503430687531658, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
-      propertyPath: food_pts
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4518503430687531658, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: health_bar
       value: 
       objectReference: {fileID: 99903642}
-    - target: {fileID: 4518503430687531658, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
-      propertyPath: health_pts
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 5298657099145672105, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: hud
       value: 
@@ -64445,6 +64429,22 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
+    - target: {fileID: 508903939067050324, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 508903939067050324, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 508903939067050324, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 508903939067050324, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 581463315784130828, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
@@ -64477,10 +64477,42 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
+    - target: {fileID: 1511532819127379125, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511532819127379125, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511532819127379125, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511532819127379125, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1684291901082560099, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
+    - target: {fileID: 1718924085344797509, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718924085344797509, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718924085344797509, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718924085344797509, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1766975243735700848, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
@@ -64597,10 +64629,42 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
+    - target: {fileID: 5111712476428379796, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111712476428379796, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111712476428379796, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111712476428379796, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5282175365873906043, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
+    - target: {fileID: 5295956029252898495, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295956029252898495, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295956029252898495, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295956029252898495, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5310382681617119220, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
@@ -64801,6 +64865,22 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
+    - target: {fileID: 8365266143855757453, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365266143855757453, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365266143855757453, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365266143855757453, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8418961137928863333, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 

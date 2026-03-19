@@ -25657,8 +25657,8 @@ MonoBehaviour:
   inv: {fileID: 475153863235454388}
   health_bar: {fileID: 0}
   food_bar: {fileID: 0}
-  health: 0
-  food: 0
+  health_pts: 100
+  food_pts: 100
 --- !u!114 &4059874489005847989
 MonoBehaviour:
   m_ObjectHideFlags: 0
