@@ -19,6 +19,11 @@ public class UIHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         Debug.Log($"Mouse exited object: {gameObject.name}");
     }
 
+    public string GetIndexName()
+    {
+        return gameObject.name;
+    }
+
     void Update()
     {
         // Holding

@@ -5,6 +5,7 @@ public class UIHoverHelperInv : MonoBehaviour
 {
     public List<UIHover> invSlots;                 // All inventory UI slots in order (row by row)
     public PlayerInventoryManager playerInventoryManager;
+    //public UIHoverHelperInvToHotbar uIHoverHelperInvToHotbar;
 
     private int dragStartIndex = -1;
 
