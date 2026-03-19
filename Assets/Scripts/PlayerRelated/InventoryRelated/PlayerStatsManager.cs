@@ -9,10 +9,10 @@ public class PlayerStatsManager : MonoBehaviour
     public int health_pts;
     public int food_pts;
 
-    // Update is called once per frame
+    
     void Update()
     {
-        health_bar.fillAmount = health_pts * 1/100;
-        food_bar.fillAmount = food_pts * 1/100;
+        health_bar.fillAmount = health_pts * 0.01f;
+        food_bar.fillAmount = food_pts * 0.01f;
     }
 }
