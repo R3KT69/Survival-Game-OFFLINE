@@ -60,7 +60,7 @@ public class UIHoverHelperInvToHotbar : MonoBehaviour
         {
             UIHover slot = invSlots[i];
 
-            Debug.Log(slot.GetIndexName());
+            //Debug.Log(slot.GetIndexName());
 
             if (slot.isHovering && Input.GetMouseButtonUp(0))
             {

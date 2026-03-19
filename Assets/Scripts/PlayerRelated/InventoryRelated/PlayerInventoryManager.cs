@@ -71,7 +71,7 @@ public class PlayerInventoryManager : MonoBehaviour
         //inv[0,0] = ItemLookup["AMMO"];
         //Debug.Log(inv[0,0].runtimeCount);
 
-        AssignItemInventory(2,3, "AMMO");
+        AssignItemInventory(0,0, "AMMO");
         //AssignItemInventory(1,1, "AMMO");
         //AssignItemInventory(0,0, "M4");
         //AssignItemInventory(0,1, "PISTOL");
@@ -145,9 +145,16 @@ public class PlayerInventoryManager : MonoBehaviour
         Item invItem = inv[invX, invY];           // Item in inventory
         Item hotbarItem = hotbar[hotbarIndex];   // Currently equipped item in hotbar
 
+        
         if (invItem == null)
         {
             Debug.LogWarning("Inventory slot is empty!");
+            return;
+        }
+
+        if (invItem.itemType == ItemType.Consumable)
+        {
+            Debug.Log("Cant swap with consumeable");
             return;
         }
 
@@ -213,8 +220,31 @@ public class PlayerInventoryManager : MonoBehaviour
     // Fourth
     public void HotbarToInvSwap(int hotbarIndex, int invX, int invY)
     {
-        Item hotbarItem = hotbar[hotbarIndex];     // Item in hotbar
         Item invItem = inv[invX, invY];            // Item in inventory
+        
+
+
+        if (hotbarIndex < 0 || hotbarIndex >= hotbar.Length)
+        {
+            Debug.LogWarning("Invalid hotbar index");
+            return;
+        }
+
+        if (invX < 0 || invX >= inv.GetLength(0) || invY < 0 || invY >= inv.GetLength(1))
+        {
+            Debug.LogWarning("Invalid inventory index");
+            return;
+        }
+
+        Item hotbarItem = hotbar[hotbarIndex];
+
+        if (hotbarItem == null)
+        {
+            Debug.LogWarning("Hotbar item is null (probably double swap)");
+            return;
+        }
+        
+        
 
         if (hotbarItem == null)
         {
@@ -225,6 +255,12 @@ public class PlayerInventoryManager : MonoBehaviour
         // Swap parent/position for the inventory item
         if (invItem != null)
         {
+            if (invItem.itemType == ItemType.Consumable)
+            {
+                Debug.Log("Cant swap with consumeable");
+                return;
+            }
+            
             // Move the current inventory item to hotbar
             weapon_Driver.currentWeapon = invItem.GetComponent<Weapon_global>();
 
