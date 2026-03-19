@@ -15,4 +15,14 @@ public class PlayerStatsManager : MonoBehaviour
         health_bar.fillAmount = health_pts * 0.01f;
         food_bar.fillAmount = food_pts * 0.01f;
     }
+
+    public void TakeDamage(int amount)
+    {
+        health_pts -= amount;
+    }
+
+    public void ConsumeFood(int amount)
+    {
+        food_pts -= amount;
+    }
 }
