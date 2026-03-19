@@ -17,11 +17,16 @@ public class UIHoverHelperInv : MonoBehaviour
             if (slot.isHovering && Input.GetMouseButtonDown(0))
             {
                 dragStartIndex = i;
+                Vector2Int pos = IndexToXY(i);
+                Debug.Log($"inv pos: Clicked slot at ({pos.x},{pos.y})");
                 // optionally highlight drag start slot
             }
 
             if (slot.isHovering && Input.GetMouseButtonUp(0))
             {
+                Vector2Int pos = IndexToXY(i);
+                Debug.Log($"inv pos: Released over slot at ({pos.x},{pos.y})");
+
                 if (dragStartIndex != -1 && dragStartIndex != i)
                 {
                     // Convert linear indices to (x,y)

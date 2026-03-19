@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class UIHoverHelperInvToHotbar : MonoBehaviour
 {
@@ -64,6 +65,7 @@ public class UIHoverHelperInvToHotbar : MonoBehaviour
                 if (dragStartHotbarIndex != -1)
                 {
                     Vector2Int invPos = IndexToXY(i);
+                    Debug.Log($"hotbartoinv: {invPos.x} {invPos.y}");
                     playerInventoryManager.HotbarToInvSwap(dragStartHotbarIndex, invPos.x, invPos.y);
                 }
 

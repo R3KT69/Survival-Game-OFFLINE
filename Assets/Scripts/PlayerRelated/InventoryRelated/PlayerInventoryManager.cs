@@ -262,6 +262,8 @@ public class PlayerInventoryManager : MonoBehaviour
             }
         }
 
+        Debug.Log($"Hotbar item going to inv[{invX},{invY}]");
+
         PlayEquipSfx();
     }
     
