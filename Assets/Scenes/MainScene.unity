@@ -63714,9 +63714,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 461120302}
     - target: {fileID: 4518503430687531658, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: food_pts
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518503430687531658, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: health_bar
       value: 
       objectReference: {fileID: 99903642}
+    - target: {fileID: 4518503430687531658, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: health_pts
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5298657099145672105, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: hud
       value: 
@@ -64429,10 +64437,6 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
-    - target: {fileID: 274137230214071067, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
-      propertyPath: m_Name
-      value: food_img
-      objectReference: {fileID: 0}
     - target: {fileID: 276966373429420842, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
@@ -64565,18 +64569,6 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
-    - target: {fileID: 4249210817210687648, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
-      propertyPath: m_Color.b
-      value: 0.23137257
-      objectReference: {fileID: 0}
-    - target: {fileID: 4249210817210687648, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
-      propertyPath: m_Color.g
-      value: 0.9803922
-      objectReference: {fileID: 0}
-    - target: {fileID: 4249210817210687648, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
-      propertyPath: m_Color.r
-      value: 0.9725491
-      objectReference: {fileID: 0}
     - target: {fileID: 4377830548248601390, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
@@ -64681,10 +64673,6 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
-    - target: {fileID: 6727105119347836023, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
-      propertyPath: m_Name
-      value: health_img
-      objectReference: {fileID: 0}
     - target: {fileID: 6786140263462081272, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
@@ -64817,18 +64805,6 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 7721495254993307798}
-    - target: {fileID: 8600414414343691326, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
-      propertyPath: m_Color.b
-      value: 0.20784315
-      objectReference: {fileID: 0}
-    - target: {fileID: 8600414414343691326, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
-      propertyPath: m_Color.g
-      value: 0.9803922
-      objectReference: {fileID: 0}
-    - target: {fileID: 8600414414343691326, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
-      propertyPath: m_Color.r
-      value: 0.4156863
-      objectReference: {fileID: 0}
     - target: {fileID: 8706463541831057807, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: weapon_Driver
       value: 
