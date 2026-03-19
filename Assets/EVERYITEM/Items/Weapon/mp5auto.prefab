@@ -15698,7 +15698,7 @@ MonoBehaviour:
   wep_animator: {fileID: 0}
   wep_audioSource: {fileID: 6177860149276841145}
   wep_data: {fileID: 11400000, guid: beee1ea199ba5c24cbea6c12593123b2, type: 2}
-  runtimeAmmo: 0
+  runtimeAmmo: 25
   type: 
   lightDuration: 0.1
   position: {x: 0, y: 0, z: 0}

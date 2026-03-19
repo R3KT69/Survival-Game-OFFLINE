@@ -4922,7 +4922,7 @@ MonoBehaviour:
   wep_animator: {fileID: 5050602699267045153}
   wep_audioSource: {fileID: 4465643582563892598}
   wep_data: {fileID: 11400000, guid: 5b0c6538c5b64984eb0aae5b110675ff, type: 2}
-  runtimeAmmo: 0
+  runtimeAmmo: 12
   type: 
   lightDuration: 0.1
   position: {x: 0, y: 0, z: 0}
