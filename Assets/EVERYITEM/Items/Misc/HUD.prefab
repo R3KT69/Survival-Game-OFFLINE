@@ -2039,7 +2039,7 @@ GameObject:
   - component: {fileID: 8894565112900146743}
   - component: {fileID: 2766236880898885876}
   m_Layer: 5
-  m_Name: Image
+  m_Name: food_bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2092,8 +2092,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4661,7 +4661,6 @@ RectTransform:
   - {fileID: 4631972569808851374}
   - {fileID: 6689517528347834820}
   - {fileID: 2633953606928904632}
-  - {fileID: 5342862223066747062}
   m_Father: {fileID: 5937855694051327310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -7200,7 +7199,7 @@ GameObject:
   - component: {fileID: 6693072500680284389}
   - component: {fileID: 6920062466106506889}
   m_Layer: 5
-  m_Name: Inventory
+  m_Name: playerstats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7218,6 +7217,7 @@ RectTransform:
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 5342862223066747062}
   - {fileID: 9184939568653640270}
   - {fileID: 5668183120953322898}
   m_Father: {fileID: 7672368176775746320}
@@ -8940,10 +8940,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5148742199099043431}
   - {fileID: 8343576827140716494}
   - {fileID: 8610039395426257403}
   - {fileID: 3978575447773850280}
+  - {fileID: 5148742199099043431}
   m_Father: {fileID: 5668183120953322898}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -12908,7 +12908,7 @@ GameObject:
   - component: {fileID: 8663072499339119334}
   - component: {fileID: 1584016044809573094}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: health_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14756,7 +14756,7 @@ GameObject:
   - component: {fileID: 4768982488062942001}
   - component: {fileID: 2452502237441742813}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: header
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14774,12 +14774,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5668183120953322898}
+  m_Father: {fileID: 5937855694051327310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -44.30002, y: 9.999981}
-  m_SizeDelta: {x: 123.3454, y: 21.4425}
+  m_AnchoredPosition: {x: 62.6, y: -27.8}
+  m_SizeDelta: {x: 81.396, y: 21.4425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4768982488062942001
 CanvasRenderer:
@@ -29910,7 +29910,7 @@ GameObject:
   - component: {fileID: 8525780955972370630}
   - component: {fileID: 2582855417231718504}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: food_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32096,7 +32096,7 @@ GameObject:
   - component: {fileID: 5832566217174161275}
   - component: {fileID: 6791546357966007852}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: health_bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32149,8 +32149,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
