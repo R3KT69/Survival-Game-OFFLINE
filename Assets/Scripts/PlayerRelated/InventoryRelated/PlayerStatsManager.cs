@@ -9,6 +9,7 @@ public class PlayerStatsManager : MonoBehaviour
     public Image food_bar;
     public int health_pts;
     public int food_pts;
+    public float food_consume_rate_idle;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class PlayerStatsManager : MonoBehaviour
         }
 
         StartCoroutine(UseFood());
+        StartCoroutine(UseFoodAuto());
         
     }
 
@@ -33,13 +35,29 @@ public class PlayerStatsManager : MonoBehaviour
                 food_pts = Mathf.Max(food_pts - 1, 0);
             }
 
-            if (food_pts < 10)
+            if (food_pts < 20)
             {
-                Debug.Log("Starving");
+                Debug.Log("Low Food");
                 health_pts = Mathf.Clamp(health_pts - 1, 0, 100);
             }
 
+            if (food_pts < 10)
+            {
+                Debug.Log("Starving");
+                health_pts = Mathf.Clamp(health_pts - 3, 0, 100);
+            }
+
             yield return new WaitForSeconds(2f);
+        }
+    }
+
+    IEnumerator UseFoodAuto()
+    {
+        while (true)
+        {
+            food_pts = Mathf.Max(food_pts - 1, 0);
+
+            yield return new WaitForSeconds(food_consume_rate_idle);
         }
     }
 

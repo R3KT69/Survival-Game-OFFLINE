@@ -63728,6 +63728,18 @@ PrefabInstance:
       propertyPath: health_pts
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 4518503430687531658, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: food_use_interval
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518503430687531658, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: food_consume_interval
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518503430687531658, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
+      propertyPath: food_consume_rate_idle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5298657099145672105, guid: 06c727274d6f99c4aab7473993da736c, type: 3}
       propertyPath: hud
       value: 
