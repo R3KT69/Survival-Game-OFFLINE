@@ -628,10 +628,10 @@ GameObject:
   - component: {fileID: 119232963209590578}
   - component: {fileID: 4679368886584921351}
   - component: {fileID: 8953119655379570742}
-  - component: {fileID: 5867370700862024015}
+  - component: {fileID: 6638881151769490463}
   - component: {fileID: 6061921621780240650}
   m_Layer: 5
-  m_Name: 73
+  m_Name: 63
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -644,9 +644,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201112336106590613}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.90000004, y: 0.90000004, z: 0.90000004}
+  m_LocalScale: {x: 0.8999999, y: 0.8999999, z: 0.8999999}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1182020853717080699}
@@ -655,7 +655,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 434.99997, y: -200}
+  m_AnchoredPosition: {x: 435.00003, y: -199.99997}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4679368886584921351
@@ -696,20 +696,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5867370700862024015
+--- !u!114 &6638881151769490463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201112336106590613}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &6061921621780240650
@@ -744,7 +744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1111490785377033171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4606,7 +4606,7 @@ GameObject:
   - component: {fileID: 6011963375199512894}
   - component: {fileID: 8885568003758614372}
   - component: {fileID: 3357053888108793676}
-  - component: {fileID: 599559371443566267}
+  - component: {fileID: 8623467624308611976}
   - component: {fileID: 5124728006399868088}
   m_Layer: 5
   m_Name: 32
@@ -4674,20 +4674,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &599559371443566267
+--- !u!114 &8623467624308611976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204085127366907317}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &5124728006399868088
@@ -4715,6 +4715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7672368176775746320}
   - component: {fileID: 8706463541831057807}
+  - component: {fileID: 3794825611378922564}
   - component: {fileID: 4878945645118035459}
   - component: {fileID: 258790545127864293}
   - component: {fileID: 6464902070146954261}
@@ -4771,6 +4772,21 @@ MonoBehaviour:
   console: {fileID: 3830574290363645890}
   inventory: {fileID: 234004863327599321}
   isInventoryOpen: 0
+--- !u!114 &3794825611378922564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207901541617330522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84cbdf3740f5fd4588a418cad8eec64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selected_crate: {fileID: 0}
+  mainCamera: {fileID: 0}
+  Hud: {fileID: 0}
 --- !u!223 &4878945645118035459
 Canvas:
   m_ObjectHideFlags: 0
@@ -4981,7 +4997,7 @@ GameObject:
   - component: {fileID: 7362145890043142477}
   - component: {fileID: 7951273661667802861}
   - component: {fileID: 4140190002008859509}
-  - component: {fileID: 3342946370598689972}
+  - component: {fileID: 7328277337437101428}
   - component: {fileID: 3790758948143706560}
   m_Layer: 5
   m_Name: 12
@@ -5049,20 +5065,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3342946370598689972
+--- !u!114 &7328277337437101428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218155269665429277}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &3790758948143706560
@@ -7234,10 +7250,10 @@ GameObject:
   - component: {fileID: 3633728724681388994}
   - component: {fileID: 7773615421439400846}
   - component: {fileID: 5305185208263441732}
-  - component: {fileID: 6828378112024792395}
+  - component: {fileID: 7525930503073877662}
   - component: {fileID: 6344687908183462545}
   m_Layer: 5
-  m_Name: 71
+  m_Name: 73
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7302,20 +7318,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6828378112024792395
+--- !u!114 &7525930503073877662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744289220152035769}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &6344687908183462545
@@ -8553,7 +8569,7 @@ GameObject:
   - component: {fileID: 3917427292014144202}
   - component: {fileID: 5264016343953680622}
   - component: {fileID: 5534794210182108011}
-  - component: {fileID: 6283653470008030553}
+  - component: {fileID: 7784080528025864844}
   - component: {fileID: 6581357395206716900}
   m_Layer: 5
   m_Name: 52
@@ -8621,20 +8637,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6283653470008030553
+--- !u!114 &7784080528025864844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053938850156983149}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &6581357395206716900
@@ -9688,7 +9704,7 @@ GameObject:
   - component: {fileID: 981085410236392472}
   - component: {fileID: 6855428677340907193}
   - component: {fileID: 1589086652884083353}
-  - component: {fileID: 8259424978546529317}
+  - component: {fileID: 6676310872929828196}
   - component: {fileID: 988884920197770780}
   m_Layer: 5
   m_Name: 11
@@ -9756,20 +9772,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8259424978546529317
+--- !u!114 &6676310872929828196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2249943213142247434}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &988884920197770780
@@ -14303,7 +14319,7 @@ GameObject:
   - component: {fileID: 141217512669154179}
   - component: {fileID: 7146227631232005219}
   - component: {fileID: 4600272635917241980}
-  - component: {fileID: 5397249927299325477}
+  - component: {fileID: 8311290097573494567}
   - component: {fileID: 892354177998526331}
   m_Layer: 5
   m_Name: 53
@@ -14371,20 +14387,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5397249927299325477
+--- !u!114 &8311290097573494567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3315340756864292451}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &892354177998526331
@@ -14451,7 +14467,7 @@ GameObject:
   - component: {fileID: 8471641419674366553}
   - component: {fileID: 4449754757752442422}
   - component: {fileID: 2781504195931648548}
-  - component: {fileID: 8869959897538792739}
+  - component: {fileID: 5789215637641478460}
   - component: {fileID: 5271543817552822463}
   m_Layer: 5
   m_Name: 31
@@ -14519,20 +14535,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8869959897538792739
+--- !u!114 &5789215637641478460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3333776391708475735}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &5271543817552822463
@@ -15364,10 +15380,10 @@ GameObject:
   - component: {fileID: 5470468427684916849}
   - component: {fileID: 2525444008604375495}
   - component: {fileID: 1938810085758728458}
-  - component: {fileID: 8229802030906298487}
+  - component: {fileID: 5527229096884409102}
   - component: {fileID: 2669475694494023682}
   m_Layer: 5
-  m_Name: 72
+  m_Name: 62
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15432,20 +15448,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8229802030906298487
+--- !u!114 &5527229096884409102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3549182255766476370}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &2669475694494023682
@@ -20869,7 +20885,7 @@ GameObject:
   - component: {fileID: 5163794009994328484}
   - component: {fileID: 4637815647894802092}
   - component: {fileID: 9114107609127738278}
-  - component: {fileID: 5792327824044293689}
+  - component: {fileID: 8483469522440090185}
   - component: {fileID: 2745754337152990475}
   m_Layer: 5
   m_Name: 43
@@ -20937,20 +20953,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5792327824044293689
+--- !u!114 &8483469522440090185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4399686148967383117}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &2745754337152990475
@@ -22364,8 +22380,6 @@ GameObject:
   - component: {fileID: 2657812625495383726}
   - component: {fileID: 9101739549975707730}
   - component: {fileID: 9019617058152704712}
-  - component: {fileID: 2994516609164595726}
-  - component: {fileID: 1593700317796185439}
   m_Layer: 5
   m_Name: Loot
   m_TagString: Untagged
@@ -22432,73 +22446,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2994516609164595726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4913018490960971320}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19fbc2d4bef2fbe49ba00657db18e7a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  invSlots: []
-  hotbarSlots:
-  - {fileID: 1533022845025627086}
-  - {fileID: 6505932257094971199}
-  - {fileID: 1432187967961746267}
-  - {fileID: 604647195468720125}
-  - {fileID: 7867693578179635642}
-  - {fileID: 4561069589600440071}
-  playerInventoryManager: {fileID: 0}
---- !u!114 &1593700317796185439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4913018490960971320}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 514c487807c493c459f12f5f21a599c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  invSlots:
-  - {fileID: 988884920197770780}
-  - {fileID: 3790758948143706560}
-  - {fileID: 1783070150362112528}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 3054933560781619923}
-  - {fileID: 3304795057971838161}
-  - {fileID: 8591793786300084030}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 5271543817552822463}
-  - {fileID: 5124728006399868088}
-  - {fileID: 5137090657371311698}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 5245106668713092605}
-  - {fileID: 1148685305282767720}
-  - {fileID: 2745754337152990475}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 1649592536181355835}
-  - {fileID: 6581357395206716900}
-  - {fileID: 892354177998526331}
-  - {fileID: 0}
-  - {fileID: 0}
-  hotbarSlots:
-  - {fileID: 1533022845025627086}
-  - {fileID: 6505932257094971199}
-  - {fileID: 1432187967961746267}
-  - {fileID: 604647195468720125}
-  - {fileID: 7867693578179635642}
-  - {fileID: 4561069589600440071}
-  playerInventoryManager: {fileID: 0}
 --- !u!1 &4914621360467771840
 GameObject:
   m_ObjectHideFlags: 0
@@ -25398,7 +25345,7 @@ GameObject:
   - component: {fileID: 5909574415611850357}
   - component: {fileID: 4742040818900281172}
   - component: {fileID: 5947536719349456192}
-  - component: {fileID: 4356308981078288813}
+  - component: {fileID: 4400780906349598832}
   - component: {fileID: 1783070150362112528}
   m_Layer: 5
   m_Name: 13
@@ -25466,20 +25413,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4356308981078288813
+--- !u!114 &4400780906349598832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5466349266981337149}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &1783070150362112528
@@ -27852,7 +27799,7 @@ GameObject:
   - component: {fileID: 1219853533226127364}
   - component: {fileID: 1683290290115734637}
   - component: {fileID: 5401953309623716928}
-  - component: {fileID: 7460310662373835933}
+  - component: {fileID: 7863499357430379248}
   - component: {fileID: 1649592536181355835}
   m_Layer: 5
   m_Name: 51
@@ -27920,20 +27867,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7460310662373835933
+--- !u!114 &7863499357430379248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5954069531730751511}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &1649592536181355835
@@ -29305,10 +29252,10 @@ GameObject:
   - component: {fileID: 6822042322434661420}
   - component: {fileID: 3478782916062438553}
   - component: {fileID: 4762519847556296067}
-  - component: {fileID: 1003627196878788886}
+  - component: {fileID: 3456151763272178345}
   - component: {fileID: 4683228276468563428}
   m_Layer: 5
-  m_Name: 62
+  m_Name: 71
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29373,20 +29320,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1003627196878788886
+--- !u!114 &3456151763272178345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6265108084429039832}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &4683228276468563428
@@ -29700,9 +29647,9 @@ GameObject:
   - component: {fileID: 5052081621135632426}
   - component: {fileID: 6059487990062826790}
   - component: {fileID: 5946208906429374460}
-  - component: {fileID: 1298152539751733320}
+  - component: {fileID: 3384073550751952912}
   m_Layer: 5
-  m_Name: InventoryGrid
+  m_Name: CrateGrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29736,11 +29683,11 @@ RectTransform:
   - {fileID: 3917427292014144202}
   - {fileID: 141217512669154179}
   - {fileID: 6452019579775839553}
+  - {fileID: 5470468427684916849}
+  - {fileID: 119232963209590578}
   - {fileID: 6822042322434661420}
   - {fileID: 8890864412142126830}
   - {fileID: 3633728724681388994}
-  - {fileID: 5470468427684916849}
-  - {fileID: 119232963209590578}
   m_Father: {fileID: 2657812625495383726}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -29786,46 +29733,42 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1298152539751733320
+--- !u!114 &3384073550751952912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6423604742221605936}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d75fc5b9ae316242bb5b90dfc78d6c7, type: 3}
+  m_Script: {fileID: 11500000, guid: d55ee8d9f76d69d428449ab6c0e02b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invSlots:
+  crateSlots:
   - {fileID: 988884920197770780}
   - {fileID: 3790758948143706560}
   - {fileID: 1783070150362112528}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 3054933560781619923}
   - {fileID: 3304795057971838161}
   - {fileID: 8591793786300084030}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 5271543817552822463}
   - {fileID: 5124728006399868088}
   - {fileID: 5137090657371311698}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 5245106668713092605}
   - {fileID: 1148685305282767720}
   - {fileID: 2745754337152990475}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 1649592536181355835}
   - {fileID: 6581357395206716900}
   - {fileID: 892354177998526331}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4738059311045206309}
+  - {fileID: 2669475694494023682}
+  - {fileID: 6061921621780240650}
+  - {fileID: 4683228276468563428}
+  - {fileID: 2343388111041250907}
+  - {fileID: 6344687908183462545}
   playerInventoryManager: {fileID: 0}
-  itemAction: {fileID: 3483510792965193481}
+  crateManager: {fileID: 0}
 --- !u!1 &6426038046536828568
 GameObject:
   m_ObjectHideFlags: 0
@@ -34188,7 +34131,7 @@ GameObject:
   - component: {fileID: 3267649162642946017}
   - component: {fileID: 1516767519683403481}
   - component: {fileID: 289631977440204193}
-  - component: {fileID: 5383598661527113580}
+  - component: {fileID: 9128107317072130017}
   - component: {fileID: 3054933560781619923}
   m_Layer: 5
   m_Name: 21
@@ -34256,20 +34199,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5383598661527113580
+--- !u!114 &9128107317072130017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7473425208809610473}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &3054933560781619923
@@ -36274,7 +36217,7 @@ GameObject:
   - component: {fileID: 6337877404431610909}
   - component: {fileID: 6681601296418672264}
   - component: {fileID: 691948952687933658}
-  - component: {fileID: 1515116944771136947}
+  - component: {fileID: 5852212020378546205}
   - component: {fileID: 3304795057971838161}
   m_Layer: 5
   m_Name: 22
@@ -36342,20 +36285,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1515116944771136947
+--- !u!114 &5852212020378546205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7748937309186060413}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &3304795057971838161
@@ -37996,7 +37939,7 @@ GameObject:
   - component: {fileID: 7430452596147877587}
   - component: {fileID: 6124181145889266625}
   - component: {fileID: 1873087858369861113}
-  - component: {fileID: 1174253500720744781}
+  - component: {fileID: 1582278548952585280}
   - component: {fileID: 1148685305282767720}
   m_Layer: 5
   m_Name: 42
@@ -38064,20 +38007,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1174253500720744781
+--- !u!114 &1582278548952585280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8252844407469942109}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &1148685305282767720
@@ -38493,7 +38436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 41.2}
+  m_AnchoredPosition: {x: 0, y: 41.19995}
   m_SizeDelta: {x: 446.8348, y: 75.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8380869288009831576
@@ -39106,10 +39049,10 @@ GameObject:
   - component: {fileID: 8890864412142126830}
   - component: {fileID: 6491375183339069882}
   - component: {fileID: 5524506985768714520}
-  - component: {fileID: 2914438898947614201}
+  - component: {fileID: 8860055498169266951}
   - component: {fileID: 2343388111041250907}
   m_Layer: 5
-  m_Name: 63
+  m_Name: 72
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39174,20 +39117,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2914438898947614201
+--- !u!114 &8860055498169266951
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8485639281210695216}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &2343388111041250907
@@ -39915,7 +39858,7 @@ GameObject:
   - component: {fileID: 6819845338346548}
   - component: {fileID: 8609468183801146131}
   - component: {fileID: 104609024447463508}
-  - component: {fileID: 6839297952502583229}
+  - component: {fileID: 1313222984413360537}
   - component: {fileID: 8591793786300084030}
   m_Layer: 5
   m_Name: 23
@@ -39983,20 +39926,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6839297952502583229
+--- !u!114 &1313222984413360537
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8669074318145812273}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &8591793786300084030
@@ -40310,7 +40253,7 @@ GameObject:
   - component: {fileID: 7922556605175043168}
   - component: {fileID: 9163911453224172475}
   - component: {fileID: 8295218403569517095}
-  - component: {fileID: 4519922688421665651}
+  - component: {fileID: 2325405467060208424}
   - component: {fileID: 5245106668713092605}
   m_Layer: 5
   m_Name: 41
@@ -40378,20 +40321,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4519922688421665651
+--- !u!114 &2325405467060208424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8752818167933616710}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &5245106668713092605
@@ -41650,7 +41593,7 @@ GameObject:
   - component: {fileID: 3008965255766546864}
   - component: {fileID: 4428496111301626435}
   - component: {fileID: 2692432988523090955}
-  - component: {fileID: 2520173183942092070}
+  - component: {fileID: 1559600413836786681}
   - component: {fileID: 5137090657371311698}
   m_Layer: 5
   m_Name: 33
@@ -41718,20 +41661,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2520173183942092070
+--- !u!114 &1559600413836786681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9038563009868244499}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &5137090657371311698
@@ -41760,7 +41703,7 @@ GameObject:
   - component: {fileID: 6452019579775839553}
   - component: {fileID: 1906682271943900717}
   - component: {fileID: 1598248723680879710}
-  - component: {fileID: 4058796597071171185}
+  - component: {fileID: 6563791781869986845}
   - component: {fileID: 4738059311045206309}
   m_Layer: 5
   m_Name: 61
@@ -41828,20 +41771,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4058796597071171185
+--- !u!114 &6563791781869986845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9099694663039637990}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab6aae2d25452e546a4779313edecc8b, type: 3}
+  m_Script: {fileID: 11500000, guid: f9bfb9a93adf75945bb9ef285848c73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  playerInventoryManager: {fileID: 0}
+  cratemanager: {fileID: 3794825611378922564}
   UI_text: {fileID: 0}
   info: {fileID: 0}
 --- !u!114 &4738059311045206309

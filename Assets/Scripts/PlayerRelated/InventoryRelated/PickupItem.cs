@@ -41,6 +41,8 @@ public class PickupItem : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 3f))
         {
+            //if (GetCrate(hit)) return;
+            
             if (hit.collider.CompareTag("Pickable"))
             {
                 Item pickableItem = hit.collider.GetComponent<Item>();
@@ -90,6 +92,16 @@ public class PickupItem : MonoBehaviour
         Destroy(hit.collider.gameObject);
     }
 
+    public bool GetCrate(RaycastHit hit)
+    {
+        if (hit.collider.tag == "CRATE")
+        {
+            Debug.Log("Crate found");
+            return true;
+        }
+
+        return false;
+    }
 
 
 }

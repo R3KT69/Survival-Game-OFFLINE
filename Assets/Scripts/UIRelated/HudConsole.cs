@@ -25,15 +25,20 @@ public class HudConsole : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            inventory.SetActive(!inventory.activeSelf);
-            isInventoryOpen = !isInventoryOpen;
-            MouseLockToggle();
-            weapon_Driver.canShoot = !isInventoryOpen;
+            TriggerInvOpen();
         }
         
     }
 
-    void MouseLockToggle()
+    public void TriggerInvOpen()
+    {
+        inventory.SetActive(!inventory.activeSelf);
+        isInventoryOpen = !isInventoryOpen;
+        MouseLockToggle();
+        weapon_Driver.canShoot = !isInventoryOpen;
+    }
+
+    public void MouseLockToggle()
     {
         if (Cursor.lockState == CursorLockMode.Locked)
         {

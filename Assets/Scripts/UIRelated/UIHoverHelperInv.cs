@@ -28,7 +28,6 @@ public class UIHoverHelperInv : MonoBehaviour
                 itemAction.selected_item = playerInventoryManager.inv[pos.x, pos.y];
                 Debug.Log($"Selected item: ({itemAction.selected_item.id})");
                 Debug.Log($"inv pos: Clicked slot at ({pos.x},{pos.y})");
-                // optionally highlight drag start slot
             }
         }
     }
