@@ -21,13 +21,49 @@ public class CrateInventoryManager : MonoBehaviour
         3    (0,2) (1,2) (2,2) (3,2) (4,2) (5,2) (6,2)
         */
         
+        /*
         crate_inv[0,0] = ItemLookup["PISTOL"];
         crate_inv[0,1] = ItemLookup["SHOTGUN"];
         crate_inv[0,2] = ItemLookup["WATER"];
 
         crate_inv[6,0] = ItemLookup["PISTOL"];
         crate_inv[6,1] = ItemLookup["SHOTGUN"];
-        crate_inv[6,2] = ItemLookup["WATER"];
+        crate_inv[6,2] = ItemLookup["WATER"];*/
+
+        RandomizedCrate();
+    }
+
+    void RandomizedCrate()
+    {
+        // Clear crate
+        for (int x = 0; x < 7; x++)
+        {
+            for (int y = 0; y < 3; y++)
+            {
+                crate_inv[x, y] = null;
+            }
+        }
+
+        List<Item> allItems = new List<Item>(ItemLookup.Values);
+
+        int itemCount = Random.Range(2, 8); // how many items to place
+
+        int placed = 0;
+
+        // COLUMN FIRST
+        for (int x = 0; x < 7; x++)
+        {
+            for (int y = 0; y < 3; y++)
+            {
+                if (placed >= itemCount)
+                    return;
+
+                Item randomItem = allItems[Random.Range(0, allItems.Count)];
+                crate_inv[x, y] = randomItem;
+
+                placed++;
+            }
+        }
     }
 
     
