@@ -27,6 +27,12 @@ public class ItemAction : MonoBehaviour
                 Destroy(selected_item);
             }
 
+            if (selected_item.id == "MEDKIT")
+            {
+                playerStatsManager.AddHealth(selected_item.defaultCount);
+                Destroy(selected_item);
+            }
+
             if (selected_item.id == "RATION")
             {
                 playerStatsManager.AddFood(selected_item.defaultCount);
