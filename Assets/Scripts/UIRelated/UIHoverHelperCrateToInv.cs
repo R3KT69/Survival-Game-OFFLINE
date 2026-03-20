@@ -7,11 +7,11 @@ public class UIHoverHelperCrateToInv : MonoBehaviour
     public PlayerInventoryManager playerInventoryManager;  // Inventory grid
     public UI_CrateManager crateManager;                  // Current selected crate
     public UI_CrateMenu crateMenu;                        // Crate slot UI
-    public UIHoverHelperCombined uIHoverHelperCombined;   // For inventory hover info
+    public UIHoverHelperCombined uIHoverHelperCombined;   
 
     [Header("Drag Tracking")]
-    public Vector2Int cratePos = new Vector2Int(-1, -1);  // Slot in crate being dragged
-    public Vector2Int invPos = new Vector2Int(-1, -1);    // Slot in inventory being hovered on release
+    public Vector2Int cratePos = new Vector2Int(-1, -1);  
+    public Vector2Int invPos = new Vector2Int(-1, -1);    
 
     private bool isDragging = false;
 
@@ -27,7 +27,7 @@ public class UIHoverHelperCrateToInv : MonoBehaviour
             UIHover slot = crateMenu.crateSlots[i];
             if (slot.isHovering && Input.GetMouseButtonDown(0))
             {
-                cratePos = crateMenu.IndexToXY(i); // Convert UI index → crate array position
+                cratePos = crateMenu.IndexToXY(i); // Convert UI index > crate array position
                 isDragging = true;
                 Debug.Log($"Started dragging from crate slot {cratePos}");
                 break;
@@ -40,7 +40,7 @@ public class UIHoverHelperCrateToInv : MonoBehaviour
             UIHover slot = uIHoverHelperCombined.invSlots[i];
             if (slot.isHovering)
             {
-                invPos = uIHoverHelperCombined.IndexToXY(i); // Convert UI index → inventory array position
+                invPos = uIHoverHelperCombined.IndexToXY(i); // Convert UI index > inventory array position
                 break;
             }
         }
