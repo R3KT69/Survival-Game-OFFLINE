@@ -51,4 +51,5 @@ MonoBehaviour:
   defaultCount: 100
   Durability: 0
   id: WOOD
+  description: Just wood.
   maxDurability: 100

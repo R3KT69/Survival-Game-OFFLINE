@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1134216492053707874}
   - component: {fileID: -4843915102237615149}
   m_Layer: 0
-  m_Name: Stone
+  m_Name: Ration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,8 @@ MonoBehaviour:
   itemType: 2
   weaponType: 4
   runtimeCount: 0
-  defaultCount: 100
+  defaultCount: 35
   Durability: 0
-  id: STONE
+  id: RATION
+  description: Military Ration
   maxDurability: 100
