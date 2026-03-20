@@ -12,6 +12,7 @@ public class HudConsole : MonoBehaviour
     public TextMeshProUGUI ammo;
     public GameObject console;
     public GameObject inventory;
+    public UI_CrateManager uI_CrateManager;
     public bool isInventoryOpen;
 
     void Start()
@@ -27,13 +28,21 @@ public class HudConsole : MonoBehaviour
         {
             TriggerInvOpen();
         }
+
+        
         
     }
 
     public void TriggerInvOpen()
     {
+        if (isInventoryOpen)
+        {
+            uI_CrateManager.inRange = false;
+        }
+
         inventory.SetActive(!inventory.activeSelf);
         isInventoryOpen = !isInventoryOpen;
+        
         MouseLockToggle();
         weapon_Driver.canShoot = !isInventoryOpen;
     }

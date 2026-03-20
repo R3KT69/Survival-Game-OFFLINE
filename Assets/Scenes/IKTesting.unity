@@ -6897,6 +6897,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1214717317}
     - target: {fileID: 3794825611378922564, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: Hud
+      value: 
+      objectReference: {fileID: 839960861}
+    - target: {fileID: 3794825611378922564, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: Loot
+      value: 
+      objectReference: {fileID: 1003321086}
+    - target: {fileID: 3794825611378922564, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 168086487}
@@ -6920,6 +6928,10 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 1214717317}
+    - target: {fileID: 4913018490960971320, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4955460910353025400, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
@@ -7192,6 +7204,10 @@ PrefabInstance:
       propertyPath: weapon_Driver
       value: 
       objectReference: {fileID: 1214717316}
+    - target: {fileID: 8706463541831057807, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: uI_CrateManager
+      value: 
+      objectReference: {fileID: 839960866}
     - target: {fileID: 8864366273249859466, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
@@ -7502,6 +7518,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1003321086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4913018490960971320, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+  m_PrefabInstance: {fileID: 839960860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1208817112
 GameObject:
   m_ObjectHideFlags: 0
