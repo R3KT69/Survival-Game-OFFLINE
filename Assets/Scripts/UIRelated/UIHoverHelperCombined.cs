@@ -12,6 +12,7 @@ public class UIHoverHelperCombined : MonoBehaviour
 
     private int dragStartIndex = -1;        // Inventory index
     private int dragStartHotbarIndex = -1;  // Hotbar index
+    public Vector2Int itemPos;
 
     void Update()
     {
@@ -107,6 +108,23 @@ public class UIHoverHelperCombined : MonoBehaviour
             dragStartHotbarIndex = -1;
             currentDrag = DragSource.None;
         }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            for (int i = 0; i < invSlots.Count; i++)
+            {
+                UIHover slot = invSlots[i];
+                if (slot.isHovering)
+                {
+                    itemPos = IndexToXY(i);
+                    //Debug.Log($"Inv→Inv swap from ({startPos.x},{startPos.y}) to ({endPos.x},{endPos.y})");
+                    //playerInventoryManager.InvToInvSwap(startPos.x, startPos.y, endPos.x, endPos.y);
+                    break;
+                }
+            }
+        }
+
+
     }
 
     private Vector2Int IndexToXY(int index)
@@ -116,4 +134,6 @@ public class UIHoverHelperCombined : MonoBehaviour
         int y = index % height;   // row
         return new Vector2Int(x, y);
     }
+
+    
 }

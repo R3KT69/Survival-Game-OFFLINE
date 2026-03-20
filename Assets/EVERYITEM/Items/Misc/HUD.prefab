@@ -4771,6 +4771,7 @@ MonoBehaviour:
   ammo: {fileID: 2230288491529196451}
   console: {fileID: 3830574290363645890}
   inventory: {fileID: 234004863327599321}
+  uI_CrateManager: {fileID: 3794825611378922564}
   isInventoryOpen: 0
 --- !u!114 &3794825611378922564
 MonoBehaviour:
@@ -4786,7 +4787,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selected_crate: {fileID: 0}
   mainCamera: {fileID: 0}
-  Hud: {fileID: 0}
+  Hud: {fileID: 8706463541831057807}
+  Loot: {fileID: 4913018490960971320}
+  inRange: 0
 --- !u!223 &4878945645118035459
 Canvas:
   m_ObjectHideFlags: 0
@@ -22386,7 +22389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2657812625495383726
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29768,7 +29771,7 @@ MonoBehaviour:
   - {fileID: 2343388111041250907}
   - {fileID: 6344687908183462545}
   playerInventoryManager: {fileID: 0}
-  crateManager: {fileID: 0}
+  crateManager: {fileID: 3794825611378922564}
 --- !u!1 &6426038046536828568
 GameObject:
   m_ObjectHideFlags: 0

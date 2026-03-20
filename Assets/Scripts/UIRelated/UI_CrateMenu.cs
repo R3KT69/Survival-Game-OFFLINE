@@ -6,6 +6,7 @@ public class UI_CrateMenu : MonoBehaviour
     public List<UIHover> crateSlots;                 
     public PlayerInventoryManager playerInventoryManager;
     public UI_CrateManager crateManager;
+    public Vector2Int itemPos;
     //public ItemAction itemAction;
     //public UIHoverHelperInvToHotbar uIHoverHelperInvToHotbar;
 
@@ -23,13 +24,14 @@ public class UI_CrateMenu : MonoBehaviour
                 if (crateManager.selected_crate.crate_inv[pos.x, pos.y] == null)
                 {
                     Debug.Log("Clicked on empty crate inv");
+                    itemPos = pos;
                     return;
                 }
     
                 //itemAction.selected_item = playerInventoryManager.inv[pos.x, pos.y];
                 //Debug.Log($"Selected item: ({itemAction.selected_item.id})");
-                Debug.Log($"inv pos: Clicked slot at ({pos.x},{pos.y}) which is {crateManager.selected_crate.crate_inv[pos.x, pos.y].id}");
-                
+                Debug.Log($"crate pos: Clicked slot at ({pos.x},{pos.y}) which is {crateManager.selected_crate.crate_inv[pos.x, pos.y].id}");
+                itemPos = pos;
             }
         }
     }

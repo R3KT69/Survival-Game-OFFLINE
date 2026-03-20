@@ -46,7 +46,7 @@ public class CrateInventoryManager : MonoBehaviour
 
         List<Item> allItems = new List<Item>(ItemLookup.Values);
 
-        int itemCount = Random.Range(2, 8); // how many items to place
+        int itemCount = Random.Range(4, 8); // how many items to place
 
         int placed = 0;
 
