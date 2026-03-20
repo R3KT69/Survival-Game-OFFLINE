@@ -40,6 +40,40 @@ public class DropItem : MonoBehaviour
         rigidObj.linearVelocity = transform.forward * 3f + Vector3.up * 1.5f;
         
     }
+
+    public void DropItemInv(Item item)
+    {
+        GameObject currentObj = item.gameObject;
+        currentObj.SetActive(true);
+        Vector3 dropPos = transform.localPosition;
+        dropPos.y += dropHeight;
+
+        Vector3 dropRot = transform.localRotation.eulerAngles;
+        dropRot.z += 90f;
+        Quaternion rotation = Quaternion.Euler(dropRot);
+        
+
+        GameObject droppedObj = Instantiate(currentObj, dropPos, rotation);
+        //Destroy(weapon_Driver.currentWeapon.gameObject);
+        //weapon_Driver.currentWeapon = droppedObj.GetComponent<Weapon_global>();
+        //arm.Unarmed();
+
+        //MonoBehaviour[] scripts = droppedObj.GetComponents<MonoBehaviour>();
+        //foreach (MonoBehaviour script in scripts) Destroy(script);
+
+        Rigidbody rigidObj = droppedObj.AddComponent<Rigidbody>();
+        rigidObj.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        rigidObj.interpolation = RigidbodyInterpolation.Interpolate;
+        droppedObj.GetComponent<BoxCollider>().enabled = true;
+        //droppedObj.AddComponent<BoxCollider>();
+        //droppedObj.GetComponent<BoxCollider>().size = new Vector3(0.1f,0.15f,0.5f);
+        //droppedObj.GetComponent<BoxCollider>().excludeLayers = playerLayer;
+
+        
+        
+        rigidObj.linearVelocity = transform.forward * 3f + Vector3.up * 1.5f;
+        
+    }
     // Update is called once per frame
     void Update()
     {

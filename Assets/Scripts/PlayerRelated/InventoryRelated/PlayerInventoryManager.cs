@@ -76,6 +76,8 @@ public class PlayerInventoryManager : MonoBehaviour
 
         AssignItemInventory(0,0, "AMMO");
         AssignItemInventory(1,0, "BANDAGE");
+        AssignItemInventory(2,0, "WATER");
+        AssignItemInventory(3,0, "RATION");
         //AssignItemInventory(1,1, "AMMO");
         //AssignItemInventory(0,0, "M4");
         //AssignItemInventory(0,1, "PISTOL");

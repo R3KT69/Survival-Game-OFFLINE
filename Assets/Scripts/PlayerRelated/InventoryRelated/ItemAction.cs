@@ -9,6 +9,7 @@ public class ItemAction : MonoBehaviour
     public TextMeshProUGUI item_name;
     public Item selected_item;
     public PlayerStatsManager playerStatsManager;
+    public DropItem dropItem;
 
     void Start()
     {
@@ -18,9 +19,36 @@ public class ItemAction : MonoBehaviour
 
     public void UseItem()
     {
-        if (selected_item != null && selected_item.id == "BANDAGE")
+        if (selected_item != null)
         {
-            playerStatsManager.health_pts += selected_item.defaultCount;
+            if (selected_item.id == "BANDAGE")
+            {
+                playerStatsManager.AddHealth(selected_item.defaultCount);
+                Destroy(selected_item);
+            }
+
+            if (selected_item.id == "RATION")
+            {
+                playerStatsManager.AddFood(selected_item.defaultCount);
+                Destroy(selected_item);
+            }
+
+            if (selected_item.id == "WATER")
+            {
+                playerStatsManager.AddFood(selected_item.defaultCount);
+                Destroy(selected_item);
+            }
+
+            
+        }
+    }
+
+    public void DiscardItem()
+    {
+        if (selected_item != null)
+        {
+            dropItem.DropItemInv(selected_item);
+            Destroy(selected_item);
         }
     }
 
