@@ -78,8 +78,9 @@ public class PlayerInventoryManager : MonoBehaviour
         
 
         // 5x5 column-first grid
+        /*
         AssignItemInventory(0,0, "AMMO"); AssignItemInventory(1,0, "BANDAGE"); AssignItemInventory(2,0, "WATER"); AssignItemInventory(3,0, "RATION"); AssignItemInventory(4,0, "AMMO");
-        AssignItemInventory(4,1, "MEDKIT");
+        AssignItemInventory(4,1, "MEDKIT");*/
         AssignItemInventory(0,1, "LH_PISTOL"); 
         AssignItemInventory(0,2, "SHOTGUN");;
         AssignItemInventory(0,3, "MP5"); 
@@ -356,6 +357,26 @@ public class PlayerInventoryManager : MonoBehaviour
             }
         }
         Debug.Log($"{ID} not found/destroyed/depleted");
+        x = -1;
+        y = -1;
+        return false;
+    }
+
+    public bool get_first_empty_slot(out int x, out int y)
+    {
+        for (x = 0; x < 5; x++)
+        {
+            for (y = 0; y < 5; y++)
+            {
+                if (inv[x, y] == null) // empty slot
+                {
+                    return true;
+                }
+            }
+        }
+
+        // No empty slots found
+        Debug.Log("No empty slot available in inventory");
         x = -1;
         y = -1;
         return false;

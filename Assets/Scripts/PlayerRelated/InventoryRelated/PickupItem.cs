@@ -44,12 +44,17 @@ public class PickupItem : MonoBehaviour
             if (hit.collider.CompareTag("Pickable"))
             {
                 Item pickableItem = hit.collider.GetComponent<Item>();
+                Debug.Log($"Pickup: idname {pickableItem.id}");
 
-                
+                if (pickableItem.itemType == ItemType.Consumable)
+                {
+                    GetConsumable(hit);
+                    return;
+                }
 
                 inv.AssignItemHotbar(emptyIndex, pickableItem.id);
                 Weapon_global assignedWeapon = inv.hotbar[emptyIndex].gameObject.GetComponent<Weapon_global>();
-                Debug.Log($"Pickup: idname {pickableItem.id}");
+                
                 //inv.hotbar[emptyIndex] = pickableItem;
                 int savedAmmo = pickableItem.gameObject.GetComponent<Weapon_global>().runtimeAmmo;
                 assignedWeapon.runtimeAmmo = savedAmmo;
@@ -61,6 +66,28 @@ public class PickupItem : MonoBehaviour
                 Destroy(hit.collider.gameObject);
             }
         }
+    }
+
+    public void GetConsumable(RaycastHit hit)
+    {
+        Item pickableItem = hit.collider.GetComponent<Item>();
+        Debug.Log($"Pickup: idname {pickableItem.id}");
+
+        int x,y;
+        inv.get_first_empty_slot(out x, out y);
+        inv.AssignItemInventory(x,y, pickableItem.id);
+
+        //Weapon_global assignedWeapon = inv.hotbar[emptyIndex].gameObject.GetComponent<Weapon_global>();
+        
+        //inv.hotbar[emptyIndex] = pickableItem;
+        //int savedAmmo = pickableItem.gameObject.GetComponent<Weapon_global>().runtimeAmmo;
+        //assignedWeapon.runtimeAmmo = savedAmmo;
+        Debug.Log($"Pickup: after pickup {pickableItem.name}");
+        
+        //arm.ChangeArm(emptyIndex, inv.hotbar, inv.hotbar[emptyIndex].weaponType, assignedWeapon);
+        //arm.currentslot = emptyIndex;
+
+        Destroy(hit.collider.gameObject);
     }
 
 
