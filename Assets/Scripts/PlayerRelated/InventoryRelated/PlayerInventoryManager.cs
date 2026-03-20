@@ -68,19 +68,21 @@ public class PlayerInventoryManager : MonoBehaviour
         5    (0,4) (1,4) (2,4) (3,4) (4,4)
         */
 
+        
 
         //InitializeItems();
         
         //inv[0,0] = ItemLookup["AMMO"];
         //Debug.Log(inv[0,0].runtimeCount);
 
-        AssignItemInventory(0,0, "AMMO");
-        AssignItemInventory(1,0, "BANDAGE");
-        AssignItemInventory(2,0, "WATER");
-        AssignItemInventory(3,0, "RATION");
-        //AssignItemInventory(1,1, "AMMO");
-        //AssignItemInventory(0,0, "M4");
-        //AssignItemInventory(0,1, "PISTOL");
+        
+
+        // 5x5 column-first grid
+        AssignItemInventory(0,0, "AMMO"); AssignItemInventory(1,0, "BANDAGE"); AssignItemInventory(2,0, "WATER"); AssignItemInventory(3,0, "RATION"); AssignItemInventory(4,0, "AMMO");
+        AssignItemInventory(0,1, "LH_PISTOL"); 
+        AssignItemInventory(0,2, "SHOTGUN");;
+        AssignItemInventory(0,3, "MP5"); 
+        AssignItemInventory(0,4, "RIFLE"); 
         
 
         //Debug.Log(ItemLookup["PISTOL"].name);

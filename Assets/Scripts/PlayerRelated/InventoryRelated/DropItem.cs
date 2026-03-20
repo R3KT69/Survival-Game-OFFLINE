@@ -45,6 +45,7 @@ public class DropItem : MonoBehaviour
     {
         GameObject currentObj = item.gameObject;
         currentObj.SetActive(true);
+        currentObj.transform.localScale = currentObj.gameObject.GetComponent<Weapon_global>().scale * Vector3.one;
         Vector3 dropPos = transform.localPosition;
         dropPos.y += dropHeight;
 
