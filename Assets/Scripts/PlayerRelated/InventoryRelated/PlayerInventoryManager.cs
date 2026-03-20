@@ -57,14 +57,17 @@ public class PlayerInventoryManager : MonoBehaviour
         foreach (Item w in All_Items.root_items) ItemLookup[w.id] = w;
 
         
-        
-        /*Inventory Grid:
-            (0,0) (1,0) (2,0) (3,0) (4,0)
-            (0,1) (1,1) (2,1) (3,1) (4,1)
-            (0,2) (1,2) (2,2) (3,2) (4,2)
-            (0,3) (1,3) (2,3) (3,3) (4,3)
-            (0,4) (1,4) (2,4) (3,4) (4,4)
+        //        [INVENTORY LAYOUT]
+        /*     ******COLUMN FIRST******
+        0      1     2     3     4     5
+        0    (x,y) (x,y) (x,y) (x,y) (x,y)
+        1    (0,0) (1,0) (2,0) (3,0) (4,0)
+        2    (0,1) (1,1) (2,1) (3,1) (4,1)
+        3    (0,2) (1,2) (2,2) (3,2) (4,2)
+        4    (0,3) (1,3) (2,3) (3,3) (4,3)
+        5    (0,4) (1,4) (2,4) (3,4) (4,4)
         */
+
 
         //InitializeItems();
         
@@ -72,6 +75,7 @@ public class PlayerInventoryManager : MonoBehaviour
         //Debug.Log(inv[0,0].runtimeCount);
 
         AssignItemInventory(0,0, "AMMO");
+        AssignItemInventory(1,0, "BANDAGE");
         //AssignItemInventory(1,1, "AMMO");
         //AssignItemInventory(0,0, "M4");
         //AssignItemInventory(0,1, "PISTOL");
@@ -260,7 +264,7 @@ public class PlayerInventoryManager : MonoBehaviour
                 Debug.Log("Cant swap with consumeable");
                 return;
             }
-            
+
             // Move the current inventory item to hotbar
             weapon_Driver.currentWeapon = invItem.GetComponent<Weapon_global>();
 

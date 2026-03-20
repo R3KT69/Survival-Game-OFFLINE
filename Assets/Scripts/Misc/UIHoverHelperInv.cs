@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class UIHoverHelperInv : MonoBehaviour
 {
-    public List<UIHover> invSlots;                 // All inventory UI slots in order (row by row)
+    public List<UIHover> invSlots;                 
     public PlayerInventoryManager playerInventoryManager;
+    public ItemAction itemAction;
     //public UIHoverHelperInvToHotbar uIHoverHelperInvToHotbar;
 
-    private int dragStartIndex = -1;
 
     void Update()
     {
@@ -17,28 +17,18 @@ public class UIHoverHelperInv : MonoBehaviour
 
             if (slot.isHovering && Input.GetMouseButtonDown(0))
             {
-                dragStartIndex = i;
                 Vector2Int pos = IndexToXY(i);
+
+                if (playerInventoryManager.inv[pos.x, pos.y] == null)
+                {
+                    Debug.Log("Clicked on empty inv");
+                    return;
+                }
+    
+                itemAction.selected_item = playerInventoryManager.inv[pos.x, pos.y];
+                Debug.Log($"Selected item: ({itemAction.selected_item.id})");
                 Debug.Log($"inv pos: Clicked slot at ({pos.x},{pos.y})");
                 // optionally highlight drag start slot
-            }
-
-            if (slot.isHovering && Input.GetMouseButtonUp(0))
-            {
-                Vector2Int pos = IndexToXY(i);
-                Debug.Log($"inv pos: Released over slot at ({pos.x},{pos.y})");
-
-                if (dragStartIndex != -1 && dragStartIndex != i)
-                {
-                    // Convert linear indices to (x,y)
-                    Vector2Int startPos = IndexToXY(dragStartIndex);
-                    Vector2Int endPos = IndexToXY(i);
-
-                    // Swap items in the inventory array
-                    playerInventoryManager.InvToInvSwap(startPos.x, startPos.y, endPos.x, endPos.y);
-                }
-
-                dragStartIndex = -1; // reset
             }
         }
     }
