@@ -7,6 +7,7 @@ public class DropItem : MonoBehaviour
     public ChangingArm arm;
     public LayerMask playerLayer;
     public float dropHeight;
+    public Transform dropPoint;
 
     public void DropItemCurrent()
     {
@@ -45,6 +46,13 @@ public class DropItem : MonoBehaviour
     {
         GameObject currentObj = item.gameObject;
         currentObj.SetActive(true);
+
+        if (item.itemType == ItemType.Consumable)
+        {
+            DropConsumableInv(item);
+            return;
+        }
+
         currentObj.transform.localScale = currentObj.gameObject.GetComponent<Weapon_global>().scale * Vector3.one;
         Vector3 dropPos = transform.localPosition;
         dropPos.y += dropHeight;
@@ -75,6 +83,27 @@ public class DropItem : MonoBehaviour
         rigidObj.linearVelocity = transform.forward * 3f + Vector3.up * 1.5f;
         
     }
+
+    public void DropConsumableInv(Item item)
+    {
+        GameObject currentObj = item.gameObject;
+        currentObj.SetActive(true);
+
+        Vector3 dropPos = dropPoint.position;
+        Quaternion rotation = dropPoint.rotation;
+
+        GameObject droppedObj = Instantiate(currentObj, dropPos, rotation);
+
+        Rigidbody rigidObj = droppedObj.AddComponent<Rigidbody>();
+        rigidObj.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        rigidObj.interpolation = RigidbodyInterpolation.Interpolate;
+
+        droppedObj.GetComponent<BoxCollider>().enabled = true;
+
+        // Use dropPoint forward instead of player forward
+        rigidObj.linearVelocity = dropPoint.forward * 3f + Vector3.up * 1.5f;
+    }
+
     // Update is called once per frame
     void Update()
     {

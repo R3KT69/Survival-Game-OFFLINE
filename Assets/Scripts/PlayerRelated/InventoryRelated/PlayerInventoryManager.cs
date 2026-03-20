@@ -78,9 +78,9 @@ public class PlayerInventoryManager : MonoBehaviour
         
 
         // 5x5 column-first grid
-        /*
+        
         AssignItemInventory(0,0, "AMMO"); AssignItemInventory(1,0, "BANDAGE"); AssignItemInventory(2,0, "WATER"); AssignItemInventory(3,0, "RATION"); AssignItemInventory(4,0, "AMMO");
-        AssignItemInventory(4,1, "MEDKIT");*/
+        AssignItemInventory(4,1, "MEDKIT");
         AssignItemInventory(0,1, "LH_PISTOL"); 
         AssignItemInventory(0,2, "SHOTGUN");;
         AssignItemInventory(0,3, "MP5"); 
