@@ -3,44 +3,72 @@ using System.Collections.Generic;
 
 public class UIHoverHelperCrateToInv : MonoBehaviour
 {
-    public PlayerInventoryManager playerInventoryManager;
-    public UI_CrateManager crateManager;
-    public UIHoverHelperCombined uIHoverHelperCombined;
-    public UI_CrateMenu crateMenu;
-    public Vector2Int invPos;
-    public Vector2Int cratePos;
+    [Header("Inventory & Crate Setup")]
+    public PlayerInventoryManager playerInventoryManager;  // Inventory grid
+    public UI_CrateManager crateManager;                  // Current selected crate
+    public UI_CrateMenu crateMenu;                        // Crate slot UI
+    public UIHoverHelperCombined uIHoverHelperCombined;   // For inventory hover info
 
+    [Header("Drag Tracking")]
+    public Vector2Int cratePos = new Vector2Int(-1, -1);  // Slot in crate being dragged
+    public Vector2Int invPos = new Vector2Int(-1, -1);    // Slot in inventory being hovered on release
+
+    private bool isDragging = false;
 
     void Update()
     {
+        // Do nothing if no crate selected
         if (crateManager.selected_crate == null)
-        {
             return;
+
+        // ---------------- Start drag from crate ----------------
+        for (int i = 0; i < crateMenu.crateSlots.Count; i++)
+        {
+            UIHover slot = crateMenu.crateSlots[i];
+            if (slot.isHovering && Input.GetMouseButtonDown(0))
+            {
+                cratePos = crateMenu.IndexToXY(i); // Convert UI index → crate array position
+                isDragging = true;
+                Debug.Log($"Started dragging from crate slot {cratePos}");
+                break;
+            }
         }
 
-        if (Input.GetMouseButtonUp(0))
+        // ---------------- Track hover over inventory ----------------
+        for (int i = 0; i < uIHoverHelperCombined.invSlots.Count; i++)
         {
-            invPos = uIHoverHelperCombined.itemPos;
-            cratePos = crateMenu.itemPos;
-
-            Debug.Log($"Dragged from {cratePos} to {invPos}");
-
-            //int x,y;
-            //playerInventoryManager.get_first_empty_slot(out x, out y);
-
-            if (crateManager.selected_crate.crate_inv[cratePos.x, cratePos.y] != null)
+            UIHover slot = uIHoverHelperCombined.invSlots[i];
+            if (slot.isHovering)
             {
-                if (playerInventoryManager.inv[invPos.x, invPos.y] == null)
-                {
-                    playerInventoryManager.inv[invPos.x, invPos.y] = crateManager.selected_crate.crate_inv[cratePos.x, cratePos.y];
-                    crateManager.selected_crate.crate_inv[cratePos.x, cratePos.y] = null;
-                }
-
+                invPos = uIHoverHelperCombined.IndexToXY(i); // Convert UI index → inventory array position
+                break;
             }
-            
+        }
+
+        // ---------------- Handle drop ----------------
+        if (isDragging && Input.GetMouseButtonUp(0))
+        {
+            Debug.Log($"Dropped from crate {cratePos} to inventory {invPos}");
+
+            var crate = crateManager.selected_crate;
+
+            // Validate positions
+            if (cratePos.x >= 0 && cratePos.y >= 0 &&
+                invPos.x >= 0 && invPos.y >= 0)
+            {
+                // Move item if inventory slot is empty
+                if (crate.crate_inv[cratePos.x, cratePos.y] != null &&
+                    playerInventoryManager.inv[invPos.x, invPos.y] == null)
+                {
+                    playerInventoryManager.inv[invPos.x, invPos.y] = crate.crate_inv[cratePos.x, cratePos.y];
+                    crate.crate_inv[cratePos.x, cratePos.y] = null;
+                }
+            }
+
+            // Reset drag
+            cratePos = new Vector2Int(-1, -1);
+            invPos = new Vector2Int(-1, -1);
+            isDragging = false;
         }
     }
-
-
-
 }

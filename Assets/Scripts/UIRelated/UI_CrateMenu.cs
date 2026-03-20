@@ -36,7 +36,7 @@ public class UI_CrateMenu : MonoBehaviour
         }
     }
 
-    private Vector2Int IndexToXY(int index)
+    public Vector2Int IndexToXY(int index)
     {
         int height = crateManager.selected_crate.crate_inv.GetLength(1); // number of rows
         int x = index / height;   // column

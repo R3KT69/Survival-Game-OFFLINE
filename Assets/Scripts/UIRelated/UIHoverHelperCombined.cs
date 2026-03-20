@@ -127,7 +127,7 @@ public class UIHoverHelperCombined : MonoBehaviour
 
     }
 
-    private Vector2Int IndexToXY(int index)
+    public Vector2Int IndexToXY(int index)
     {
         int height = playerInventoryManager.inv.GetLength(1); // number of rows
         int x = index / height;   // column
