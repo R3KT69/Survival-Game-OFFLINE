@@ -15723,6 +15723,7 @@ MonoBehaviour:
   defaultCount: 0
   Durability: 100
   id: MP5
+  description: Compact submachine gun with high rate of fire for tight spaces.
   maxDurability: 100
 --- !u!114 &-5302543154543170984
 MonoBehaviour:

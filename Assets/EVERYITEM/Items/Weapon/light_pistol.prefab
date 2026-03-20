@@ -4889,6 +4889,7 @@ MonoBehaviour:
   defaultCount: 0
   Durability: 100
   id: LH_PISTOL
+  description: Small, fast, and easy to handle for quick shots.
   maxDurability: 100
 --- !u!114 &5890041859441773218
 MonoBehaviour:

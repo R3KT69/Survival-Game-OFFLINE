@@ -29,8 +29,8 @@ public class ItemAction : MonoBehaviour
     {
         if (selected_item != null)
         {
-            description.text = selected_item.id;
             item_name.text = selected_item.id;
+            description.text = selected_item.description;
         }
     }
 }

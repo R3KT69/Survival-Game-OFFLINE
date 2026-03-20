@@ -172,6 +172,7 @@ public class PlayerInventoryManager : MonoBehaviour
             hotbarItem.transform.localScale = Vector3.one;
 
             inv[invX, invY] = hotbarItem; // Place it in inventory
+            PlayEquipSfx();
             //hotbarItem.gameObject.SetActive(false); // deactivate while in inventory
         }
         else
@@ -206,7 +207,7 @@ public class PlayerInventoryManager : MonoBehaviour
         if (hotbarItem == null)
             inv[invX, invY] = null;
 
-        PlayEquipSfx();
+        
     }
 
     private Transform GetHoldingPoint(Item item)
@@ -278,6 +279,7 @@ public class PlayerInventoryManager : MonoBehaviour
 
             hotbar[hotbarIndex] = invItem;
             invItem.gameObject.SetActive(false);
+            PlayEquipSfx();
         }
         else // if hotbar becomes empty after dragging
         {
@@ -304,7 +306,7 @@ public class PlayerInventoryManager : MonoBehaviour
 
         Debug.Log($"Hotbar item going to inv[{invX},{invY}]");
 
-        PlayEquipSfx();
+        
     }
     
 

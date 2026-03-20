@@ -22,6 +22,7 @@ public class Item : MonoBehaviour
     public int defaultCount;
     public float Durability;
     public string id;
+    public string description;
 
     //public string instanceId;
     //public int maxStack = 1;

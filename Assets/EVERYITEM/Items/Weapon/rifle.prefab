@@ -15350,6 +15350,7 @@ MonoBehaviour:
   defaultCount: 0
   Durability: 100
   id: RIFLE
+  description: Precision rifle designed for long-range accuracy and power.
   maxDurability: 100
 --- !u!82 &6590204998418804337
 AudioSource:

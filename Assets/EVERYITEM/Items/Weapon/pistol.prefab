@@ -5066,6 +5066,7 @@ MonoBehaviour:
   defaultCount: 0
   Durability: 100
   id: PISTOL
+  description: Reliable sidearm; handy for emergencies and close-range defense.
   maxDurability: 100
 --- !u!114 &5890041859441773218
 MonoBehaviour:

@@ -51,4 +51,5 @@ MonoBehaviour:
   defaultCount: 25
   Durability: 0
   id: BANDAGE
+  description: Simple cloth to stop bleeding and heal minor injuries.
   maxDurability: 100

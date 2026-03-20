@@ -14731,6 +14731,7 @@ MonoBehaviour:
   defaultCount: 0
   Durability: 100
   id: AK
+  description: Rugged assault rifle, packs heavy firepower and kicks hard.
   maxDurability: 100
 --- !u!114 &-5302543154543170984
 MonoBehaviour:

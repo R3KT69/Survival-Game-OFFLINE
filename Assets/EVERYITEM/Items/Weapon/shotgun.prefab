@@ -5168,6 +5168,7 @@ MonoBehaviour:
   defaultCount: 0
   Durability: 0
   id: SHOTGUN
+  description: Powerful close-range weapon that spreads devastating pellets.
   maxDurability: 100
 --- !u!114 &2967328804583049843
 MonoBehaviour:

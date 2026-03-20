@@ -4747,7 +4747,7 @@ MonoBehaviour:
   wep_audioSource: {fileID: 4465643582563892598}
   wep_data: {fileID: 11400000, guid: 7097593bdf95f0d438906ac15d24ecb6, type: 2}
   runtimeAmmo: 1
-  type: 
+  type: Classic old-school firearm; slow reload but packs a punch.
   lightDuration: 0.1
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
@@ -4890,6 +4890,7 @@ MonoBehaviour:
   defaultCount: 0
   Durability: 100
   id: FLINTLOCK
+  description: 
   maxDurability: 100
 --- !u!114 &5890041859441773218
 MonoBehaviour:

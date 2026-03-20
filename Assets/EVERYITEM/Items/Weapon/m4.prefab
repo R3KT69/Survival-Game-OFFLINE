@@ -14731,6 +14731,7 @@ MonoBehaviour:
   defaultCount: 0
   Durability: 100
   id: M4
+  description: Versatile assault rifle with balanced accuracy and fire rate.
   maxDurability: 100
 --- !u!114 &-5302543154543170984
 MonoBehaviour:
