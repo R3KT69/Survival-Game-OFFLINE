@@ -86,7 +86,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5419388219616782}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19fbc2d4bef2fbe49ba00657db18e7a9, type: 3}
   m_Name: 
@@ -125,6 +125,7 @@ MonoBehaviour:
   - {fileID: 7867693578179635642}
   - {fileID: 4561069589600440071}
   playerInventoryManager: {fileID: 0}
+  itemPos: {x: 0, y: 0}
 --- !u!114 &1968783651021556392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,6 +728,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &234004863327599321
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,7 +746,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1111490785377033171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2989,6 +2991,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &902230831194293239
 GameObject:
   m_ObjectHideFlags: 0
@@ -4459,6 +4462,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &1139511764812878895
 GameObject:
   m_ObjectHideFlags: 0
@@ -4705,6 +4709,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &1207901541617330522
 GameObject:
   m_ObjectHideFlags: 0
@@ -4715,10 +4720,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7672368176775746320}
   - component: {fileID: 8706463541831057807}
+  - component: {fileID: 8777858996948125937}
   - component: {fileID: 3794825611378922564}
+  - component: {fileID: 6216479165272696989}
+  - component: {fileID: 1439270403333920362}
   - component: {fileID: 4878945645118035459}
-  - component: {fileID: 258790545127864293}
   - component: {fileID: 6464902070146954261}
+  - component: {fileID: 258790545127864293}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -4773,6 +4781,24 @@ MonoBehaviour:
   inventory: {fileID: 234004863327599321}
   uI_CrateManager: {fileID: 3794825611378922564}
   isInventoryOpen: 0
+--- !u!114 &8777858996948125937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207901541617330522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe917ad8cf405545b3cd692e66fd23e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInventoryManager: {fileID: 0}
+  crateManager: {fileID: 3794825611378922564}
+  crateMenu: {fileID: 3384073550751952912}
+  uIHoverHelperCombined: {fileID: 2471582917900803535}
+  cratePos: {x: 0, y: 0}
+  invPos: {x: 0, y: 0}
 --- !u!114 &3794825611378922564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4790,6 +4816,90 @@ MonoBehaviour:
   Hud: {fileID: 8706463541831057807}
   Loot: {fileID: 4913018490960971320}
   inRange: 0
+--- !u!114 &6216479165272696989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207901541617330522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55ee8d9f76d69d428449ab6c0e02b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crateSlots:
+  - {fileID: 988884920197770780}
+  - {fileID: 3790758948143706560}
+  - {fileID: 1783070150362112528}
+  - {fileID: 3054933560781619923}
+  - {fileID: 3304795057971838161}
+  - {fileID: 8591793786300084030}
+  - {fileID: 5271543817552822463}
+  - {fileID: 5124728006399868088}
+  - {fileID: 5137090657371311698}
+  - {fileID: 5245106668713092605}
+  - {fileID: 1148685305282767720}
+  - {fileID: 2745754337152990475}
+  - {fileID: 1649592536181355835}
+  - {fileID: 6581357395206716900}
+  - {fileID: 892354177998526331}
+  - {fileID: 4738059311045206309}
+  - {fileID: 2669475694494023682}
+  - {fileID: 6061921621780240650}
+  - {fileID: 4683228276468563428}
+  - {fileID: 2343388111041250907}
+  - {fileID: 6344687908183462545}
+  playerInventoryManager: {fileID: 0}
+  crateManager: {fileID: 3794825611378922564}
+  itemPos: {x: 0, y: 0}
+--- !u!114 &1439270403333920362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207901541617330522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19fbc2d4bef2fbe49ba00657db18e7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invSlots:
+  - {fileID: 776830811998180634}
+  - {fileID: 8519959685928852423}
+  - {fileID: 4828017821620842742}
+  - {fileID: 2718978895008149532}
+  - {fileID: 728012329541842929}
+  - {fileID: 6724879442201005459}
+  - {fileID: 1272400055800899373}
+  - {fileID: 787747630740409009}
+  - {fileID: 7329801741172727362}
+  - {fileID: 2828999033114931237}
+  - {fileID: 7658043918964797676}
+  - {fileID: 4855010558221321092}
+  - {fileID: 5183398328522833762}
+  - {fileID: 7177953269812653015}
+  - {fileID: 527012523129076907}
+  - {fileID: 703170973388045053}
+  - {fileID: 1702637782379462455}
+  - {fileID: 8620472449346515681}
+  - {fileID: 4689849522491828477}
+  - {fileID: 882041970471307712}
+  - {fileID: 357859991068520719}
+  - {fileID: 5420430772854966439}
+  - {fileID: 314552570023227874}
+  - {fileID: 8607337325817538806}
+  - {fileID: 5843200404939870645}
+  hotbarSlots:
+  - {fileID: 1533022845025627086}
+  - {fileID: 6505932257094971199}
+  - {fileID: 1432187967961746267}
+  - {fileID: 604647195468720125}
+  - {fileID: 7867693578179635642}
+  - {fileID: 4561069589600440071}
+  playerInventoryManager: {fileID: 0}
+  itemPos: {x: 0, y: 0}
 --- !u!223 &4878945645118035459
 Canvas:
   m_ObjectHideFlags: 0
@@ -4813,6 +4923,23 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &6464902070146954261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207901541617330522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &258790545127864293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4836,23 +4963,6 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &6464902070146954261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207901541617330522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1 &1209917053902766158
 GameObject:
   m_ObjectHideFlags: 0
@@ -5099,6 +5209,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &1226626451499052172
 GameObject:
   m_ObjectHideFlags: 0
@@ -6180,6 +6291,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &1581300021979783963
 GameObject:
   m_ObjectHideFlags: 0
@@ -6290,6 +6402,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &1611501792872760446
 GameObject:
   m_ObjectHideFlags: 0
@@ -7352,6 +7465,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &1761726001498137522
 GameObject:
   m_ObjectHideFlags: 0
@@ -8671,6 +8785,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &2083662758956388951
 GameObject:
   m_ObjectHideFlags: 0
@@ -8781,6 +8896,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &2105831451057482004
 GameObject:
   m_ObjectHideFlags: 0
@@ -9299,6 +9415,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &2171089122002154099
 GameObject:
   m_ObjectHideFlags: 0
@@ -9806,6 +9923,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &2260780010649799411
 GameObject:
   m_ObjectHideFlags: 0
@@ -10745,6 +10863,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &2451312354956937873
 GameObject:
   m_ObjectHideFlags: 0
@@ -10991,6 +11110,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &2494221129784698891
 GameObject:
   m_ObjectHideFlags: 0
@@ -11237,6 +11357,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &2559660215459039580
 GameObject:
   m_ObjectHideFlags: 0
@@ -11347,6 +11468,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &2594486354286672487
 GameObject:
   m_ObjectHideFlags: 0
@@ -12435,6 +12557,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &2818462016901044307
 GameObject:
   m_ObjectHideFlags: 0
@@ -13165,6 +13288,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &3015024429255760446
 GameObject:
   m_ObjectHideFlags: 0
@@ -13275,6 +13399,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &3031764130401169436
 GameObject:
   m_ObjectHideFlags: 0
@@ -13929,6 +14054,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &3156426431631712542
 GameObject:
   m_ObjectHideFlags: 0
@@ -14311,6 +14437,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &3315340756864292451
 GameObject:
   m_ObjectHideFlags: 0
@@ -14421,6 +14548,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &3320483612334451514
 GameObject:
   m_ObjectHideFlags: 0
@@ -14569,6 +14697,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &3416222201797927077
 GameObject:
   m_ObjectHideFlags: 0
@@ -14815,6 +14944,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &3445351373312675189
 GameObject:
   m_ObjectHideFlags: 0
@@ -15482,6 +15612,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &3585382405869601566
 GameObject:
   m_ObjectHideFlags: 0
@@ -15592,6 +15723,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &3587739173798751982
 GameObject:
   m_ObjectHideFlags: 0
@@ -17044,6 +17176,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &3817626031983350269
 GameObject:
   m_ObjectHideFlags: 0
@@ -19028,6 +19161,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &4110018808638878072
 GameObject:
   m_ObjectHideFlags: 0
@@ -19867,6 +20001,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &4286787813746935151
 GameObject:
   m_ObjectHideFlags: 0
@@ -19977,6 +20112,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &4295598453488494537
 GameObject:
   m_ObjectHideFlags: 0
@@ -20359,6 +20495,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &4342775098100965693
 GameObject:
   m_ObjectHideFlags: 0
@@ -20469,6 +20606,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &4360919643454822809
 GameObject:
   m_ObjectHideFlags: 0
@@ -20987,6 +21125,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &4432996974977637219
 GameObject:
   m_ObjectHideFlags: 0
@@ -21097,6 +21236,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &4437061293647381856
 GameObject:
   m_ObjectHideFlags: 0
@@ -22372,6 +22512,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &4913018490960971320
 GameObject:
   m_ObjectHideFlags: 0
@@ -24191,6 +24332,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &5255985841566030899
 GameObject:
   m_ObjectHideFlags: 0
@@ -24437,6 +24579,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &5267338852320388124
 GameObject:
   m_ObjectHideFlags: 0
@@ -24683,6 +24826,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &5280717384578380618
 GameObject:
   m_ObjectHideFlags: 0
@@ -24793,6 +24937,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &5302842902810230210
 GameObject:
   m_ObjectHideFlags: 0
@@ -25447,6 +25592,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &5505757505104531532
 GameObject:
   m_ObjectHideFlags: 0
@@ -25829,6 +25975,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &5547004773827868002
 GameObject:
   m_ObjectHideFlags: 0
@@ -25939,6 +26086,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &5553707704350081100
 GameObject:
   m_ObjectHideFlags: 0
@@ -26742,6 +26890,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &5638933251180196396
 GameObject:
   m_ObjectHideFlags: 0
@@ -27273,6 +27422,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &5781856570357420737
 GameObject:
   m_ObjectHideFlags: 0
@@ -27519,6 +27669,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &5893018300220407672
 GameObject:
   m_ObjectHideFlags: 0
@@ -27901,6 +28052,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &6001957686874059992
 GameObject:
   m_ObjectHideFlags: 0
@@ -28011,6 +28163,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &6012183780345202483
 GameObject:
   m_ObjectHideFlags: 0
@@ -28548,6 +28701,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &6092633871478658232
 GameObject:
   m_ObjectHideFlags: 0
@@ -29108,6 +29262,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &6235128570301837835
 GameObject:
   m_ObjectHideFlags: 0
@@ -29354,6 +29509,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &6283835097874180112
 GameObject:
   m_ObjectHideFlags: 0
@@ -29743,7 +29899,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6423604742221605936}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d55ee8d9f76d69d428449ab6c0e02b9f, type: 3}
   m_Name: 
@@ -29772,6 +29928,7 @@ MonoBehaviour:
   - {fileID: 6344687908183462545}
   playerInventoryManager: {fileID: 0}
   crateManager: {fileID: 3794825611378922564}
+  itemPos: {x: 0, y: 0}
 --- !u!1 &6426038046536828568
 GameObject:
   m_ObjectHideFlags: 0
@@ -30231,6 +30388,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &6550031025434823202
 GameObject:
   m_ObjectHideFlags: 0
@@ -30341,6 +30499,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &6663821331164825453
 GameObject:
   m_ObjectHideFlags: 0
@@ -31904,6 +32063,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &6887024128978664014
 GameObject:
   m_ObjectHideFlags: 0
@@ -33767,6 +33927,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &7318682899304137753
 GameObject:
   m_ObjectHideFlags: 0
@@ -33877,6 +34038,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &7384354141484267189
 GameObject:
   m_ObjectHideFlags: 0
@@ -33987,6 +34149,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &7425514924230474511
 GameObject:
   m_ObjectHideFlags: 0
@@ -34233,6 +34396,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &7480490609912594796
 GameObject:
   m_ObjectHideFlags: 0
@@ -34343,6 +34507,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &7487785340204341747
 GameObject:
   m_ObjectHideFlags: 0
@@ -35614,6 +35779,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &7652470000919674634
 GameObject:
   m_ObjectHideFlags: 0
@@ -35801,6 +35967,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &7701337284104445712
 GameObject:
   m_ObjectHideFlags: 0
@@ -36319,6 +36486,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &7751036051433467373
 GameObject:
   m_ObjectHideFlags: 0
@@ -37251,6 +37419,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &8119266127273299614
 GameObject:
   m_ObjectHideFlags: 0
@@ -38041,6 +38210,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &8333734416250498006
 GameObject:
   m_ObjectHideFlags: 0
@@ -38287,6 +38457,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &8361342872512877127
 GameObject:
   m_ObjectHideFlags: 0
@@ -38397,6 +38568,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &8370339768561915577
 GameObject:
   m_ObjectHideFlags: 0
@@ -38908,6 +39080,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &8477783374541852930
 GameObject:
   m_ObjectHideFlags: 0
@@ -39151,6 +39324,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &8519277754275151521
 GameObject:
   m_ObjectHideFlags: 0
@@ -39960,6 +40134,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &8736720614869815415
 GameObject:
   m_ObjectHideFlags: 0
@@ -40355,6 +40530,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &8798835144316415113
 GameObject:
   m_ObjectHideFlags: 0
@@ -40465,6 +40641,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &8817541862370977772
 GameObject:
   m_ObjectHideFlags: 0
@@ -40983,6 +41160,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &8909589064234578319
 GameObject:
   m_ObjectHideFlags: 0
@@ -41093,6 +41271,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &8910430578285343373
 GameObject:
   m_ObjectHideFlags: 0
@@ -41203,6 +41382,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &8976354216787033113
 GameObject:
   m_ObjectHideFlags: 0
@@ -41449,6 +41629,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &9027952722458901104
 GameObject:
   m_ObjectHideFlags: 0
@@ -41695,6 +41876,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &9099694663039637990
 GameObject:
   m_ObjectHideFlags: 0
@@ -41805,6 +41987,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &9167895647149605327
 GameObject:
   m_ObjectHideFlags: 0
@@ -41915,6 +42098,7 @@ MonoBehaviour:
   isHovering: 0
   isCurrentlyHeld: 0
   justReleased: 0
+  isDragging: 0
 --- !u!1 &9206696196179820488
 GameObject:
   m_ObjectHideFlags: 0
