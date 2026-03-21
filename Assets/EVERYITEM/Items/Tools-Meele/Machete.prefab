@@ -106,10 +106,12 @@ MonoBehaviour:
   isStackable: 0
   itemType: 3
   weaponType: 2
+  item_icon: {fileID: 21300000, guid: b915ae1555e604a4ebcf16e21b5a3bda, type: 3}
   runtimeCount: 0
   defaultCount: 0
   Durability: 100
   id: MACHETE
+  description: 
   maxDurability: 100
 --- !u!114 &5813536244532166790
 MonoBehaviour:

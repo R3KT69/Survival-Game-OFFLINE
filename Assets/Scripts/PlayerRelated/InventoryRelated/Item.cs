@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum ItemType
 {
@@ -18,6 +19,7 @@ public class Item : MonoBehaviour
     public bool isStackable;
     public ItemType itemType;
     public WEP_Type weaponType;
+    public Sprite item_icon;
     public int runtimeCount;
     public int defaultCount;
     public float Durability;

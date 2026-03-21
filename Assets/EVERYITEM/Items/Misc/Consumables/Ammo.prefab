@@ -49,6 +49,7 @@ MonoBehaviour:
   isStackable: 1
   itemType: 2
   weaponType: 4
+  item_icon: {fileID: 21300000, guid: f06e8edf2a763804d834d34c87cfaf9e, type: 3}
   runtimeCount: 0
   defaultCount: 100
   Durability: 0
