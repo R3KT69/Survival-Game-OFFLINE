@@ -16,6 +16,6 @@ MonoBehaviour:
   weaponType: 0
   damage: 15
   fireRate: 0.185
-  bulletVel: 50
+  bulletVel: 75
   magSize: 8
   reloadTime: 1

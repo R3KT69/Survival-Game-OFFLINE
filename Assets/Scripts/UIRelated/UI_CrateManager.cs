@@ -11,6 +11,11 @@ public class UI_CrateManager : MonoBehaviour
     void Start()
     {
         Hud = GameObject.Find("HUD").GetComponent<HudConsole>();
+        if (mainCamera == null)
+        {
+            mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        }
+        
         inRange = false;
     }
 
