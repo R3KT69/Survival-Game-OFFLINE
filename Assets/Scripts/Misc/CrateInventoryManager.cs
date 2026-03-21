@@ -6,6 +6,7 @@ public class CrateInventoryManager : MonoBehaviour
     public Item[,] crate_inv = new Item[7,3];
     private Dictionary<string, Item> ItemLookup;
     public ItemRoot All_Items;
+    public Vector2Int itemSize; // Y MAX 7x3 = 21, X min = 0
 
     void Start()
     {
@@ -29,6 +30,11 @@ public class CrateInventoryManager : MonoBehaviour
         crate_inv[6,0] = ItemLookup["PISTOL"];
         crate_inv[6,1] = ItemLookup["SHOTGUN"];
         crate_inv[6,2] = ItemLookup["WATER"];*/
+        if (itemSize == null)
+        {
+            itemSize.x = 2;
+            itemSize.y = 4;
+        }
 
         RandomizedCrate();
     }
@@ -46,7 +52,7 @@ public class CrateInventoryManager : MonoBehaviour
 
         List<Item> allItems = new List<Item>(ItemLookup.Values);
 
-        int itemCount = Random.Range(4, 8); // how many items to place
+        int itemCount = Random.Range(itemSize.x, itemSize.y); // how many items to place
 
         int placed = 0;
 

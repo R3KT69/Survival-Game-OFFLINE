@@ -22,8 +22,8 @@ public class CrateAndInvDragManager : MonoBehaviour
 
     void Update()
     {
-        if (crateManager.selected_crate == null)
-            return;
+        if (crateManager.selected_crate == null) return;
+        if (crateManager.Loot.activeSelf == false) return;
 
         // ---------------- Start Drag ----------------
         if (!isDragging && Input.GetMouseButtonDown(0))
