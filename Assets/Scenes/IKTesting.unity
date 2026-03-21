@@ -8547,12 +8547,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6649045263704798488, guid: 14c17b51e21c7da47a3ab20c11b17306, type: 3}
+      propertyPath: All_Items
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a163bfff48e8dc4b824ff9483bc5a25, type: 2}
+    - target: {fileID: 6649045263704798488, guid: 14c17b51e21c7da47a3ab20c11b17306, type: 3}
       propertyPath: itemSize.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6649045263704798488, guid: 14c17b51e21c7da47a3ab20c11b17306, type: 3}
       propertyPath: itemSize.y
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

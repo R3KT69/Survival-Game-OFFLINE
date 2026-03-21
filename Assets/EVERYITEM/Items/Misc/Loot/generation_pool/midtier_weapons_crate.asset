@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668feb0bbc87269409834406c9e73e05, type: 3}
+  m_Name: midtier_weapons_crate
+  m_EditorClassIdentifier: 
+  root_items:
+  - {fileID: 4940877703530525793, guid: b9da2b64ba6e9cf4692a6d9083ef295a, type: 3}
+  - {fileID: 1853641263064706418, guid: 5d07116c69eed2940914bb65492dc881, type: 3}
+  - {fileID: 5615870472991457075, guid: 33140dcad11810643acd3f6cb4976905, type: 3}
