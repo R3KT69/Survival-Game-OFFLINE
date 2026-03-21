@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class UIHoverHelperDragManager : MonoBehaviour
+public class CrateAndInvDragManager : MonoBehaviour
 {
     [Header("Inventory & Crate Setup")]
     public PlayerInventoryManager playerInventoryManager;
