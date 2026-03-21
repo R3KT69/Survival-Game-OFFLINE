@@ -3,6 +3,8 @@ Im trying to make something similler to RUST
 
 Some Screenshots:
 <img width="1555" height="867" alt="image" src="https://github.com/user-attachments/assets/0e77d1d7-6534-4d96-ab92-5b0589dd1630"/>
+<img width="1920" height="1080" alt="screenshot_023" src="https://github.com/user-attachments/assets/3b6d565a-b80c-4e46-8150-f0fa0fd5de4c" />
+<img width="1920" height="1080" alt="screenshot_025" src="https://github.com/user-attachments/assets/70c30e2b-b460-430d-93f0-7791eff16f73" />
 <img width="463" height="271" alt="image" src="https://github.com/user-attachments/assets/aecb1e3c-b7de-4e67-8389-94aaa0df0309" />
 <img width="1916" height="1012" alt="image" src="https://github.com/user-attachments/assets/a7924672-00d5-4ced-8004-4c2dea6f5111" />
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/07d74629-4816-4c60-8cdd-ce1b9330d22d" />
