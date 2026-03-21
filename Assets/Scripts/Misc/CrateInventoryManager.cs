@@ -7,9 +7,11 @@ public class CrateInventoryManager : MonoBehaviour
     private Dictionary<string, Item> ItemLookup;
     public ItemRoot All_Items;
     public Vector2Int itemSize; // Y MAX 7x3 = 21, X min = 0
+    public bool PersistentCrate;
 
-    void Start()
+    void Awake()
     {
+        //PersistentCrate = true;
         ItemLookup = new Dictionary<string, Item>();
         foreach (Item w in All_Items.root_items) ItemLookup[w.id] = w;
 
@@ -37,6 +39,23 @@ public class CrateInventoryManager : MonoBehaviour
         }
 
         RandomizedCrate();
+    }
+    void Update()
+    {
+        Debug.Log($"is crate empty?: {isCrateEmpty()}");
+        if (isCrateEmpty() && PersistentCrate == false)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    bool isCrateEmpty()
+    {
+        foreach (var item in crate_inv)
+        {
+            if (item != null) return false;
+                
+        } return true;
     }
 
     void RandomizedCrate()
