@@ -1,7 +1,59 @@
-# Survival-Game
-Im trying to make something similler to RUST
+<h1 align="center">🎮 Survival Game</h1>
 
-Some Screenshots:
+A work-in-progress survival game inspired by games like **RUST**, **Minecraft**, **Escape from tarkov** etc, mostly focused on unique mechanics of the individual games.
+  
+<h2 align="center">Player Systems</h1>
+
+* **IK-Based Directional Movement**
+* **Dynamic Health System**
+* **Health is heavily influenced by food levels**
+* **Status Bars (Health, Hunger, etc.)**
+
+
+
+<h2 align="center">Inventory & Items</h1>
+
+* **Grid-Based Inventory System**
+* **Item Pickup & Drop Mechanics**
+* **Visual Inventory (In Progress)**
+* **Items displayed on character** (e.g., behind the back, but still work in progress)
+* **Armor System**
+
+
+
+<h2 align="center">Combat</h1>
+
+* **Projectile-Based Shooting System**
+* **Supports multiple weapon types**
+* **Physics-driven projectiles**
+
+
+
+<h2 align="center">Survival Mechanics</h1>
+
+* **Eating System**
+* **Dynamic Food System**
+* **Direct impact on player survival and regeneration**
+
+
+
+<h2 align="center">World Interaction</h1>
+
+* **Randomized Loot System**
+* **Crafting System**
+* **Drop item**
+* **Pickup Item**
+
+
+
+<h2 align="center">Tech Stack</h1>
+
+* **Engine:** Unity
+* **Language:** C#
+* **<i>Assets used in this project are all CC0/Free Standard</i>**
+
+
+## Some Screenshots:
 <img width="1555" height="867" alt="image" src="https://github.com/user-attachments/assets/0e77d1d7-6534-4d96-ab92-5b0589dd1630"/>
 <img width="1920" height="1080" alt="screenshot_023" src="https://github.com/user-attachments/assets/3b6d565a-b80c-4e46-8150-f0fa0fd5de4c" />
 <img width="1920" height="1080" alt="screenshot_025" src="https://github.com/user-attachments/assets/70c30e2b-b460-430d-93f0-7791eff16f73" />
