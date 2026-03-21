@@ -762,7 +762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1111490785377033171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7485,7 +7485,6 @@ GameObject:
   - component: {fileID: 5937855694051327310}
   - component: {fileID: 4562325675988040244}
   - component: {fileID: 6693072500680284389}
-  - component: {fileID: 6920062466106506889}
   m_Layer: 5
   m_Name: playerstats
   m_TagString: Untagged
@@ -7552,52 +7551,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6920062466106506889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2171089122002154099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 514c487807c493c459f12f5f21a599c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  invSlots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  hotbarSlots:
-  - {fileID: 1533022845025627086}
-  - {fileID: 6505932257094971199}
-  - {fileID: 1432187967961746267}
-  - {fileID: 604647195468720125}
-  - {fileID: 7867693578179635642}
-  - {fileID: 4561069589600440071}
-  playerInventoryManager: {fileID: 0}
 --- !u!1 &2188599447814624407
 GameObject:
   m_ObjectHideFlags: 0
