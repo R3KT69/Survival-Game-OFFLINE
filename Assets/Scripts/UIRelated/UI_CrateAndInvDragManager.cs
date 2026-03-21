@@ -29,39 +29,36 @@ public class CrateAndInvDragManager : MonoBehaviour
         if (!isDragging && Input.GetMouseButtonDown(0))
         {
             // Drag from Inventory
-            // Drag from Inventory
-        for (int i = 0; i < uIHoverHelperCombined.invSlots.Count; i++)
-        {
-            UIHover slot = uIHoverHelperCombined.invSlots[i];
-            if (slot.isHovering && playerInventoryManager.inv[uIHoverHelperCombined.IndexToXY(i).x, uIHoverHelperCombined.IndexToXY(i).y] != null)
+            for (int i = 0; i < uIHoverHelperCombined.invSlots.Count; i++)
             {
-                startInvPos = uIHoverHelperCombined.IndexToXY(i);
-                startCratePos = new Vector2Int(-1, -1);
-                currentDrag = DragSource.Inventory;
-                isDragging = true;
-                Debug.Log($"Drag started from Inventory {startInvPos}");
-                break;
-            }
-        }
-            
-            
-                // Drag from Crate
-                for (int i = 0; i < crateMenu.crateSlots.Count; i++)
+                UIHover slot = uIHoverHelperCombined.invSlots[i];
+                if (slot.isHovering && playerInventoryManager.inv[uIHoverHelperCombined.IndexToXY(i).x, uIHoverHelperCombined.IndexToXY(i).y] != null)
                 {
-                    UIHover slot = crateMenu.crateSlots[i];
-                    Vector2Int pos = crateMenu.IndexToXY(i);
-                    if (slot.isHovering &&
-                        crateManager.selected_crate.crate_inv[pos.x, pos.y] != null)
-                    {
-                        startCratePos = pos;
-                        startInvPos = new Vector2Int(-1, -1);
-                        currentDrag = DragSource.Crate;
-                        isDragging = true;
-                        Debug.Log($"Drag started from Crate {startCratePos}");
-                        break;
-                    }
+                    startInvPos = uIHoverHelperCombined.IndexToXY(i);
+                    startCratePos = new Vector2Int(-1, -1);
+                    currentDrag = DragSource.Inventory;
+                    isDragging = true;
+                    Debug.Log($"Drag started from Inventory {startInvPos}");
+                    break;
                 }
+            }
             
+            // Drag from Crate
+            for (int i = 0; i < crateMenu.crateSlots.Count; i++)
+            {
+                UIHover slot = crateMenu.crateSlots[i];
+                Vector2Int pos = crateMenu.IndexToXY(i);
+                if (slot.isHovering &&
+                    crateManager.selected_crate.crate_inv[pos.x, pos.y] != null)
+                {
+                    startCratePos = pos;
+                    startInvPos = new Vector2Int(-1, -1);
+                    currentDrag = DragSource.Crate;
+                    isDragging = true;
+                    Debug.Log($"Drag started from Crate {startCratePos}");
+                    break;
+                }
+            }
         }
 
         // ---------------- Update Hover Target ----------------
@@ -102,7 +99,7 @@ public class CrateAndInvDragManager : MonoBehaviour
         {
             if (currentDrag == DragSource.Inventory)
             {
-                // Inventory → Crate
+                // Inventory to Crate
                 if (cratePos.x >= 0 && cratePos.y >= 0)
                 {
                     Item dragged = playerInventoryManager.inv[startInvPos.x, startInvPos.y];
@@ -117,14 +114,18 @@ public class CrateAndInvDragManager : MonoBehaviour
             }
             else if (currentDrag == DragSource.Crate)
             {
-                // Crate → Inventory
+                // Crate to Inventory
                 if (invPos.x >= 0 && invPos.y >= 0)
                 {
                     Item dragged = crateManager.selected_crate.crate_inv[startCratePos.x, startCratePos.y];
                     Item target = playerInventoryManager.inv[invPos.x, invPos.y];
 
-                    // Swap or move
-                    playerInventoryManager.inv[invPos.x, invPos.y] = dragged;
+                    Debug.Log($"Assigning Item {dragged.id}");
+
+                    // Assign into inventory
+                    playerInventoryManager.AssignItemInventory(invPos.x, invPos.y, dragged.id);
+
+                    // Put previous inventory item back into crate
                     crateManager.selected_crate.crate_inv[startCratePos.x, startCratePos.y] = target;
 
                     Debug.Log($"Crate {startCratePos} → Inventory {invPos}");

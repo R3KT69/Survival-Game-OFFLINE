@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2536613050592872342
 Transform:
   m_ObjectHideFlags: 0
@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732332174625595131}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7010567, y: -0.0922957, z: 0.7010582, w: 0.09229598}
+  m_LocalRotation: {x: 0.7010574, y: -0.09229599, z: 0.7010574, w: 0.09229593}
   m_LocalPosition: {x: 0.053, y: 0.123, z: 0.074}
   m_LocalScale: {x: 6.32, y: 6.32, z: 6.32}
   m_ConstrainProportionsScale: 1
@@ -133,6 +133,7 @@ MonoBehaviour:
   defaultCount: 0
   Durability: 100
   id: HATCHET
+  description: 
   maxDurability: 100
 --- !u!114 &5813536244532166790
 MonoBehaviour:
