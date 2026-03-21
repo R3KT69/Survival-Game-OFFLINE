@@ -347,7 +347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   All_Items: {fileID: 11400000, guid: 3d110040bfe791b45ab93bc03297cb3c, type: 2}
-  itemSize: {x: 2, y: 4}
+  itemRange: {x: 3, y: 6}
+  PersistentCrate: 0
 --- !u!65 &5266350871622950294
 BoxCollider:
   m_ObjectHideFlags: 0
