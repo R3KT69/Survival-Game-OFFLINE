@@ -130,7 +130,7 @@ MonoBehaviour:
   itemType: 1
   weaponType: 2
   item_icon: {fileID: 21300000, guid: ce40aa3e2af6747459a74e29f5b91cff, type: 3}
-  runtimeCount: 0
+  runtimeCount: 1
   defaultCount: 0
   Durability: 100
   id: PICKAXE

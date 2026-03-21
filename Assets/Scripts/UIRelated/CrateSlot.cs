@@ -15,6 +15,7 @@ public class CrateSlot : MonoBehaviour
         UI_text = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         info = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
         item_image = transform.GetChild(2).GetComponent<Image>();
+        item_image.preserveAspect = true;
     }
 
     void Update()

@@ -130,7 +130,7 @@ MonoBehaviour:
   itemType: 1
   weaponType: 2
   item_icon: {fileID: 21300000, guid: 363e8145e13ccaf49b024b9bbe5c1eb3, type: 3}
-  runtimeCount: 0
+  runtimeCount: 1
   defaultCount: 0
   Durability: 100
   id: HATCHET

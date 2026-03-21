@@ -50,7 +50,7 @@ MonoBehaviour:
   itemType: 2
   weaponType: 4
   item_icon: {fileID: 21300000, guid: 7e0d28dca131da6489372f380b57609b, type: 3}
-  runtimeCount: 0
+  runtimeCount: 1
   defaultCount: 10
   Durability: 0
   id: WATER
