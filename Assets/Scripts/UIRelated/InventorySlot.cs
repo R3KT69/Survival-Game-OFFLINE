@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
@@ -7,13 +8,14 @@ public class InventorySlot : MonoBehaviour
     public PlayerInventoryManager playerInventoryManager;
     public TextMeshProUGUI UI_text;
     public TextMeshProUGUI info;
+    public Image item_image;
     
 
     void Awake()
     {
         UI_text = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         info = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-
+        item_image = transform.GetChild(2).GetComponent<Image>();
     }
 
     void Update()
@@ -47,10 +49,20 @@ public class InventorySlot : MonoBehaviour
                 info.text = $"x{count}";
             }
             
+            Color alpha = item_image.color;
+            alpha.a = 1f;
+            item_image.color = alpha;
+
+            item_image.sprite = playerInventoryManager.inv[ind1,ind2].item_icon;
+            
         } else
         {
+            Color alpha = item_image.color;
+            alpha.a = 0f;
+            item_image.color = alpha;
             UI_text.text = "Empty"; 
             info.text = "0/0";
+            item_image.sprite = null;
         }
     }
 

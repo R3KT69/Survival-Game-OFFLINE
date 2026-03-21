@@ -6696,6 +6696,10 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 1214717317}
+    - target: {fileID: 234004863327599321, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 276966373429420842, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
       propertyPath: playerInventoryManager
       value: 
@@ -7216,7 +7220,8 @@ PrefabInstance:
       propertyPath: playerInventoryManager
       value: 
       objectReference: {fileID: 1214717317}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6920062466106506889, guid: 7cdf65addce125147bf5fe9097dedff5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

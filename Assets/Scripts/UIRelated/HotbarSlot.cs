@@ -7,13 +7,13 @@ public class HotbarSlot : MonoBehaviour
     public PlayerInventoryManager playerInventoryManager;
     public TextMeshProUGUI UI_text;
     public TextMeshProUGUI info;
-    private Image image;
+    public Image item_image;
     
     void Awake()
     {
         UI_text = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         info = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-        image = gameObject.GetComponent<Image>();
+        item_image = transform.GetChild(2).GetComponent<Image>();
     }
 
     void Start()
@@ -45,10 +45,20 @@ public class HotbarSlot : MonoBehaviour
             string maxAmmo = playerInventoryManager.hotbar[ind1].gameObject.GetComponent<Weapon_global>().wep_data.magSize.ToString();
             UI_text.text = playerInventoryManager.hotbar[ind1].id; 
             info.text = $"{ammo}/{maxAmmo}";
+
+            Color alpha = item_image.color;
+            alpha.a = 1f;
+            item_image.color = alpha;
+            
+            item_image.sprite = playerInventoryManager.hotbar[ind1].item_icon;
         }else
         {
+            Color alpha = item_image.color;
+            alpha.a = 0f;
+            item_image.color = alpha;
             UI_text.text = "Empty"; 
             info.text = "0/0";
+            item_image.sprite = null;
         }
     }
 
