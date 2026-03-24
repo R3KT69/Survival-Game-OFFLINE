@@ -42,7 +42,7 @@ public class CrateInventoryManager : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log($"is crate empty?: {isCrateEmpty()}");
+        //Debug.Log($"is crate empty?: {isCrateEmpty()}");
         if (isCrateEmpty() && PersistentCrate == false)
         {
             Destroy(gameObject);
